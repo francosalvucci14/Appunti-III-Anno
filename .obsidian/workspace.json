@@ -106,18 +106,6 @@
             }
           },
           {
-            "id": "cf2e1717bba41ea5",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "ciao.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "d2199b76c4df9c54",
             "type": "leaf",
             "state": {
@@ -147,7 +135,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -163,7 +151,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "da0aa02f697e8343",
+  "active": "605095f41696d1cf",
   "lastOpenFiles": [
     "README.md",
     "ciao.md"
