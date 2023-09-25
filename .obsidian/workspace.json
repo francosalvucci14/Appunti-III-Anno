@@ -26,9 +26,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3b86f60e58f39d95",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -133,6 +143,17 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "75d41d951e079662",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
         ],
         "currentTab": 3
@@ -151,7 +172,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "605095f41696d1cf",
+  "active": "3b86f60e58f39d95",
   "lastOpenFiles": [
     "README.md",
     "ciao.md"
