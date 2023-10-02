@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti ISW/Indice appunti.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti ISW/Indice appunti.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti ISW/Indice appunti.md"
+                "file": "README.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti ISW/Indice appunti.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,10 +156,10 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
-    "README.md",
-    "Appunti CN/Indice appunti.md",
     "Appunti ISW/Lezione 1.md",
     "Appunti ISW/Indice appunti.md",
+    "README.md",
+    "Appunti CN/Indice appunti.md",
     "Appunti ABD/Indice appunti.md",
     "Appunti CN/Lezione 1.md",
     "Appunti ABD/Lezione 1.md",
