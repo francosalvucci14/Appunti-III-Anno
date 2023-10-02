@@ -11,34 +11,15 @@
             "id": "fc7c89dc674250ca",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "da0aa02f697e8343",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "ciao.md",
+                "file": "Appunti ISW/Indice appunti.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "3b86f60e58f39d95",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.13"
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ciao.md",
+                "file": "Appunti ISW/Indice appunti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ciao.md"
+                "file": "Appunti ISW/Indice appunti.md"
               }
             }
           },
@@ -150,6 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Appunti ISW/Indice appunti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,9 +154,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b86f60e58f39d95",
+  "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
     "README.md",
-    "ciao.md"
+    "Appunti CN/Indice appunti.md",
+    "Appunti ISW/Lezione 1.md",
+    "Appunti ISW/Indice appunti.md",
+    "Appunti ABD/Indice appunti.md",
+    "Appunti CN/Lezione 1.md",
+    "Appunti ABD/Lezione 1.md",
+    "ciao.md",
+    "Appunti ISW",
+    "Appunti ABD",
+    "Appunti CN"
   ]
 }
