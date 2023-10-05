@@ -1,3 +1,8 @@
 [
-  "obsidian-git"
+  "obsidian-git",
+  "cm-editor-syntax-highlight-obsidian",
+  "quick-latex",
+  "obsidian-better-codeblock",
+  "obsidian-matrix",
+  "table-editor-obsidian"
 ]
