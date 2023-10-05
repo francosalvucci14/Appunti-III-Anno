@@ -90,4 +90,3 @@ Sviluppando quindi come già fatto per $d_{3}$ (per ricorrenza) ottengo $$d_{3}=
 $$=(x_{3}-x_{0})\cdot(x_{3}-x_{1})\cdot(x_{3}-x_{2})\cdot(x_{2}-x_{0})\cdot(x_{2}-x_{1})\cdot(x_{1}-x_{0})$$
 che risulta uguale allo sviluppo della produttoria $(X)$ per $n=3$. $\square$
 
-
