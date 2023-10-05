@@ -1,2 +1,3 @@
-- [[Appunti CN/Lezione 1|Lezione 1]]
+- [[Appunti CN/Lezione 1|Lezione 1 - Interpolazione polinomiale]]
+- [[Lezione 2]]
 - 
