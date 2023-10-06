@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 2.md",
+                "file": "Appunti ABD/Indice appunti ABD.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CN/Lezione 2.md",
+                "file": "Appunti ABD/Indice appunti ABD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Lezione 2.md"
+                "file": "Appunti ABD/Indice appunti ABD.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Lezione 2.md",
+                "file": "Appunti ABD/Indice appunti ABD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,14 +158,15 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
-    "Appunti CN/Lezione 1.md",
-    "Appunti CN/Lezione 2.md",
-    "Appunti CN/Indice appunti CN.md",
     "Appunti ISW/Indice appunti ISW.md",
+    "Appunti CN/Indice appunti CN.md",
     "Appunti ABD/Indice appunti ABD.md",
+    "Appunti ABD/Lezione 2.md",
     "Appunti ABD/Lezione 1.md",
-    "README.md",
     "Appunti ISW/Lezione 1.md",
+    "Appunti CN/Lezione 2.md",
+    "Appunti CN/Lezione 1.md",
+    "README.md",
     "ciao.md",
     "Appunti ISW",
     "Appunti ABD",
