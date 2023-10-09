@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 2.md",
+                "file": "Appunti ABD/Lezione 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CN/Lezione 2.md",
+                "file": "Appunti ABD/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Lezione 2.md"
+                "file": "Appunti ABD/Lezione 1.md"
               }
             }
           },
@@ -124,21 +124,9 @@
               "type": "git-view",
               "state": {}
             }
-          },
-          {
-            "id": "75d41d951e079662",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti CN/Lezione 2.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -156,15 +144,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0762c8319a947449",
+  "active": "5d9cd1a702f4c255",
   "lastOpenFiles": [
+    "Appunti CN/Lezione 2.md",
     "Appunti ABD/Lezione 2.md",
     "Appunti ABD/Indice appunti ABD.md",
     "Appunti ISW/Indice appunti ISW.md",
     "Appunti CN/Indice appunti CN.md",
     "Appunti ABD/Lezione 1.md",
     "Appunti ISW/Lezione 1.md",
-    "Appunti CN/Lezione 2.md",
     "Appunti CN/Lezione 1.md",
     "README.md",
     "ciao.md",
