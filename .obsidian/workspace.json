@@ -17,7 +17,8 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "7b2df2d35fe72a20"
           }
         ]
       }
@@ -80,23 +81,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1534a85d87418174",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti ABD/Lezione 1.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "d2199b76c4df9c54",
             "type": "leaf",
             "state": {
@@ -118,12 +102,13 @@
             }
           },
           {
-            "id": "605095f41696d1cf",
+            "id": "320e8ee82dcd6042",
             "type": "leaf",
             "state": {
               "type": "git-view",
               "state": {}
-            }
+            },
+            "group": "7b2df2d35fe72a20"
           }
         ],
         "currentTab": 2
@@ -144,14 +129,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5d9cd1a702f4c255",
+  "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
+    "Appunti ABD/Lezione 1.md",
     "Appunti CN/Lezione 2.md",
     "Appunti ABD/Lezione 2.md",
     "Appunti ABD/Indice appunti ABD.md",
     "Appunti ISW/Indice appunti ISW.md",
     "Appunti CN/Indice appunti CN.md",
-    "Appunti ABD/Lezione 1.md",
     "Appunti ISW/Lezione 1.md",
     "Appunti CN/Lezione 1.md",
     "README.md",
