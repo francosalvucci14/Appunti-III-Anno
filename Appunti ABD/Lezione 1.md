@@ -77,5 +77,24 @@ Queste occorrenze sono "**false**" (bogus): non hanno altra causa se non il fatt
 - **Il modello del Grafo** : G(V,E), con un (enorme) insieme V di **n** (potenziali criminali) agenti che usano visitare un (enorme) insieme H di **h** pubbliche posizioni (hotel, bar, ristoranti, aereporti, etc...) in una grande regione/città:
 	- Un arco (u,v) esiste se e solo se 'u' e 'v' visitano la _stessa posizione_ in H _nello stesso giorno_ su una sequenza di $T>>0$ giorni 
 - **Modello Ipotetico** : il **processo di visita degli agenti** nei luoghi pubblici è sufficientemente casuale e uniforme
-- **Problema (informale)** : Trovare le possibili "Gangs", denominate _Clicque_ in G
+- **Problema (informale)** : Trovare le possibili "Gangs", denominate _Clique_ in G
+
+##### Gangs : Impostazioni Formali
+
+**Domanda** : Quale **dimensione massima della Clique** ci aspettiamo in G(V,E)?
+
+**Risposta** : Per ogni paio di agenti (u,v), abbiamo che 
+$$Pr[(u,v)\in E]\approx\frac{T}{h} = p$$
+Per un sottoinsieme $S\subseteq V$ di dimensione s, abbiamo che
+$$Pr[\text{S is a clique}]\approx p^{(\frac{s^2}{2})}$$
+Quindi:
+$$E[\text{Numero di clique di dimensione s}]= C(n,s)\cdot p^{(\frac{s^2}{2})}\approx (\frac{n}{e\cdot s})^s\cdot p^{(\frac{s^2}{2})}(\star)$$
+
+Ora, osservando un grande sistema spazio-temporale, per esempio $n\approx10^7,h\approx10^4,T\approx10^3\top\approx\frac{1}{10}$, da $(*)$ possiamo aspettarci un _grande_ numero di clique di dimensione $s\approx 10$
+
+## Una "lente computazionale" per il Data Mining
+
+L'approccio della **Computer Science** al Data Mining è _Algoritmico_:
+- Dato un Data Set DS, fornire un Algoritmo **efficiente** per rispondere ad alcune queries molto _complesse_
+
 
