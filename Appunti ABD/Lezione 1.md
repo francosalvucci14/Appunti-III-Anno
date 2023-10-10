@@ -47,3 +47,35 @@ Quindi, Media e [Varianza Standard](https://it.wikipedia.org/wiki/Varianza) cara
 
 Altri scenari tipici nel Data Mining offrono adottano la **worst-case hypothesis** :
 
+- L'input Data Set, da cui dovrebbero essere estratte le _informazioni target_, è gestito da una **fonte avversariale** che genera i dati con il goal di minimizare l'efficeinza della soluzione algoritmica, o peggio ancora, la sua validità
+- **Esempio**: Calcolare (e aggiornare) il **numero di uni** nell'ultima finestra di lunghezza N su uno _**Stream infinito di bits**_ governato da un'avversario che sceglie il prossimo bit in funzione delle scelte dell'algoritmo precedente
+
+## Limiti Statistici del Data Mining
+
+Un _goal tipico dei problemi_ di Data Mining è quello di trovare eventi _**inusuali**_ nascosti all'interno di enormi Data Sets
+
+>[!attention]- Attenzione
+>L'uso eccessivo del Data Mining è detto **Principio di Bonferroni**
+
+>[!cite]- Cit.
+>Se il Data Set (o il Data Process) collezione un enorme numero di elementi provenienti da diverse fonti in modo abbastanza casuale, allora eventi inusuali potrebbero non avere significati particolari : sono solo artefatti statistici che potrebbero verificarsi
+
+### Principio di Bonferroni : Definizione informale
+
+Supponi di cercare un evento speficio all'interno dell'input Data Set DS
+
+Allora
+
+Puoi aspettarti che l'evento si verifichi, _anche se_ S è completamente casuale, e il numero di occorrenze dell'evento _aumenterà all'aumentare della dimensione di DS_
+
+Queste occorrenze sono "**false**" (bogus): non hanno altra causa se non il fatto che i dati casuali avranno sempre un certo numero di caratteristiche insolite che sembrano significative ma non lo sono
+
+#### Esempio di "Bogus" : Gangs nei Social Networks
+
+**Estrarre informazioni da un Social Network**
+
+- **Il modello del Grafo** : G(V,E), con un (enorme) insieme V di **n** (potenziali criminali) agenti che usano visitare un (enorme) insieme H di **h** pubbliche posizioni (hotel, bar, ristoranti, aereporti, etc...) in una grande regione/città:
+	- Un arco (u,v) esiste se e solo se 'u' e 'v' visitano la _stessa posizione_ in H _nello stesso giorno_ su una sequenza di $T>>0$ giorni 
+- **Modello Ipotetico** : il **processo di visita degli agenti** nei luoghi pubblici è sufficientemente casuale e uniforme
+- **Problema (informale)** : Trovare le possibili "Gangs", denominate _Clicque_ in G
+
