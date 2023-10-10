@@ -17,8 +17,7 @@
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "7b2df2d35fe72a20"
+            }
           }
         ]
       }
@@ -107,8 +106,7 @@
             "state": {
               "type": "git-view",
               "state": {}
-            },
-            "group": "7b2df2d35fe72a20"
+            }
           }
         ],
         "currentTab": 1

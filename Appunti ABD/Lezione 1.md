@@ -97,4 +97,18 @@ Ora, osservando un grande sistema spazio-temporale, per esempio $n\approx10^7,h\
 L'approccio della **Computer Science** al Data Mining è _Algoritmico_:
 - Dato un Data Set DS, fornire un Algoritmo **efficiente** per rispondere ad alcune queries molto _complesse_
 
+>[!info]- Osservazione
+>L'algoritmo **non dovrebbe basarsi** su alcuna _ipotesi statistica_ $I$ su DS, ma se $I$ vale, i valori calcolati saranno coerenti con $I$
+
+### Task tipici
+
+1) Modellazione Computazionale del Data Process
+2) Riassumere un Data Set
+3) Estrarre le caratteristiche _più importanti_ del set di dati e scartare il resto
+
+## Stream dei Dati
+
+In molte situazioni nel Data Mining, noi non _conosciamo_ l'intero Data Set _in anticipo_
+
+Lo **Stream Management** è importante quando l'**input rate** è controllato _**esternamente**_
 
