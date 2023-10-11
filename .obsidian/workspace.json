@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti ABD/Lezione 1.md",
+                "file": "Appunti CN/Lezione 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "58207ff4cffc6ca8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti CN/Lezione 3.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti ABD/Lezione 1.md"
+                "file": "Appunti CN/Lezione 3.md"
               }
             }
           },
@@ -106,6 +119,35 @@
             "state": {
               "type": "git-view",
               "state": {}
+            }
+          },
+          {
+            "id": "107d2182ed3ab9b3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appunti CN/Lezione 3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7730a1b1c9da50d8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti CN/Lezione 3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           }
         ],
@@ -127,15 +169,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5d9cd1a702f4c255",
+  "active": "58207ff4cffc6ca8",
   "lastOpenFiles": [
-    "Appunti ABD/Lezione 1.md",
     "Appunti CN/Lezione 2.md",
+    "Appunti CN/Lezione 3.md",
     "Appunti ABD/Lezione 2.md",
+    "Appunti ISW/Lezione 1.md",
+    "Appunti ABD/Lezione 1.md",
     "Appunti ABD/Indice appunti ABD.md",
     "Appunti ISW/Indice appunti ISW.md",
     "Appunti CN/Indice appunti CN.md",
-    "Appunti ISW/Lezione 1.md",
     "Appunti CN/Lezione 1.md",
     "README.md",
     "ciao.md",
