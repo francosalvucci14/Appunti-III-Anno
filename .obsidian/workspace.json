@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 3.md",
+                "file": "Appunti CN/Indice appunti CN.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Lezione 3.md"
+                "file": "Appunti CN/Indice appunti CN.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CN/Lezione 3.md",
+                "file": "Appunti CN/Indice appunti CN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,14 +144,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Lezione 3.md",
+                "file": "Appunti CN/Indice appunti CN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -171,14 +171,14 @@
   },
   "active": "58207ff4cffc6ca8",
   "lastOpenFiles": [
-    "Appunti CN/Lezione 2.md",
     "Appunti CN/Lezione 3.md",
+    "Appunti CN/Indice appunti CN.md",
+    "Appunti CN/Lezione 2.md",
     "Appunti ABD/Lezione 2.md",
     "Appunti ISW/Lezione 1.md",
     "Appunti ABD/Lezione 1.md",
     "Appunti ABD/Indice appunti ABD.md",
     "Appunti ISW/Indice appunti ISW.md",
-    "Appunti CN/Indice appunti CN.md",
     "Appunti CN/Lezione 1.md",
     "README.md",
     "ciao.md",

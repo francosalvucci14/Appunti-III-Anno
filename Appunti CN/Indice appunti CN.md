@@ -1,3 +1,5 @@
 - [[Appunti CN/Lezione 1|Lezione 1 - Interpolazione polinomiale]]
-- [[Appunti CN/Lezione 2|Lezione 2]]
+- [[Appunti CN/Lezione 2|Lezione 2 - Ancora su interpolazione]]
+- [[Lezione 3|Lezione 3 - Errore (resto) dell'interpolazione]]
+- 
 - 
