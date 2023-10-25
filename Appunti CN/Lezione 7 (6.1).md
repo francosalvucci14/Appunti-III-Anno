@@ -21,7 +21,8 @@ Fissato $\epsilon=10^{-8}$, determinare un $n$ tale che la formula $I_{n}$fornis
 **Soluzione**
 Per il teorema sull'errore della formula dei trapezi si ha $$\bigg|\int_{0}^{1}\sqrt{\cos x}\:dx-I_{n}\bigg|=\left|-\frac{f^{''}(\eta)}{12}\left(\frac{1}{n}\right)^{2}\right|=\frac{\big|f^{''}(\eta)\big|}{12n^{2}}\:\:\:(\eta\in[0,1])$$ 
 Nell'[[#Esempio 1|esempio precedente]] abbiamo che $|f^{''}(x)|\le0.9458$ per ogni $x\in[0,1]$ e quindi risulta $$\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le \frac{1}{12n^{2}}$$
-Poiché $$\frac{1}{12n^{2}}\le\epsilon\iff n\ge \sqrt{\frac{1}{12\epsilon}}=n(\epsilon)$$ si ha $$\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le\epsilon\:\:\:\: \forall n\ge n(\epsilon)$$ Nel nostro caso abbiamo $\epsilon=10^{-8}$ e quindi per garantire che $\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le10^{-8}$, basta prendere un qualsiasi $n \le n(10^{-8})=2886.75\dots$
+Poiché $$\frac{1}{12n^{2}}\le\epsilon\iff n\ge \sqrt{\frac{1}{12\epsilon}}=n(\epsilon)$$ si ha $$\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le\epsilon\:\:\:\: \forall n\ge n(\epsilon)$$
+Nel nostro caso abbiamo $\epsilon=10^{-8}$ e quindi per garantire che $\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le10^{-8}$, basta prendere un qualsiasi $n \ge n(10^{-8})=2886.75\dots$
 
 ## Esempio 3
 
