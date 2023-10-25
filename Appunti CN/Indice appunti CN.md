@@ -1,5 +1,8 @@
 - [[Appunti CN/Lezione 1|Lezione 1 - Interpolazione polinomiale]]
 - [[Appunti CN/Lezione 2|Lezione 2 - Ancora su interpolazione]]
 - [[Lezione 3|Lezione 3 - Errore (resto) dell'interpolazione]]
-- 
+- [[Lezione 4|Lezione 4 - Forma di Newton]] 
+- [[Lezione 5|Lezione 5 - Aggiunta di un nodo]]
+- [[Lezione 6|Lezione 6 - Formula dei trapezi]]
+- [[Lezione 7 (6.1)]]
 - 
