@@ -50,4 +50,4 @@ f^{'}(x)&= e^{x}+xe^{x}=(1+x)e^{x}\\
 f^{''}(x)&= e^{x}+(1+x)e^{x}=(2+x)e^{x}
 \end{align*}$$ Per ogni $x\in [0,2]$ si ha $$|f^{''}(x)|=|(2+x)e^{x}|=(2+x)e^{x}\le4e^{x}$$
 Dunque $$\bigg|\int_{0}^{2}xe^{x}\:dx-I_{n}\bigg|\le \frac{8e^{2}}{3n^{2}}$$
-Poiché $$\frac{8e^{2}}{3n^{2}}\le \epsilon\iff n\ge \sqrt{\frac{8e^{2}}{3n^{2}}}= n(\epsilon)$$ Nel caso $\epsilon=1.3\cdot10^{-9}$, per garantire che $\bigg|\int_{0}^{2}xe^{x}\:dx-I_{n}\bigg|\le \epsilon$ basta prendere un qualsiasi $n\ge n(1.3\cdot 10^{-9})=123113.92\dots$
+Poiché $$\frac{8e^{2}}{3n^{2}}\le \epsilon\iff n\ge \sqrt{\frac{8e^{2}}{3n^{2}}}= n(\epsilon)$$Nel caso $\epsilon=1.3\cdot10^{-9}$, per garantire che $\bigg|\int_{0}^{2}xe^{x}\:dx-I_{n}\bigg|\le \epsilon$ basta prendere un qualsiasi $n\ge n(1.3\cdot 10^{-9})=123113.92\dots$
