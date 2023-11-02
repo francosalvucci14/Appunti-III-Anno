@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 8.md",
+                "file": "Appunti CN/Lezione 9.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Lezione 8.md"
+                "file": "Appunti CN/Lezione 9.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CN/Lezione 8.md",
+                "file": "Appunti CN/Lezione 9.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Lezione 8.md",
+                "file": "Appunti CN/Lezione 9.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,8 +172,9 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
-    "Appunti CN/Lezione 1.md",
     "Appunti CN/Lezione 8.md",
+    "Appunti CN/Lezione 9.md",
+    "Appunti CN/Lezione 1.md",
     "Lezione 1 - Interpolazione polinomiale.md",
     "Appunti CN/img/img1.png",
     "Appunti CN/Lezione 7 (6.1).md",
