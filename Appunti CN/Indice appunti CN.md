@@ -5,4 +5,6 @@
 - [[Lezione 5|Lezione 5 - Aggiunta di un nodo]]
 - [[Lezione 6|Lezione 6 - Formula dei trapezi]]
 - [[Lezione 7 (6.1)]]
+- [[Lezione 8|Lezione 8 - Estrapolazione]]
+- [[Lezione 9|Lezione 9 - Richiami di algebra lineare]]
 - 
