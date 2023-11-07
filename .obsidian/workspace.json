@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Indice appunti CN.md",
+                "file": "Appunti CN/Lezione 10.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Indice appunti CN.md"
+                "file": "Appunti CN/Lezione 10.md"
               }
             }
           },
@@ -109,29 +109,12 @@
             }
           },
           {
-            "id": "107d2182ed3ab9b3",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti CN/Indice appunti CN.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "7730a1b1c9da50d8",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Indice appunti CN.md",
+                "file": "Appunti CN/Lezione 10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,11 +153,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "320e8ee82dcd6042",
   "lastOpenFiles": [
-    "Appunti CN/Lezione 8.md",
-    "Appunti CN/Indice appunti CN.md",
     "Appunti CN/Lezione 9.md",
+    "Appunti CN/Lezione 10.md",
+    "Appunti CN/Indice appunti CN.md",
+    "Appunti CN/Lezione 8.md",
     "Appunti CN/Lezione 1.md",
     "Lezione 1 - Interpolazione polinomiale.md",
     "Appunti CN/img/img1.png",
