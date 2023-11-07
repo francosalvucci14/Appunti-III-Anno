@@ -7,4 +7,5 @@
 - [[Lezione 7 (6.1)]]
 - [[Lezione 8|Lezione 8 - Estrapolazione]]
 - [[Lezione 9|Lezione 9 - Richiami di algebra lineare]]
+- [[Lezione 10|Lezione 10 - Polinomi di Matrici]]
 - 
