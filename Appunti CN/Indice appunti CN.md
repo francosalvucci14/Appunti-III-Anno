@@ -10,5 +10,6 @@
 - [[Lezione 10|Lezione 10 - Polinomi di Matrici]]
 - [[Lezione 11|Lezione 11 - Cerchi di Gershgorin]]
 - [[Lezione 12|Lezione 12 - Matrici a diag. dominante]]
+- [[Lezione 12.1|Lezione 12.1 - Esempi sui cerchi di Gershgorin]]
 - [[Lezione 13|Lezione 13 - Norme matriciali]]
 - 
