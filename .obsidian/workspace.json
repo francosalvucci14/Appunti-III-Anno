@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 12.md",
+                "file": "Appunti CN/Lezione 11.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Lezione 12.md"
+                "file": "Appunti CN/Lezione 11.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Lezione 12.md",
+                "file": "Appunti CN/Lezione 11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CN/Lezione 12.md",
+                "file": "Appunti CN/Lezione 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "44d464164230b7ee",
@@ -172,31 +172,31 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
-    "Appunti CN/img/img4.png",
-    "Appunti CN/Lezione 11.md",
     "Appunti CN/Lezione 12.md",
-    "Appunti CN/Lezione 15.md",
+    "Appunti CN/Lezione 11.md",
     "Appunti CN/Lezione 14.md",
-    "Appunti CN/Lezione 12.1.md",
+    "Appunti CN/Lezione 10.md",
     "Appunti CN/Lezione 13.md",
-    "Appunti CN/img/img5.png",
+    "Appunti CN/Lezione 12.1.md",
+    "Appunti CN/Lezione 15.md",
+    "Appunti CN/Lezione 9.md",
+    "Appunti CN/Lezione 8.md",
+    "Appunti CN/Lezione 7 (6.1).md",
+    "Appunti CN/Lezione 6.md",
+    "Appunti CN/Lezione 5.md",
     "Appunti CN/Lezione 4.md",
+    "Appunti CN/Lezione 3.md",
+    "Appunti CN/Lezione 2.md",
+    "Appunti CN/img/img4.png",
+    "Appunti CN/img/img5.png",
     "Appunti CN/Indice appunti CN.md",
     "Appunti CN/img/img3.png",
     "Appunti CN/img/img2.png",
     "Appunti CN/img/img2(1).png",
     "Appunti CN/img/img3(1).png",
-    "Appunti CN/Lezione 10.md",
-    "Appunti CN/Lezione 9.md",
-    "Appunti CN/Lezione 8.md",
     "Appunti CN/Lezione 1.md",
     "Lezione 1 - Interpolazione polinomiale.md",
     "Appunti CN/img/img1.png",
-    "Appunti CN/Lezione 7 (6.1).md",
-    "Appunti CN/Lezione 3.md",
-    "Appunti CN/Lezione 6.md",
-    "Appunti CN/Lezione 2.md",
-    "Appunti CN/Lezione 5.md",
     "Lezione 2 - Errore o resto dell'interpolazione polinomiale.md",
     "Appunti CN/img/img0.png",
     "Appunti CN/img",
