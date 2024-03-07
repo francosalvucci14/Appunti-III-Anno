@@ -91,7 +91,7 @@
             }
           },
           {
-            "id": "5d9cd1a702f4c255",
+            "id": "c7e7748393778edf",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -101,44 +101,15 @@
             }
           },
           {
-            "id": "320e8ee82dcd6042",
+            "id": "f93ea91c596c0818",
             "type": "leaf",
             "state": {
               "type": "git-view",
               "state": {}
             }
-          },
-          {
-            "id": "7730a1b1c9da50d8",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti PW/Lezione 1.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "4164adae500d5682",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti PW/Lezione 1.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "44d464164230b7ee",
