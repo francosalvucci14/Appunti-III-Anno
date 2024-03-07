@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "44d464164230b7ee",
@@ -170,8 +170,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0762c8319a947449",
+  "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
+    "Appunti PW/img/Pasted image 20240307101405.png",
+    "Appunti PW/img/Pasted image 20240307100517.png",
+    "Appunti PW/img",
     "Appunti VSDI",
     "Appunti PW/Indice delle lezioni.md",
     "Appunti PW/Lezione 1.md",
