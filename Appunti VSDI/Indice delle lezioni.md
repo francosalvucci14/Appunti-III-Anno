@@ -1,2 +1,2 @@
-- [[Appunti VSDI/Lezione 1|Lezione 1]]
+- [[Lezione 0 - Introduzione|Lezione 0 - Introduzione]]
 - 

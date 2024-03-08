@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Lezione 1.md",
+                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti PW/Lezione 1.md"
+                "file": "Appunti VSDI/Lezione 0 - Introduzione.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti PW/Lezione 1.md",
+                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,14 +131,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti PW/Lezione 1.md",
+                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "44d464164230b7ee",
@@ -172,12 +172,13 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
+    "vdsiuniroma2.github.io.md",
+    "Appunti VSDI/Lezione 0 - Introduzione.md",
+    "Appunti PW/Lezione 1.md",
     "Appunti PW/img/Pasted image 20240308123133.png",
     "Appunti PW/img/Pasted image 20240308122847.png",
     "Appunti PW/img/Pasted image 20240308122806.png",
-    "Appunti VSDI/Lezione 1.md",
     "Appunti VSDI/Indice delle lezioni.md",
-    "Appunti PW/Lezione 1.md",
     "Appunti PW/img/Pasted image 20240307103103.png",
     "Appunti PW/img/Pasted image 20240307101405.png",
     "Appunti PW/img/Pasted image 20240307100517.png",
@@ -205,7 +206,6 @@
     "Appunti CN/Indice appunti CN.md",
     "Appunti CN/img/img3.png",
     "Appunti CN/img/img2.png",
-    "Appunti CN/img/img2(1).png",
     "Appunti CN/Lezione 1.md",
     "Lezione 1 - Interpolazione polinomiale.md",
     "Lezione 2 - Errore o resto dell'interpolazione polinomiale.md",
