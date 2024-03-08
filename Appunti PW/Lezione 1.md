@@ -100,4 +100,3 @@ Richiedono qualunque documento, di ogni tipo : Immagini, PDF, Video,Audio,etc...
 
 I browser visualizzano i documenti richiesti al server in una finestra, e spesso gli stessi documenti sono mostrati in modo diverso dai diversi browser
 
-
