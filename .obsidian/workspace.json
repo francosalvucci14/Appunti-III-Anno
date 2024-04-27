@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
+                "file": "Appunti PW/Lezione 1 - Internet ed il Web.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti VSDI/Lezione 0 - Introduzione.md"
+                "file": "Appunti PW/Lezione 1 - Internet ed il Web.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
+                "file": "Appunti PW/Lezione 1 - Internet ed il Web.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti VSDI/Lezione 0 - Introduzione.md",
+                "file": "Appunti PW/Lezione 1 - Internet ed il Web.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,8 +172,22 @@
   },
   "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
-    "vdsiuniroma2.github.io.md",
+    "Appunti PW/Lezione 0 - Intro.md",
+    "Appunti PW/Indice delle lezioni.md",
+    "Appunti CN/Lezione 11.md",
+    "Appunti CN/Lezione 10.md",
+    "Appunti CN/Lezione 9.md",
+    "Appunti CN/Lezione 4.md",
+    "Appunti CN/Lezione 5.md",
+    "Appunti CN/Lezione 6.md",
+    "Appunti CN/Lezione 1.md",
+    "Appunti CN/Lezione 8.md",
+    "Appunti CN/Lezione 12.md",
+    "Appunti CN/Lezione 13.md",
     "Appunti VSDI/Lezione 0 - Introduzione.md",
+    "Appunti CN/Lezione 12.1.md",
+    "Appunti CN/Lezione 7 (6.1).md",
+    "vdsiuniroma2.github.io.md",
     "Appunti PW/Lezione 1.md",
     "Appunti PW/img/Pasted image 20240308123133.png",
     "Appunti PW/img/Pasted image 20240308122847.png",
@@ -184,21 +198,9 @@
     "Appunti PW/img/Pasted image 20240307100517.png",
     "Appunti PW/img",
     "Appunti VSDI",
-    "Appunti PW/Indice delle lezioni.md",
-    "Appunti CN/Lezione 11.md",
     "Appunti PW",
-    "Appunti CN/Lezione 12.md",
     "Appunti CN/Lezione 14.md",
-    "Appunti CN/Lezione 10.md",
-    "Appunti CN/Lezione 13.md",
-    "Appunti CN/Lezione 12.1.md",
     "Appunti CN/Lezione 15.md",
-    "Appunti CN/Lezione 9.md",
-    "Appunti CN/Lezione 8.md",
-    "Appunti CN/Lezione 7 (6.1).md",
-    "Appunti CN/Lezione 6.md",
-    "Appunti CN/Lezione 5.md",
-    "Appunti CN/Lezione 4.md",
     "Appunti CN/Lezione 3.md",
     "Appunti CN/Lezione 2.md",
     "Appunti CN/img/img4.png",
@@ -206,12 +208,10 @@
     "Appunti CN/Indice appunti CN.md",
     "Appunti CN/img/img3.png",
     "Appunti CN/img/img2.png",
-    "Appunti CN/Lezione 1.md",
     "Lezione 1 - Interpolazione polinomiale.md",
     "Lezione 2 - Errore o resto dell'interpolazione polinomiale.md",
     "Appunti CN/img",
     "Appunti ABD/Lezione 2.md",
-    "Appunti ABD/Lezione 1.md",
     "Appunti ISW",
     "Appunti ABD",
     "Appunti CN"
