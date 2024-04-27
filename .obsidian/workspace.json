@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Indice delle lezioni.md",
+                "file": "Appunti VSDI/Indice delle lezioni.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,9 +95,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Appunti PW/Indice delle lezioni.md"
-              }
+              "state": {}
             }
           },
           {
@@ -114,7 +112,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti PW/Indice delle lezioni.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +128,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti PW/Indice delle lezioni.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,47 +166,49 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "58207ff4cffc6ca8",
   "lastOpenFiles": [
+    "Appunti VSDI/Indice delle lezioni.md",
+    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
+    "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
+    "Appunti VSDI/Lezione 10 - Introduzione web.md",
+    "Appunti VSDI/Lezione 9 - Password.md",
+    "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
+    "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
+    "Appunti VSDI/Lezione 5 - Social Engineering.md",
+    "Appunti VSDI/Lezione 3 - Linux.md",
+    "Appunti VSDI/Lezione 2 - Internet.md",
+    "Appunti VSDI/Lezione 1 - Intro.md",
+    "Appunti VSDI/Lezioni/Lezione 9 - Password.md",
+    "Appunti VSDI/Lezioni/Lezione 7 - Enumerazione SBM.md",
+    "Appunti VSDI/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
+    "Appunti VSDI/Lezioni/Lezione 5 - Social Engineering.md",
+    "Appunti VSDI/Lezioni/Lezione 3 - Linux.md",
+    "Appunti VSDI/Lezioni/Lezione 2 - Internet.md",
+    "Appunti VSDI/Lezioni/Lezione 12 - Web Command Injection.md",
+    "Appunti VSDI/Lezioni/Lezione 11 - Enumerazione Web.md",
+    "Appunti VSDI/Lezioni/Lezione 10 - Introduzione web.md",
+    "Appunti VSDI/Lezioni/Lezione 1 - Intro.md",
+    "Appunti VSDI/Lezioni",
+    "Appunti VSDI/Immagini/Pasted image 20240422121707.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422121346.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422121343.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422121136.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422113506.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422113426.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422113404.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422112617.png",
+    "Appunti VSDI/Immagini/Pasted image 20240422112555.png",
+    "Appunti VSDI/Immagini/Pasted image 20240418170800.png",
+    "Appunti VSDI/Immagini",
+    "Appunti VSDI/Lezione 0 - Introduzione.md",
+    "Appunti PW/Indice delle lezioni.md",
     "Appunti PW/Lezione 3 - CSS (1).md",
     "Appunti PW/Lezione 4 - CSS (2).md",
-    "Appunti PW/Indice delle lezioni.md",
     "Appunti PW/Lezioni 10-14 Javascript.md",
-    "Appunti PW/Lezione 9 - CSS (7).md",
-    "Appunti PW/Lezione 1 - Internet ed il Web.md",
-    "Appunti PW/Lezione 0 - Intro.md",
-    "Appunti CN/Lezione 11.md",
-    "Appunti CN/Lezione 10.md",
-    "Appunti CN/Lezione 9.md",
-    "Appunti CN/Lezione 4.md",
-    "Appunti CN/Lezione 5.md",
-    "Appunti CN/Lezione 6.md",
-    "Appunti CN/Lezione 1.md",
-    "Appunti CN/Lezione 8.md",
-    "Appunti CN/Lezione 12.md",
-    "Appunti CN/Lezione 13.md",
-    "Appunti VSDI/Lezione 0 - Introduzione.md",
-    "Appunti CN/Lezione 12.1.md",
-    "Appunti CN/Lezione 7 (6.1).md",
-    "vdsiuniroma2.github.io.md",
-    "Appunti PW/Lezione 1.md",
-    "Appunti PW/img/Pasted image 20240308123133.png",
-    "Appunti PW/img/Pasted image 20240308122847.png",
-    "Appunti PW/img/Pasted image 20240308122806.png",
-    "Appunti VSDI/Indice delle lezioni.md",
-    "Appunti PW/img/Pasted image 20240307103103.png",
-    "Appunti PW/img/Pasted image 20240307101405.png",
-    "Appunti PW/img/Pasted image 20240307100517.png",
     "Appunti PW/img",
     "Appunti VSDI",
     "Appunti PW",
-    "Appunti CN/Lezione 14.md",
-    "Appunti CN/Lezione 15.md",
-    "Appunti CN/Lezione 3.md",
-    "Appunti CN/img/img4.png",
-    "Appunti CN/img/img5.png",
-    "Appunti CN/img/img3.png",
-    "Appunti CN/img/img2.png",
     "Appunti CN/img",
     "Appunti ISW",
     "Appunti ABD",
