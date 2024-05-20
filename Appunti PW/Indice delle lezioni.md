@@ -9,4 +9,6 @@
 - [[Lezione 8 - CSS (6)]]
 - [[Lezione 9 - CSS (7)]]
 - [[Lezioni 10-14 Javascript]]
+- [[Lezione 15 - Javascript Asincrono]]
+- [[Lezione 16 - Async-CORS]]
 - 

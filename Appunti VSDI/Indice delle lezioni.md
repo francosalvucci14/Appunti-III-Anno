@@ -8,4 +8,6 @@
 - [[Lezione 10 - Introduzione web]]
 - [[Lezione 11 - Enumerazione Web]]
 - [[Lezione 12 - Web Command Injection]]
+- [[Lezione 13 - Local File Inclusion]]
+- [[Lezione 14 - SQL Injections e XSS]]
 - 
