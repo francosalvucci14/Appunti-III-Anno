@@ -12,4 +12,6 @@
 - [[Lezione 12|Lezione 12 - Matrici a diag. dominante]]
 - [[Lezione 12.1|Lezione 12.1 - Esempi sui cerchi di Gershgorin]]
 - [[Lezione 13|Lezione 13 - Norme matriciali]]
+- [[Lezione 14]]
+- [[Lezione 15]]
 - 
