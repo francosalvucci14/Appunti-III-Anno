@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti VSDI/Indice delle lezioni.md",
+                "file": "Appunti VSDI/Lezione 12 - Web Command Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Appunti VSDI/Lezione 12 - Web Command Injection.md"
+              }
             }
           },
           {
@@ -112,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Appunti VSDI/Lezione 12 - Web Command Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,6 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Appunti VSDI/Lezione 12 - Web Command Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,13 +170,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "58207ff4cffc6ca8",
+  "active": "0762c8319a947449",
   "lastOpenFiles": [
-    "Appunti VSDI/Indice delle lezioni.md",
-    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
-    "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
-    "Appunti VSDI/Lezione 10 - Introduzione web.md",
+    "Appunti VSDI/Immagini/Pasted image 20240514142143.png",
+    "Appunti VSDI/Immagini/Pasted image 20240514141956.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513154243.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513154131.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150629.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150543.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150453.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150253.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150243.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150121.png",
+    "Appunti VSDI/Immagini/Pasted image 20240513150008.png",
+    "Appunti VSDI/Lezione 14 - SQL Injections e XSS.md",
+    "Appunti VSDI/Lezione 13 - Local File Inclusion.md",
+    "Appunti PW/Lezione 16 - Async-CORS.md",
+    "Appunti PW/Lezione 15 - Javascript Asincrono.md",
+    "Appunti PW/Lezione 4 - CSS (4).md",
+    "Appunti PW/Lezioni 10-14 Javascript.md",
     "Appunti VSDI/Lezione 9 - Password.md",
+    "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
+    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
+    "Appunti VSDI/Indice delle lezioni.md",
+    "Appunti VSDI/Lezione 10 - Introduzione web.md",
     "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
     "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
     "Appunti VSDI/Lezione 5 - Social Engineering.md",
@@ -187,25 +208,8 @@
     "Appunti VSDI/Lezioni/Lezione 2 - Internet.md",
     "Appunti VSDI/Lezioni/Lezione 12 - Web Command Injection.md",
     "Appunti VSDI/Lezioni/Lezione 11 - Enumerazione Web.md",
-    "Appunti VSDI/Lezioni/Lezione 10 - Introduzione web.md",
-    "Appunti VSDI/Lezioni/Lezione 1 - Intro.md",
     "Appunti VSDI/Lezioni",
-    "Appunti VSDI/Immagini/Pasted image 20240422121707.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422121346.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422121343.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422121136.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422113506.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422113426.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422113404.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422112617.png",
-    "Appunti VSDI/Immagini/Pasted image 20240422112555.png",
-    "Appunti VSDI/Immagini/Pasted image 20240418170800.png",
     "Appunti VSDI/Immagini",
-    "Appunti VSDI/Lezione 0 - Introduzione.md",
-    "Appunti PW/Indice delle lezioni.md",
-    "Appunti PW/Lezione 3 - CSS (1).md",
-    "Appunti PW/Lezione 4 - CSS (2).md",
-    "Appunti PW/Lezioni 10-14 Javascript.md",
     "Appunti PW/img",
     "Appunti VSDI",
     "Appunti PW",

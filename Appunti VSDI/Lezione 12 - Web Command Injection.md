@@ -71,3 +71,20 @@ Can exploit also with:
 #### Windows
 - `&, &&`
 ( SLIDE 12 )
+## Command Injection
+Qualsiasi codice eseguibile in lato server che utilizza l'input del client per interagire con l'OS può essere utilizzato per l'inject di comandi al SO.
+![[Pasted image 20240429121824.png|center|500]]
+![[Pasted image 20240429121842.png|center|500]]
+![[Pasted image 20240429121906.png|center|600]]
+![[Pasted image 20240429121929.png|center|600]]
+## Reverse shell
+![[Pasted image 20240429122010.png|center|500]]
+![[Pasted image 20240429122031.png|center|500]]
+## Mitigazione di Command Injections
+Validazione dell'input: Esegue la validazione di tutti gli input degli utenti per evitare caratteri pericolosi (ad esempio `; | >`...). È sempre meglio il white-listing del black-listing, dato che è preferibile dire quali caratteri sono concessi piuttosto che dire quali non sono ammessi.
+Ancora meglio: analizzare (*parse*) l'input completo prima di farci qualsiasi cosa, usando un parser standard, quindi usare gli alberi di analisi invece delle stringhe.
+La convalida dell'input tenta di prevenire gli attacchi.
+
+Dovremmo anche cercare di mitigare il possibile impatto:
+- eseguendo l'applicazione web con privilegi minimi
+- (ovvero applicando il principio del privilegio minimo)
