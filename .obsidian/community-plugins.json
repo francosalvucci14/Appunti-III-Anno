@@ -2,8 +2,8 @@
   "obsidian-git",
   "cm-editor-syntax-highlight-obsidian",
   "quick-latex",
-  "obsidian-better-codeblock",
   "obsidian-matrix",
   "table-editor-obsidian",
-  "automatic-table-of-contents"
+  "automatic-table-of-contents",
+  "better-export-pdf"
 ]
