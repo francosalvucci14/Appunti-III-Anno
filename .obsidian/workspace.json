@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Lezione 7 - CSS (5).md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti PW/Lezione 7 - CSS (5).md"
+                "file": "Appunti VSDI/ProvaEsame/WriteUp.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti PW/Lezione 7 - CSS (5).md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,12 +126,12 @@
             }
           },
           {
-            "id": "9840a483040b5836",
+            "id": "702bb0e80d48c1db",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti PW/Lezione 7 - CSS (5).md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,8 +170,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "0762c8319a947449",
   "lastOpenFiles": [
+    "Appunti VSDI/ProvaEsame/img",
+    "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
+    "Appunti VSDI/ProvaEsame/WriteUp.md",
+    "Appunti VSDI/ProvaEsame",
+    "Appunti VSDI/Lezione 5 - Social Engineering.md",
+    "Appunti VSDI/Lezione 3 - Linux.md",
+    "Appunti VSDI/Lezione 2 - Internet.md",
+    "Appunti VSDI/Lezione 13 - Local File Inclusion.md",
+    "Appunti VSDI/Lezione 14 - SQL Injections e XSS.md",
+    "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
+    "Appunti VSDI/Lezione 10 - Introduzione web.md",
+    "Appunti VSDI/Lezione 9 - Password.md",
+    "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
+    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
+    "Appunti PW/Lezioni 10-14 Javascript.md",
+    "Appunti PW/Lezione 7 - CSS (5).md",
     "Appunti PW/Lezione 6 - CSS (4).md",
     "Appunti PW/Lezione 5 - CSS (3).md",
     "Appunti PW/Lezione 4 - CSS (2).md",
@@ -180,8 +196,6 @@
     "Appunti CN/Indice appunti CN.md",
     "Appunti VSDI/Indice delle lezioni.md",
     "Appunti PW/Indice delle lezioni.md",
-    "Appunti VSDI/Lezione 14 - SQL Injections e XSS.md",
-    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
     "Appunti VSDI/Immagini/Pasted image 20240514142143.png",
     "Appunti VSDI/Immagini/Pasted image 20240514141956.png",
     "Appunti VSDI/Immagini/Pasted image 20240513154243.png",
@@ -192,22 +206,9 @@
     "Appunti VSDI/Immagini/Pasted image 20240513150253.png",
     "Appunti VSDI/Immagini/Pasted image 20240513150243.png",
     "Appunti VSDI/Immagini/Pasted image 20240513150121.png",
-    "Appunti VSDI/Lezione 13 - Local File Inclusion.md",
     "Appunti PW/Lezione 16 - Async-CORS.md",
     "Appunti PW/Lezione 15 - Javascript Asincrono.md",
-    "Appunti PW/Lezioni 10-14 Javascript.md",
-    "Appunti VSDI/Lezione 9 - Password.md",
-    "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
-    "Appunti VSDI/Lezione 10 - Introduzione web.md",
-    "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
-    "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
-    "Appunti VSDI/Lezione 5 - Social Engineering.md",
-    "Appunti VSDI/Lezione 3 - Linux.md",
-    "Appunti VSDI/Lezione 2 - Internet.md",
     "Appunti VSDI/Lezione 1 - Intro.md",
-    "Appunti VSDI/Lezioni/Lezione 9 - Password.md",
-    "Appunti VSDI/Lezioni/Lezione 7 - Enumerazione SBM.md",
-    "Appunti VSDI/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
     "Appunti VSDI/Lezioni",
     "Appunti VSDI/Immagini",
     "Appunti PW/img",
