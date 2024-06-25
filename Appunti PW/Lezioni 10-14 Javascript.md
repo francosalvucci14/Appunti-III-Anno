@@ -425,7 +425,7 @@ s(); // alerts ”Ciao Lorenzo"
 ## Costruttori, prototipi ed ereditarietà
 ### This
 Un oggetto può avere come proprietà una funzione. La parola chiave `this` usata dentro la funzione indica l'oggetto che la contiene ( dipende dal contesto, la stessa funzione può indicare come `this` oggetti diversi ).
-Es.
+	Es.
 ```js
 var studente = {
 	name: “pippo”,
