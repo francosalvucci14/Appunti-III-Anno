@@ -1,6 +1,14 @@
+
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+includeLinks: true # Make headings clickable
+debugInConsole: false # Print debug info in Obsidian console
+```
+
 # Domande generiche
-
-
 
 Le risposte sono:
 
@@ -196,7 +204,6 @@ L'event loop è un costrutto di programmazione che gestisce le operazioni asincr
 ## Node.js
 
 ^150eed
-
 ### Definizione
 
 Node.js è un runtime JavaScript costruito sul motore V8 di Google Chrome, che permette di eseguire JavaScript lato server. Node.js è noto per il suo modello di I/O non bloccante, orientato agli eventi, che lo rende ideale per applicazioni che necessitano di alte prestazioni e scalabilità, come i server web.
@@ -229,26 +236,21 @@ L'event loop è il meccanismo che permette a JavaScript di gestire le operazioni
 ^19a2f8
 
 Le microtask sono una parte fondamentale dell'architettura di gestione degli eventi e dell'esecuzione asincrona in JavaScript. Sono un tipo di attività che viene eseguita immediatamente dopo che l'event loop ha completato il ciclo corrente, ma prima che riprenda a elaborare la coda dei messaggi (macro-task).
-
 ## Microtask nel Contesto dello Sviluppo Web
 
 ## Definizione
 
 Le microtask sono piccole unità di lavoro che vengono eseguite subito dopo la conclusione della funzione corrente e prima che il ciclo dell'event loop venga completato. Vengono spesso utilizzate per operazioni che devono essere eseguite rapidamente e che hanno una priorità maggiore rispetto alle macro-task (come eventi I/O, timeout, ecc.).
-
 ## Esempi di Microtask
 
 - **Promesse (Promises)**: Le callback `.then` e `.catch` di una promessa vengono eseguite come microtask.
 - **Mutation Observer**: Callback utilizzate per osservare e reagire alle modifiche nel DOM.
-
 ## Funzionamento
 
 Quando un'operazione asincrona, come una promessa, viene risolta, il suo callback viene messo nella coda delle microtask. Dopo che lo stack di chiamate corrente è vuoto, l'event loop controlla la coda delle microtask e esegue tutte le microtask in quella coda prima di passare alle macro-task (i normali eventi asincroni, come `setTimeout` e `setInterval`).
-
 ## Priorità delle Microtask
 
 Le microtask hanno una priorità maggiore rispetto alle macro-task. Questo significa che se ci sono microtask nella coda, queste verranno eseguite prima che venga eseguita qualsiasi macro-task successiva. Questo garantisce che le operazioni che necessitano di una rapida risposta vengano gestite prontamente.
-
 ## Esempio di Codice
 
 Ecco un esempio per illustrare la differenza tra microtask e macro-task:
@@ -283,3 +285,59 @@ console.log('End');
 - **Consistenza**: Garantiscono che le operazioni importanti vengano completate prima che l'event loop continui con altre operazioni di minor priorità.
 
 In conclusione, le microtask sono essenziali per la gestione efficiente delle operazioni asincrone ad alta priorità in JavaScript, garantendo che le promesse e altre operazioni critiche vengano gestite rapidamente e in modo ordinato.
+
+# Routing
+
+Il **routing** nello sviluppo web si riferisce al processo di determinazione di quale azione intraprendere in risposta a una richiesta di un URL specifico. È una parte fondamentale del funzionamento di applicazioni web, server web e framework lato client.
+
+## Routing lato Server
+
+Nelle applicazioni web lato server, il routing è il meccanismo che associa gli URL alle funzioni del server o ai controller che gestiscono le richieste. Quando un server web riceve una richiesta, il router analizza l'URL e decide quale codice eseguire per rispondere alla richiesta.
+
+### Esempio con Express.js (Node.js)
+
+In un'applicazione Express, il routing è configurato definendo le route e le relative funzioni di gestione:
+
+```javascript
+const express = require('express');
+const app = express();
+
+// Definisce una route per la home page
+app.get('/', (req, res) => {
+    res.send('Benvenuto alla home page!');
+});
+
+// Definisce una route per una pagina di contatto
+app.get('/contatti', (req, res) => {
+    res.send('Questa è la pagina dei contatti.');
+});
+
+// Definisce una route per gestire parametri dinamici
+app.get('/utente/:id', (req, res) => {
+    const userId = req.params.id;
+    res.send(`Profilo utente con ID: ${userId}`);
+});
+
+app.listen(3000, () => {
+    console.log('Server in ascolto su http://localhost:3000');
+});
+```
+
+In questo esempio:
+
+- `app.get('/')`: Gestisce le richieste alla home page.
+- `app.get('/contatti')`: Gestisce le richieste alla pagina dei contatti.
+- `app.get('/utente/:id')`: Gestisce le richieste a una pagina utente con un ID dinamico.
+## Tipologie di Routing
+
+1. **Routing Statico**: Gli URL sono mappati a risorse specifiche, come file o funzioni. È rigido e non supporta parametri dinamici.
+2. **Routing Dinamico**: Gli URL possono includere parametri dinamici, come `/:id`, che vengono gestiti in modo flessibile.
+3. **Routing Nested**: Permette di definire rotte annidate, utile per applicazioni complesse con sezioni diverse che richiedono sub-routes.
+## Benefici del Routing
+
+- **Organizzazione del codice**: Separa le logiche di gestione delle richieste, migliorando la manutenibilità del codice.
+- **Navigazione user-friendly**: Permette una navigazione intuitiva con URL significativi.
+- **Sviluppo di SPA**: Facilita il caricamento dinamico dei contenuti senza ricaricare l'intera pagina.
+## Conclusione
+
+Il routing è un concetto cruciale nello sviluppo web, sia lato server che lato client. Permette di associare URL specifici a funzioni di gestione o componenti, migliorando l'organizzazione del codice e l'esperienza utente.
