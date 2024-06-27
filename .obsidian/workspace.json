@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Lezione 15 - Javascript Asincrono.md",
+                "file": "Appunti PW/Esame/Domande.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d5ad1f6a126b13b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti PW/Esame/Risposte Domande.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti PW/Lezione 15 - Javascript Asincrono.md"
+                "file": "Appunti PW/Esame/Risposte Domande.md"
               }
             }
           },
@@ -107,38 +120,9 @@
               "type": "git-view",
               "state": {}
             }
-          },
-          {
-            "id": "9dd450d7b57c18ef",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti PW/Lezione 15 - Javascript Asincrono.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "702bb0e80d48c1db",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti PW/Lezione 15 - Javascript Asincrono.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "44d464164230b7ee",
@@ -170,17 +154,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "1d5ad1f6a126b13b",
   "lastOpenFiles": [
-    "Appunti PW/Lezione 3 - CSS (1).md",
-    "Appunti PW/Lezione 2 - HTML e GIT.md",
-    "Appunti PW/Lezioni 10-14 Javascript.md",
-    "Appunti PW/Lezione 16 - Async-CORS.md",
-    "Appunti PW/Lezione 7 - CSS (5).md",
     "Appunti PW/Lezione 8 - CSS (6).md",
+    "Appunti PW/Lezione 7 - CSS (5).md",
     "Appunti PW/Lezione 6 - CSS (4).md",
     "Appunti PW/Lezione 5 - CSS (3).md",
+    "Appunti PW/Esame/Risposte Domande.md",
+    "Appunti PW/Esame/Domande.md",
+    "Appunti PW/Indice delle lezioni.md",
+    "Appunti PW/Esame/Untitled.md",
+    "Appunti PW/Esame",
+    "Appunti PW/Lezione 9 - CSS (7).md",
     "Appunti PW/Lezione 15 - Javascript Asincrono.md",
+    "Appunti PW/Lezione 16 - Async-CORS.md",
+    "Appunti PW/Lezioni 10-14 Javascript.md",
+    "Appunti PW/Lezione 3 - CSS (1).md",
+    "Appunti PW/Lezione 4 - CSS (2).md",
+    "Appunti PW/Lezione 2 - HTML e GIT.md",
     "Appunti VSDI/ProvaEsame/WriteUp.md",
     "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
     "Appunti VSDI/Lezione 5 - Social Engineering.md",
@@ -189,17 +180,11 @@
     "Appunti VSDI/Lezione 14 - SQL Injections e XSS.md",
     "Appunti VSDI/Lezione 13 - Local File Inclusion.md",
     "Appunti VSDI/Lezione 10 - Introduzione web.md",
-    "Appunti PW/Lezione 9 - CSS (7).md",
-    "Appunti PW/Lezione 4 - CSS (2).md",
     "Appunti VSDI/ProvaEsame/img",
     "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
     "Appunti VSDI/ProvaEsame",
     "Appunti VSDI/Lezione 3 - Linux.md",
     "Appunti VSDI/Lezione 2 - Internet.md",
-    "Appunti VSDI/Lezione 9 - Password.md",
-    "Appunti PW/Lezione 4 - CSS (4).md",
-    "Appunti CN/Indice appunti CN.md",
-    "Appunti VSDI/Indice delle lezioni.md",
     "Appunti VSDI/Immagini/Pasted image 20240514142143.png",
     "Appunti VSDI/Immagini/Pasted image 20240514141956.png",
     "Appunti VSDI/Immagini/Pasted image 20240513154243.png",
@@ -216,7 +201,6 @@
     "Appunti VSDI",
     "Appunti PW",
     "Appunti CN/img",
-    "Appunti ISW",
-    "Appunti ABD"
+    "Appunti ISW"
   ]
 }
