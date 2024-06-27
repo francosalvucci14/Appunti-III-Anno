@@ -158,8 +158,13 @@ Le risposte sono:
 
 30) **Costruttore**
    Un costruttore è una funzione speciale in una classe o un oggetto che viene chiamata per inizializzare l'oggetto appena creato. In JavaScript, le classi possono avere un metodo `constructor` per questo scopo.
+   Quando viene chiamato un costruttore con `new`:
+   - Viene creato un oggetto vuoto e assegnato a this
+   - Viene eseguita la funzione
+   - Viene ritornato this
+   Lo scope di **var** è il functional block più vicino. Lo scope di **let** è l'enclosing block più vicino
 
-31) **DOM**
+1) **DOM**
    Il DOM (Document Object Model) è una rappresentazione strutturata di un documento HTML o XML sotto forma di un albero. Permette a linguaggi di programmazione come JavaScript di manipolare il contenuto, la struttura e lo stile di un documento web.
 
 32) **Codice sincrono/asincrono**
