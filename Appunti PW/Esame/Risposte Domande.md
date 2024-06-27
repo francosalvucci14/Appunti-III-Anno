@@ -155,6 +155,18 @@ Le risposte sono:
 
 29) **Scope**
    Lo scope (ambito) definisce la visibilità e la durata delle variabili e delle funzioni. In JavaScript, ci sono due tipi principali di scope: lo scope globale e lo scope locale (o di funzione). Con l'introduzione di `let` e `const`, esiste anche lo scope di blocco.
+   Lo **scope locale** lo hanno quelle variabili che si trovano all'interno delle funzioni, mentre quando una variabile si trova fuori dalla funzione assume **scope globale**
+   Esempio : 
+```javascript
+let var1; //scope globale
+
+function myFunction(){
+	let var2; //scope locale
+	// Do Stuff...
+}
+console.log(var1) //accedo a var1 perchè ha scope globale
+console.log(var2) //non riesco perchè var2 è definita nella funzione
+```
 
 30) **Costruttore**
    Un costruttore è una funzione speciale in una classe o un oggetto che viene chiamata per inizializzare l'oggetto appena creato. In JavaScript, le classi possono avere un metodo `constructor` per questo scopo.
