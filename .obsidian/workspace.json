@@ -13,19 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Esame/Domande.md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "1d5ad1f6a126b13b",
+            "id": "b625f58320723188",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti PW/Esame/Risposte Domande.md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti PW/Esame/Risposte Domande.md"
+                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md"
               }
             }
           },
@@ -119,6 +119,35 @@
             "state": {
               "type": "git-view",
               "state": {}
+            }
+          },
+          {
+            "id": "4d4062937efef5eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "38b0ac42b3f90964",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           }
         ],
@@ -154,21 +183,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "b625f58320723188",
   "lastOpenFiles": [
-    "Appunti PW/Lezione 8 - CSS (6).md",
-    "Appunti PW/Lezione 7 - CSS (5).md",
-    "Appunti PW/Lezione 6 - CSS (4).md",
-    "Appunti PW/Lezione 5 - CSS (3).md",
-    "Appunti PW/Esame/Risposte Domande.md",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726101034.png",
+    "Appunti VSDI/ProvaEsame/WriteUp2.md",
+    "Appunti VSDI/ProvaEsame/img2",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726165941.png",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726132224.png",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726110957.png",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726102337.png",
     "Appunti PW/Esame/Domande.md",
+    "Appunti PW/Lezioni 10-14 Javascript.md",
+    "Appunti PW/Lezione 15 - Javascript Asincrono.md",
+    "Appunti PW/Lezione 16 - Async-CORS.md",
+    "Appunti PW/Lezione 5 - CSS (3).md",
+    "Appunti PW/Lezione 6 - CSS (4).md",
+    "Appunti PW/Lezione 7 - CSS (5).md",
+    "Appunti PW/Lezione 8 - CSS (6).md",
+    "Appunti PW/Esame/Risposte Domande.md",
     "Appunti PW/Indice delle lezioni.md",
     "Appunti PW/Esame/Untitled.md",
     "Appunti PW/Esame",
     "Appunti PW/Lezione 9 - CSS (7).md",
-    "Appunti PW/Lezione 15 - Javascript Asincrono.md",
-    "Appunti PW/Lezione 16 - Async-CORS.md",
-    "Appunti PW/Lezioni 10-14 Javascript.md",
     "Appunti PW/Lezione 3 - CSS (1).md",
     "Appunti PW/Lezione 4 - CSS (2).md",
     "Appunti PW/Lezione 2 - HTML e GIT.md",
@@ -183,24 +219,16 @@
     "Appunti VSDI/ProvaEsame/img",
     "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
     "Appunti VSDI/ProvaEsame",
-    "Appunti VSDI/Lezione 3 - Linux.md",
-    "Appunti VSDI/Lezione 2 - Internet.md",
     "Appunti VSDI/Immagini/Pasted image 20240514142143.png",
     "Appunti VSDI/Immagini/Pasted image 20240514141956.png",
     "Appunti VSDI/Immagini/Pasted image 20240513154243.png",
     "Appunti VSDI/Immagini/Pasted image 20240513154131.png",
     "Appunti VSDI/Immagini/Pasted image 20240513150629.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150543.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150453.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150253.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150243.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150121.png",
     "Appunti VSDI/Lezioni",
     "Appunti VSDI/Immagini",
     "Appunti PW/img",
     "Appunti VSDI",
     "Appunti PW",
-    "Appunti CN/img",
-    "Appunti ISW"
+    "Appunti CN/img"
   ]
 }
