@@ -20,19 +20,29 @@
             }
           },
           {
-            "id": "b625f58320723188",
+            "id": "40ffecfc23ebb8de",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_12_33_53.png"
+              }
+            }
+          },
+          {
+            "id": "cb63b7febf4abb15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -109,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md"
+                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md"
               }
             }
           },
@@ -127,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp2.md",
+                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,15 +193,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b625f58320723188",
+  "active": "0762c8319a947449",
   "lastOpenFiles": [
-    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726101034.png",
+    "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_12_33_53.png",
+    "Appunti VSDI/ProvaEsame/img3/photo_1_2024-09-10_13-07-00.jpg",
+    "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
+    "Appunti VSDI/ProvaEsame/img3/photo_2_2024-09-10_13-07-00.jpg",
+    "Appunti VSDI/ProvaEsame/img3/photo_3_2024-09-10_13-07-00 1.jpg",
+    "Appunti VSDI/ProvaEsame/img3/photo_4_2024-09-10_13-07-00.jpg",
+    "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_09_48_39.png",
+    "Appunti VSDI/ProvaEsame/img3/photo_3_2024-09-10_13-07-00.jpg",
+    "Appunti VSDI/ProvaEsame/img3",
     "Appunti VSDI/ProvaEsame/WriteUp2.md",
+    "README.md",
+    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726101034.png",
     "Appunti VSDI/ProvaEsame/img2",
     "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726165941.png",
     "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726132224.png",
-    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726110957.png",
-    "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726102337.png",
     "Appunti PW/Esame/Domande.md",
     "Appunti PW/Lezioni 10-14 Javascript.md",
     "Appunti PW/Lezione 15 - Javascript Asincrono.md",
@@ -215,20 +233,12 @@
     "Appunti VSDI/Lezione 11 - Enumerazione Web.md",
     "Appunti VSDI/Lezione 14 - SQL Injections e XSS.md",
     "Appunti VSDI/Lezione 13 - Local File Inclusion.md",
-    "Appunti VSDI/Lezione 10 - Introduzione web.md",
     "Appunti VSDI/ProvaEsame/img",
-    "Appunti VSDI/Lezione 6 - Enumeration e Network Mapping.md",
     "Appunti VSDI/ProvaEsame",
-    "Appunti VSDI/Immagini/Pasted image 20240514142143.png",
-    "Appunti VSDI/Immagini/Pasted image 20240514141956.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513154243.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513154131.png",
-    "Appunti VSDI/Immagini/Pasted image 20240513150629.png",
     "Appunti VSDI/Lezioni",
     "Appunti VSDI/Immagini",
     "Appunti PW/img",
     "Appunti VSDI",
-    "Appunti PW",
-    "Appunti CN/img"
+    "Appunti PW"
   ]
 }
