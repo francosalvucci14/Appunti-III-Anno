@@ -214,4 +214,4 @@ p.interactive()
 
 ## Altro metodo per canary
 
-da gdb, lanciare il comando `x/x $fs_base+0x28` se l'architettura è a 64 bit
+da gdb, lanciare il comando `x/x $fs_base+0x28` se l'architettura è a 64 bit    
