@@ -11,10 +11,9 @@ debugInConsole: false # Print debug info in Obsidian console
 ## Esercizio 1
 
 Il primo esercizio chiede di scrivere in MATLAB una function che calcoli l'algoritmo di **Ruffini-Horner** per la valutazione del polinomio d'interpolazione in un punto
-
 ### Codice Esercizio 1
 
-^[Codice Interpolazione con Ruffini-Horner ]
+Il codice del primo esericizio è  il seguente: ^[Codice Interpolazione con Ruffini-Horner ]
 
 ```matlab
 function p_t = interpola_ruffini_horner(x, y, t)
