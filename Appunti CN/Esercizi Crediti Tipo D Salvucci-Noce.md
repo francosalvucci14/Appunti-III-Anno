@@ -107,7 +107,6 @@ function In = formula_trapezi(f, a, b, n)
     end
     
     % Formula dei trapezi
-    %In = (h/2) * (f(a) + 2 * somma + f(b));
     In = h*((f(a)+f(b))/2+somma)
 end
 ```
