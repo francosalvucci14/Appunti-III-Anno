@@ -81,7 +81,6 @@ end
 ## Esercizio 2
 
 Il secondo esercizio chiede di scrivere una function MATLAB per implementare la **formula dei trapezi** di una data funzione presa in input.
-
 ### Codice Esercizio 2
 
 ```matlab
