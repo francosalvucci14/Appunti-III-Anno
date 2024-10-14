@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
                 "mode": "preview",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md"
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,10 +171,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
-    "Appunti ISW/Progetto Noce-Salvucci-Sfeir.md",
     "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
+    "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
+    "Appunti ISW/Progetto Noce-Salvucci-Sfeir.md",
     "Appunti VSDI/ProvaEsame/WriteUp2.md",
     "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_12_33_53.png",
     "Appunti CN/Lezione 6.md",
@@ -211,7 +212,6 @@
     "Appunti VSDI/ProvaEsame/WriteUp.md",
     "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
     "Appunti VSDI/Lezione 5 - Social Engineering.md",
-    "Appunti VSDI/Lezione 12 - Web Command Injection.md",
     "Appunti VSDI/ProvaEsame/img",
     "Appunti VSDI/ProvaEsame",
     "Appunti VSDI/Lezioni",
