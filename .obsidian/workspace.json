@@ -171,7 +171,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "44d464164230b7ee",
@@ -206,11 +206,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c7e7748393778edf",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/metodo_gauss_seidel(es5).m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/jacobi_method(es4).m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/estrapolazione(es3).m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/metodo_gauss_seidel.m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/jacobi_method.m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/estrapolazione.m",
+    "Appunti CN/Esercizi MATLAB crediti D/metodo_gauss_seidel.m",
+    "Appunti CN/Esercizi MATLAB crediti D/jacobi_method.m",
+    "Appunti CN/Esercizi MATLAB crediti D/estrapolazione.m",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi",
     "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function",
-    "Appunti CN/Esercizi MATLAB crediti D",
     "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
     "Appunti ISW/Progetto Noce-Salvucci-Sfeir.md",
@@ -225,10 +233,8 @@
     "Appunti VSDI/ProvaEsame/img3/photo_4_2024-09-10_13-07-00.jpg",
     "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_09_48_39.png",
     "Appunti VSDI/ProvaEsame/img3/photo_3_2024-09-10_13-07-00.jpg",
-    "Appunti VSDI/ProvaEsame/img3",
     "README.md",
     "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726101034.png",
-    "Appunti VSDI/ProvaEsame/img2",
     "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726165941.png",
     "Appunti VSDI/ProvaEsame/img2/Pasted image 20240726132224.png",
     "Appunti PW/Esame/Domande.md",
@@ -242,17 +248,11 @@
     "Appunti PW/Esame/Risposte Domande.md",
     "Appunti PW/Indice delle lezioni.md",
     "Appunti PW/Esame/Untitled.md",
-    "Appunti PW/Esame",
     "Appunti PW/Lezione 9 - CSS (7).md",
     "Appunti PW/Lezione 3 - CSS (1).md",
     "Appunti PW/Lezione 4 - CSS (2).md",
     "Appunti PW/Lezione 2 - HTML e GIT.md",
     "Appunti VSDI/ProvaEsame/WriteUp.md",
-    "Appunti VSDI/Lezione 7 - Enumerazione SBM.md",
-    "Appunti VSDI/ProvaEsame/img",
-    "Appunti VSDI/ProvaEsame",
-    "Appunti VSDI/Lezioni",
-    "Appunti VSDI/Immagini",
-    "Appunti PW/img"
+    "Appunti VSDI/Lezione 7 - Enumerazione SBM.md"
   ]
 }
