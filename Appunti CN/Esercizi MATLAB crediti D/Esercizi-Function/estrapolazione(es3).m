@@ -13,8 +13,9 @@ function p0 = estrapol(f, a, b, n_vect,cifre)
     h_squared = zeros(1, m);
     In_values = zeros(1, m);
 
-    addpath('/home/acronimo/Lezioni Tor Vergata/3 anno/Calcolo Numerico/Esercizi/EserciziCreditiD/Esercizio1/');
-    addpath('/home/acronimo/Lezioni Tor Vergata/3 anno/Calcolo Numerico/Esercizi/EserciziCreditiD/Esercizio2/');
+    % addpath server per caricare le funzioni di Esercizio1 e Esercizio2 usate sotto
+    %addpath('path/to/Esercizio1/');
+    %addpath('path/to/Esercizio2/');
 
     % Calcola h^2 e In per ogni n in n_vect
     for i = 1:m
