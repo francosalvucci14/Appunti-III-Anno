@@ -331,6 +331,10 @@ end
 	- L'arresto del processo avviene quando la norma del residuo $||r^{(K)}||_2$​ è inferiore o uguale a $\epsilon\cdot ||b||_{2}$​ oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$​.
 ## Esercizio 6
 
+## Codice
+
+## Spiegazione
+
 
 # Problemi
 

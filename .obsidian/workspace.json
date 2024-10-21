@@ -103,19 +103,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d2199b76c4df9c54",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
             "id": "c7e7748393778edf",
             "type": "leaf",
             "state": {
@@ -138,20 +125,6 @@
             }
           },
           {
-            "id": "38b0ac42b3f90964",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
             "id": "a0bdd939fe6d02cd",
             "type": "leaf",
             "state": {
@@ -171,7 +144,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "44d464164230b7ee",
