@@ -154,6 +154,9 @@ function p0 = estrapol(f, a, b, n_vect)
     % t=0 perché vogliamo estrapolare p(0)
     p0 = interpola_ruffini_horner(h_squared, In_values, 0);
 
+	% Se viene specificato il numero di cifre, usa vpa per ottenere precisione       if nargin > 4 
+		p0 = vpa(p0, cifre); % Calcola p0 con precisione specificata 
+	end
 end
 ```
 
@@ -176,6 +179,7 @@ end
 
 - `interpola_ruffini_horner`, `differenze_divise` e `horner_eval` provengono dall'Esercizio 1.1.
 - `formula_trapezi` viene dall'Esercizio 1.2 per approssimare gli integrali usando la formula dei trapezi.
+- `vpa(p0, cifre)` viene usato per approssimare correttamente il risultato con il numero di cifre passate in input. Questa è una funzione del Toolbox **Symbolic Math Toolbox** 
 ## Esercizio 4
 
 L'esercizio cheide di creare una function MATLAB per implementare il **metodo di Jacobi**.
