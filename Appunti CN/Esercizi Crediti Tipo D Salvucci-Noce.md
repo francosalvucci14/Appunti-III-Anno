@@ -117,8 +117,218 @@ Funzione **`formula_trapezi`**:
 - Usa la **formula dei trapezi** per calcolare un'approssimazione dell'integrale: $$I_n=h\left[\frac{f(a)+f(b)}{2}+\sum\limits_{j=1}^{n-1}f(x_j)\right]$$
 - Restituisce l'approssimazione $I_n$​ della funzione $f(x)$ passata in input usando la formula dei trapezi.
 ## Esercizio 3
+
+Il terzo esercizio chiede di scrivere una function MATLAB per implementare il **metodo di estrapolazione** di una data funzione presa in input.
+Chiede anche di usare le function MATLAB usate per risolvere gli esercizi 1 e 2
+
+## Codice Esercizio 3 
+
+Il codice è il seguente:
+
+```matlab
+function p0 = estrapol(f, a, b, n_vect)
+    % Input:
+    % f: funzione da integrare
+    % a: estremo sinistro dell'intervallo
+    % b: estremo destro dell'intervallo
+    % n_vect: vettore dei valori di n0, n1, ..., nm
+
+    % Output:
+    % p0: valore estrapolato p(0)
+
+    % Prealloca i vettori per h^2 e In
+    m = length(n_vect);
+    h_squared = zeros(1, m);
+    In_values = zeros(1, m);
+
+    % Calcola h^2 e In per ogni n in n_vect
+    for i = 1:m
+        n = n_vect(i);
+        h = (b - a) / n;  % Passo di discretizzazione
+        h_squared(i) = h^2;
+        In_values(i) = formula_trapezi(f, a, b, n);
+    end
+
+    % Interpola i valori (h^2, In) usando le differenze divise
+    % La funzione interpola_ruffini_horner accetta vettori di x (qui h^2) e y (qui In_values)
+    % t=0 perché vogliamo estrapolare p(0)
+    p0 = interpola_ruffini_horner(h_squared, In_values, 0);
+
+end
+```
+
+### Spiegazione del codice
+
+1. **Input**:
+    - `f`: la funzione da integrare.
+    - `a` e `b`: gli estremi dell'intervallo su cui si calcola l'integrale.
+    - `n_vect`: un vettore di valori $n_0,n_1,\dots,n_m$ usati per il calcolo degli integrali.
+2. **Output**:
+    - `p0`: il valore estrapolato $p(0)$, dove $p(x)$ è il polinomio interpolante ottenuto dai valori di $h^2$ e $I_n$.
+3. **Calcolo di $h^2$ e $I_n$​**:
+    - Per ogni $n_i$​ nel vettore `n_vect`, il programma calcola il passo $h$ e il corrispondente integrale approssimato $I_n$​ utilizzando la formula dei trapezi fornita nell'Esercizio 2.
+4. **Interpolazione**:
+    - I valori $h^2$ e $I_n$​ vengono usati per ottenere il polinomio interpolante con la funzione di interpolazione `interpola_ruffini_horner`, che è la soluzione all'Esercizio 1.11.
+5. **Estrapolazione**:
+    - Il programma valuta il polinomio interpolante nel punto $t=0$ per ottenere $p(0)$.
+
+#### Uso delle altre funzioni
+
+- `interpola_ruffini_horner`, `differenze_divise` e `horner_eval` provengono dall'Esercizio 1.1.
+- `formula_trapezi` viene dall'Esercizio 1.2 per approssimare gli integrali usando la formula dei trapezi.
 ## Esercizio 4
+
+L'esercizio cheide di creare una function MATLAB per implementare il **metodo di Jacobi**.
+## Codice Esercizo 4
+
+Il codice è il seguente
+
+```matlab
+function [x, K, r_norm] = jacobi_method(A, b, x0, epsilon, N_max)
+    % Input:
+    % A: matrice del sistema lineare Ax = b
+    % b: vettore dei termini noti
+    % x0: vettore di innesco (stima iniziale di x)
+    % epsilon: soglia di precisione
+    % N_max: numero massimo di iterazioni consentite
+
+    % Output:
+    % x: vettore approssimato x^(K) dopo K iterazioni o x^(N_max)
+    % K: numero di iterazioni effettivamente eseguite
+    % r_norm: norma ||r^(K)||_2 del residuo alla fine del processo
+
+    % Numero di variabili (dimensione del sistema)
+    n = length(b);
+
+    % Inizializza la variabile per il vettore x^(K) (soluzione corrente)
+    x = x0;
+
+    % Itera il metodo di Jacobi
+    for K = 1:N_max
+        % Prealloca il vettore x^(K+1)
+        x_new = zeros(n, 1);
+
+        % Calcola ogni componente di x^(K+1)
+        for i = 1:n
+            % Somma degli elementi a sinistra di x^(K)
+            sum1 = A(i, 1:i-1) * x(1:i-1);
+            % Somma degli elementi a destra di x^(K)
+            sum2 = A(i, i+1:n) * x(i+1:n);
+            % Formula del metodo di Jacobi
+            x_new(i) = (b(i) - sum1 - sum2) / A(i, i);
+        end
+
+        % Calcola il residuo r^(K) = b - A * x^(K)
+        r = b - A * x_new;
+
+        % Calcola la norma del residuo ||r^(K)||_2
+        r_norm = norm(r, 2);
+
+        % Condizione di arresto: se ||r^(K)||_2 <= epsilon * ||b||_2
+        if r_norm <= epsilon * norm(b, 2)
+            x = x_new;
+            return;  % Arresta l'algoritmo e restituisce il risultato
+        end
+
+        % Aggiorna la soluzione corrente x^(K) con x^(K+1)
+        x = x_new;
+    end
+
+    % Se si raggiunge N_max iterazioni senza soddisfare il criterio, si restituisce
+    % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
+end
+```
+## Spiegazione del codice
+
+### Descrizione del codice:
+
+1. **Input:**
+    - `A`: La matrice del sistema lineare.
+    - `b`: Il vettore dei termini noti.
+    - `x0`: Il vettore di innesco (cioè la stima iniziale di $x$).
+    - `epsilon`: La soglia di precisione per il residuo.
+    - `N_max`: Il numero massimo di iterazioni consentite.
+2. **Output:**
+    - `x`: Il vettore soluzione $x^{(K)}$, dove $K$ è il numero di iterazioni.
+    - `K`: Il numero di iterazioni effettivamente eseguite.
+    - `r_norm`: La norma $||r^{(K)}||_2$​ del residuo $r^{(K)}=b-A\cdot x^{(K)}$.
+3. **Procedura:**
+    - Il metodo di Jacobi viene applicato iterativamente fino a quando il residuo $||r^{(K)}||_2$​ diventa minore o uguale a $\epsilon\cdot ||b||_{2}$​, oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$.
+    - Se nessuna delle iterazioni soddisfa la condizione di arresto, il programma restituisce $x^{(N_{\text{max}})}$.
 ## Esercizio 5
+
+L'esercizio cheide di creare una function MATLAB per implementare il **metodo di Gauss-Sidel**.
+## Codice Esercizio 5
+
+Il codice è il seguente
+
+```matlab
+function [x, K, r_norm] = metodo_gauss_seidel(A, b, x0, epsilon, N_max)
+    % Input:
+    % A: matrice del sistema lineare Ax = b
+    % b: vettore dei termini noti
+    % x0: vettore di innesco (stima iniziale di x)
+    % epsilon: soglia di precisione
+    % N_max: numero massimo di iterazioni consentite
+
+    % Output:
+    % x: vettore approssimato x^(K) dopo K iterazioni o x^(N_max)
+    % K: numero di iterazioni effettivamente eseguite
+    % r_norm: norma ||r^(K)||_2 del residuo alla fine del processo
+
+    % Numero di variabili (dimensione del sistema)
+    n = length(b);
+
+    % Inizializza la soluzione corrente con il vettore di innesco x0
+    x = x0;
+
+    % Itera il metodo di Gauss-Seidel
+    for K = 1:N_max
+        % Memorizza la soluzione precedente x^(K-1)
+        x_old = x;
+
+        % Calcola ogni componente di x^(K)
+        for i = 1:n
+            % Somma degli elementi a sinistra di x^(K)
+            sum1 = A(i, 1:i-1) * x(1:i-1);
+            % Somma degli elementi a destra di x^(K-1)
+            sum2 = A(i, i+1:n) * x_old(i+1:n);
+            % Formula del metodo di Gauss-Seidel
+            x(i) = (b(i) - sum1 - sum2) / A(i, i);
+        end
+
+        % Calcola il residuo r^(K) = b - A * x^(K)
+        r = b - A * x;
+
+        % Calcola la norma del residuo ||r^(K)||_2
+        r_norm = norm(r, 2);
+
+        % Condizione di arresto: se ||r^(K)||_2 <= epsilon * ||b||_2
+        if r_norm <= epsilon * norm(b, 2)
+            return;  % Arresta l'algoritmo e restituisce il risultato
+        end
+    end
+
+    % Se si raggiunge N_max iterazioni senza soddisfare il criterio, si restituisce
+    % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
+end
+```
+
+## Spiegazione Codice
+
+1. **Input:**
+    - `A`: La matrice del sistema lineare.
+    - `b`: Il vettore dei termini noti.
+    - `x0`: Il vettore di innesco (cioè la stima iniziale di $x$).
+    - `epsilon`: La soglia di precisione per il residuo.
+    - `N_max`: Il numero massimo di iterazioni consentite.
+2. **Output:**
+    - `x`: Il vettore soluzione $x^{(K)}$, dove $K$ è il numero di iterazioni.
+    - `K`: Il numero di iterazioni effettivamente eseguite.
+    - `r_norm`: La norma $||r^{(K)}||_2$​ del residuo $r^{(K)}=b-A\cdot x^{(K)}$.
+3. **Procedura:**
+    - Il metodo di Gauss-Seidel iterativo aggiorna ogni componente del vettore $x^{(K)}$ tenendo conto dei valori già aggiornati di $x_i$​, a differenza del metodo di Jacobi, dove si usano solo i valori dell'iterazione precedente.
+	- L'arresto del processo avviene quando la norma del residuo $||r^{(K)}||_2$​ è inferiore o uguale a $\epsilon\cdot ||b||_{2}$​ oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$​.
 ## Esercizio 6
 
 
