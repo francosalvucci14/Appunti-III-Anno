@@ -142,6 +142,33 @@
               "icon": "links-coming-in",
               "title": "Backlinks for Esercizi Crediti Tipo D Salvucci-Noce"
             }
+          },
+          {
+            "id": "7918521bebedec53",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
+            }
+          },
+          {
+            "id": "9a04c7d8092b8f18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
         ],
         "currentTab": 1
@@ -179,8 +206,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "9e6c7ebd0da9801b",
   "lastOpenFiles": [
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/bisezione(es6).m",
+    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/bisezione.m",
     "Appunti CN/Esercizi MATLAB crediti D/estrapolazione.m",
     "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/metodo_gauss_seidel(es5).m",
     "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/jacobi_method(es4).m",
@@ -190,8 +219,6 @@
     "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/estrapolazione.m",
     "Appunti CN/Esercizi MATLAB crediti D/metodo_gauss_seidel.m",
     "Appunti CN/Esercizi MATLAB crediti D/jacobi_method.m",
-    "Appunti CN/Esercizi MATLAB crediti D/Problemi",
-    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function",
     "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
     "Appunti ISW/Progetto Noce-Salvucci-Sfeir.md",

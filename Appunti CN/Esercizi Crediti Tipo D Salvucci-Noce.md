@@ -183,7 +183,7 @@ end
 ## Esercizio 4
 
 L'esercizio cheide di creare una function MATLAB per implementare il **metodo di Jacobi**.
-## Codice Esercizo 4
+### Codice Esercizo 4
 
 Il codice è il seguente
 
@@ -242,9 +242,7 @@ function [x, K, r_norm] = jacobi_method(A, b, x0, epsilon, N_max)
     % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
 end
 ```
-## Spiegazione del codice
-
-### Descrizione del codice:
+### Spiegazione del codice
 
 1. **Input:**
     - `A`: La matrice del sistema lineare.
@@ -262,7 +260,7 @@ end
 ## Esercizio 5
 
 L'esercizio cheide di creare una function MATLAB per implementare il **metodo di Gauss-Sidel**.
-## Codice Esercizio 5
+### Codice Esercizio 5
 
 Il codice è il seguente
 
@@ -318,7 +316,7 @@ function [x, K, r_norm] = metodo_gauss_seidel(A, b, x0, epsilon, N_max)
 end
 ```
 
-## Spiegazione Codice
+### Spiegazione Codice
 
 1. **Input:**
     - `A`: La matrice del sistema lineare.
@@ -335,11 +333,54 @@ end
 	- L'arresto del processo avviene quando la norma del residuo $||r^{(K)}||_2$​ è inferiore o uguale a $\epsilon\cdot ||b||_{2}$​ oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$​.
 ## Esercizio 6
 
-## Codice
+L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo della  bisezione**, ovvero il metodo che permette di trovare il punto $\xi$ di una funzione $f(x)$ definita su intervallo $[a,b]$ tale che $f(\xi)=0$
+### Codice
 
-## Spiegazione
+Codice esercizio 6
 
+```matlab
+function [xi, K, fx] = bisezione(a, b, f, epsilon)
+    % Verifica che f(a) e f(b) abbiano segno opposto
+    if f(a) * f(b) > 0
+        error('f(a) e f(b) devono avere segni opposti');
+    end
 
+    % Inizializzazione degli estremi dell'intervallo e contatore delle iterazioni
+    alpha_k = a;
+    beta_k = b;
+    K = 0;
+
+    % Ripeti finché la lunghezza dell'intervallo è maggiore della precisione richiesta
+    while (beta_k - alpha_k) / 2 > epsilon
+        % Calcola il punto medio dell'intervallo
+        xi = (alpha_k + beta_k) / 2;
+
+        % Aggiorna gli estremi dell'intervallo in base al segno di f(xi)
+        if f(alpha_k) * f(xi) <= 0
+            beta_k = xi;
+        else
+            alpha_k = xi;
+        end
+
+        % Incrementa il contatore delle iterazioni
+        K = K + 1;
+    end
+
+    % Calcola l'approssimazione finale di xi come punto medio dell'ultimo intervallo
+    xi = (alpha_k + beta_k) / 2;
+    fx = f(xi); % Calcola il valore di f in xi
+end
+```
+
+### Spiegazione
+
+- **Verifica dei segni**: la funzione controlla che $f(a)$ e $f(b)$ abbiano segno opposto, come richiesto dal teorema degli zeri.
+- **Inizializzazione**: definisce $\alpha_k = a$ e $\beta_k = b$ e imposta il contatore $K=0$
+- **Iterazione del metodo di bisezione**: continua a suddividere l'intervallo finché la metà della sua lunghezza è maggiore di $\varepsilon$. Ad ogni iterazione:
+    - Calcola il punto medio $\xi$.
+    - Aggiorna gli estremi in base al segno di $f(\xi)$ rispetto a $f(\alpha_k)$.
+    - Incrementa $K$.
+- **Output finale**: restituisce l'approssimazione $\xi$, l'indice $K$, e $f(\xi)$.
 # Problemi
 
 ## Problema 1
