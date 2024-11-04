@@ -385,6 +385,9 @@ end
 
 ## Problema 1
 
+Il problema 1 dice questo 
+
+![[problema 1.png|center|500]]
 ### Codice
 
 ```matlab
