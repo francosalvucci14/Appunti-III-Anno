@@ -425,7 +425,7 @@ Il grafico delle funzioni $\sqrt{x}$ e $p(x)$ è il seguente
 ![[grafico_es1.jpg|center|500]]
 ### Codice MATLAB
 
-```matlab
+```matlab title:Problema2.1
 % Definisci i nodi di interpolazione e i valori corrispondenti di sqrt(x)
 x_nodes = [0, 1/64, 4/64, 9/64, 16/64, 25/64, 36/64, 49/64, 1];
 y_nodes = sqrt(x_nodes);
