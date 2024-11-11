@@ -15,7 +15,7 @@ Il primo esercizio chiede di scrivere in MATLAB una function che calcoli l'algor
 _**Esercizio d’implementazione dell’algoritmo di valutazione del polinomio d’interpolazione in più punti.**_
 ### Codice Esercizio 1
 
-Il codice del primo esericizio è  il seguente: ^[Codice Interpolazione con Ruffini-Horner ]
+Il codice del primo esericizio è  il seguente:
 
 ```matlab title:"Esercizio 1.1"
 function p_t = interpola_ruffini_horner(x, y, t)
@@ -628,7 +628,5 @@ format("default");
 ## Problema 4
 ## Problema 5
 ## Problema 6
-
-# Appendice dei programmi
 
 
