@@ -15,7 +15,7 @@ Il primo esercizio chiede di scrivere in MATLAB una function che calcoli l'algor
 
 Il codice del primo esericizio è  il seguente: ^[Codice Interpolazione con Ruffini-Horner ]
 
-```matlab
+```matlab title:"Esercizio 1.1"
 function p_t = interpola_ruffini_horner(x, y, t)
     % Input:
     % x: vettore dei punti x0, x1, ..., xn (devono essere distinti)
@@ -83,7 +83,7 @@ end
 Il secondo esercizio chiede di scrivere una function MATLAB per implementare la **formula dei trapezi** di una data funzione presa in input.
 ### Codice Esercizio 2
 
-```matlab
+```matlab title:"Esercizio 1.2"
 function In = formula_trapezi(f, a, b, n)
     % Input:
     % f: funzione da integrare (definita su [a,b])
@@ -125,7 +125,7 @@ Chiede anche di usare le function MATLAB usate per risolvere gli esercizi 1 e 2
 
 Il codice è il seguente:
 
-```matlab
+```matlab title:"Esercizio 1.3"
 function p0 = estrapol(f, a, b, n_vect)
     % Input:
     % f: funzione da integrare
@@ -187,7 +187,7 @@ L'esercizio cheide di creare una function MATLAB per implementare il **metodo di
 
 Il codice è il seguente
 
-```matlab
+```matlab title:"Esercizio 1.4"
 function [x, K, r_norm] = jacobi_method(A, b, x0, epsilon, N_max)
     % Input:
     % A: matrice del sistema lineare Ax = b
@@ -264,7 +264,7 @@ L'esercizio cheide di creare una function MATLAB per implementare il **metodo di
 
 Il codice è il seguente
 
-```matlab
+```matlab title:"Esercizio 1.5"
 function [x, K, r_norm] = metodo_gauss_seidel(A, b, x0, epsilon, N_max)
     % Input:
     % A: matrice del sistema lineare Ax = b
@@ -338,7 +338,7 @@ L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo de
 
 Codice esercizio 6
 
-```matlab
+```matlab title:"Esercizio 1.6"
 function [xi, K, fx] = bisezione(a, b, f, epsilon)
     % Verifica che f(a) e f(b) abbiano segno opposto
     if f(a) * f(b) > 0
@@ -414,7 +414,6 @@ Con $\xi_i=\frac{i-1}{20}$, il vettore colonna $p(\xi_1)-\sqrt{\xi_1},\dots,p(\x
 \\&p(\xi_{20})-\sqrt{\xi_{20}}:  10.731478361986454
 \\&p(\xi_{21})-\sqrt{\xi_{21}}:  -0.000000000000004\end{align}$$
 Osservando i valori numerici, si può notare che:
-
 - **L'errore non è costante:** La differenza $p(\xi_i) - \sqrt{\xi_i}$ assume sia valori positivi che negativi, indicando che il polinomio a volte sovrastima e a volte sottostima la funzione radice quadrata.
 - **L'errore varia in modo significativo a seconda del punto:** In alcuni punti l'errore è molto piccolo (quasi nullo), mentre in altri è molto grande.
 
@@ -463,78 +462,141 @@ hold off;
 ```
 ## Problema 2
 
-Il secondo problema dice questo 
-![[problema 2.png|center|500]]
+![[problema 2.png|center|700]]
+
+### Soluzione
+
+**Punto (a)**
+
+Per il teorema sull'errore o resto della formula dei trapezi, abbiamo che $$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}(\eta)(b-a)}{12}\cdot h^2\right|$$
+Per determinare un $n=n(\varepsilon)$ tale che $\left|I-I_n\right|\leq\varepsilon$ procediamo in questo modo
+
+Abbiamo che 
+
+$$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}(\eta)\cdot 1}{12n^2}\right|=\frac{f^{''}(\eta)}{12n^2},\eta\in[0,1]$$
+Calcoliamo $f^{''}(x)$ : 
+$$f^{'}(x)=f^{''}=f(x)=e^x$$
+per ogni $x\in[0,1]$ si ha che:
+$$\left|f^{''}(x)\right|=\left|e^x\right|=e^x\leq e=2.71828$$
+Quindi, possiamo scrivere $$\left|\int_0^1e^xdx-I_n\right|\leq\frac{2.71828}{12n^2}$$
+E infine $$\frac{2.71828}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2.71828}{12\varepsilon}}=n(\varepsilon)$$
+**Punto (b)**
+
+Tabella
+
+| $\varepsilon$ | $n$   | $I_n$            | $I$              | Errore               |
+| ------------- | ----- | ---------------- | ---------------- | -------------------- |
+| 1.0e-1        | 2     | 1.75393109246483 | 1.71828182845905 | 3.56492640057802e-2  |
+| 1.0e-2        | 4     | 1.72722190455752 | 1.71828182845905 | 8.94007609847147e-3  |
+| 1.0e-3        | 12    | 1.71927608944639 | 1.71828182845905 | 9.94260987340567e-4  |
+| 1.0e-4        | 38    | 1.71838098946991 | 1.71828182845905 | 9.91610108698193e-5  |
+| 1.0e-5        | 120   | 1.71829177220812 | 1.71828182845905 | 9.94374907281603e-6  |
+| 1.0e-6        | 379   | 1.71828282532022 | 1.71828182845905 | 9.96861172719576e-7  |
+| 1.0e-7        | 1197  | 1.71828192839571 | 1.71828182845905 | 9.99366627230103e-8  |
+| 1.0e-8        | 3785  | 1.71828183845402 | 1.71828182845905 | 9.99497018483453e-9  |
+| 1.0e-9        | 11967 | 1.71828182945891 | 1.71828182845905 | 9.99865967798996e-10 |
+| 1.0e-10       | 37839 | 1.71828182855904 | 1.71828182845905 | 9.99984539618026e-11 |
+**Punto (c)**
+
+Le approssimazioni di $I$ ottenute con la formula dei trapezi sono le seguenti :
+
+$I_2 = 1.75393109246482525876$ (Errore = $3.5649264006e-02$)
+$I_4 = 1.72722190455751656302$ (Errore = $8.9400760985e-03$)
+$I_8 = 1.72051859216430180766$ (Errore = $2.2367637053e-03$)
+$I_16 = 1.71884112857999449275$ (Errore = $5.5930012095e-04$)
+
+Valore esatto di $I$ è : $1.718281828459045$
+
+**Punto (d)**
+
+Il valore di $p(0) = 1.718281828460389$
+Confronto con il valore esatto di $I$ = $1.343813949006289e-12$ (ovvero $1.344\cdot10^{-12}$)
 ### Codice
 
-```matlab
-% Script per risolvere il problema 2.2 con il metodo di Ruffini-Horner
-% Definizione della funzione f(x) = e^x
+```matlab title:"Problema 2.2"
+% Definizione della funzione
 f = @(x) exp(x);
 
-% Intervallo di integrazione [0, 1]
-a = 0;
-b = 1;
-
 % Valore esatto dell'integrale
-I_exact = exp(1) - 1;
+I_exact = 1.718281828459045;
 
-% Precisioni richieste
+% --- Punto (b) ---
+% Tolleranze epsilon da verificare
 epsilons = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 1e-7, 1e-8, 1e-9, 1e-10];
 
-% Inizializza le variabili per la tabella dei risultati
-results = []; % tabella dei risultati
+% Inizializzazione tabella
+results = [];
 
-fprintf("Punto (a)\n");
-
-% Passo (a) e (b}: Trova n(epsilon) per ogni epsilon e costruisci la tabella
-for eps = epsilons
+for epsilon = epsilons
     n = 1;
-    In = formula_trapezi(f, a, b, n);
+    In = formula_trapezi(f, 0, 1, n);
     error = abs(I_exact - In);
 
-    % Incrementa n finché l'errore non è inferiore a epsilon
-    while error > eps
+    % Incrementa n fino a soddisfare la condizione di errore
+    while error > epsilon
         n = n + 1;
-        In = formula_trapezi(f, a, b, n);
+        In = formula_trapezi(f, 0, 1, n);
         error = abs(I_exact - In);
-
-        % Debug: stampa ogni volta che In viene aggiornato
-        %fprintf('Calcolo per eps = %.1e: n = %d, In = %.10f, error = %.10e\n', eps, n, In, error);
     end
 
-    % Salva i risultati in una tabella
-    results = [results; eps, n, In, I_exact, error];
-    % Stampa i risultati per questo epsilon
-    fprintf('%.1e\t %d\t %.10f\t %.10f\t %.10e\n', eps, n, In, I_exact, error);
+    % Aggiungi i risultati per questo epsilon
+    results = [results; epsilon, n, In, I_exact, error];
 end
 
-% Visualizza la tabella dei risultati
-fprintf("Punto (b)\n");
-disp('Tabella dei risultati:');
-disp(array2table(results, 'VariableNames', {'Epsilon', 'n', 'In', 'I_exact', 'Error'}));
+% --- Formattazione e visualizzazione dei risultati ---
+% Cambia formato per Epsilon in esponenziale
+format("shortE");
+epsilon_col = results(:,1);
 
-% Passo (c}: Calcolo di I_2, I_4, I_8, I_16 e confronto con I_exact
-fprintf("Punto (c)\n");
+% Cambia formato per I_n e I_exact in formato long
+format("long");
+In_col = results(:,3);
+I_exact_col = results(:,4);
+
+% Cambia formato per il resto dei valori in compatto
+format("compact");
+n_col = results(:,2);
+error_col = results(:,5);
+
+% Mostra la tabella formattata
+disp('Tabella dei risultati per il punto (b):');
+disp(table(epsilon_col, n_col, In_col, I_exact_col, error_col, ...
+    'VariableNames', {'Epsilon', 'n', 'In', 'I_exact', 'Error'}));
+
+% --- Punto (c) ---
 n_values = [2, 4, 8, 16];
-In_values = zeros(size(n_values));
+I_values = zeros(size(n_values));
+
 for i = 1:length(n_values)
-    n = n_values(i);
-    In_values(i) = formula_trapezi(f, a, b, n);
-    fprintf('I_%d = %.10f (Errore = %.10e)\n', n, In_values(i), abs(I_exact - In_values(i)));
+    I_values(i) = formula_trapezi(f, 0, 1, n_values(i));
 end
 
-% Passo (d}: Calcolo del polinomio interpolante usando il metodo di Ruffini-Horner
-% Usa i valori h^2 come nodi e gli I_n calcolati come valori corrispondenti
-fprintf("Punto (d)\n");
-h_values = 1 ./ n_values;
-t = 0;  % Punto in cui vogliamo valutare il polinomio interpolante
-p0 = interpola_ruffini_horner(h_values.^2,In_values, t);
+% Visualizza i risultati per il punto (c) con formato long per I_values
+disp('Risultati per il punto (c):');
+format("long");
+for i = 1:length(n_values)
+    fprintf('I_%d = %.20f (Errore = %.10e)\n', n_values(i), I_values(i), abs(I_exact - I_values(i)));
+end
+disp('Valore esatto I:');
+disp(I_exact);
 
-fprintf('\nPolinomio interpolante p(0) = %.10f\n', p0);
-fprintf('Errore tra p(0) e I_exact = %.10e\n', abs(I_exact - p0));
+% --- Punto (d) ---
+% Passi di discretizzazione
+h_values = [1/2, 1/4, 1/8, 1/16];
+h_squared = h_values.^2;
+
+% Calcola il polinomio interpolante usando le funzioni fornite
+p0 = interpola_ruffini_horner(h_squared, I_values, 0);
+
+% Visualizza il risultato dell'interpolazione per il punto (d) in formato long
+disp('Risultato per il punto (d):');
+disp(['p(0) = ', num2str(p0, '%.15f')]);
+disp(['Confronto con il valore esatto I: ', num2str(I_exact, '%.15f')]);
+disp(abs(p0-I_exact));
+% Reset del formato al default per successive esecuzioni
+format("default");
 ```
-### Spiegazione
+
 ## Problema 3
 ## Problema 4
 ## Problema 5
