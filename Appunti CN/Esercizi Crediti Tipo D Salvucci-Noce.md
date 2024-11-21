@@ -548,7 +548,7 @@ Valore esatto di $I$ è : $1.718281828459045$
 Il valore di $p(0) = 1.718281828460389$
 Confronto con il valore esatto di $I$ = $1.718281828459045$
 
-Si nota che il valore $p(0)$ si avvicina di molto al valore esatto di $I$, infatti l'errore $\left|p(0)-I\right|=1.343813949006289e-12$  
+Si nota che il valore $p(0)$ si avvicina di molto al valore esatto di $I$, infatti l'errore $\left|p(0)-I\right|=1.343813949006289e-12$ (ovvero $1.3438\times10^{-12}$)
 ### Codice
 
 ```matlab title:"Problema 2.2"
