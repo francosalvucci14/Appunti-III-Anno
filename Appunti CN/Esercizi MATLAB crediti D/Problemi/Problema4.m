@@ -45,7 +45,7 @@ disp('Tabella dei risultati per le varie precisioni:');
 disp('Epsilon | Iterazioni K | x_epsilon                       | Norma errore ||x - x_approx||_inf');
 for i = 1:length(results)
     r = results(i);
-    fprintf('%.1e | %3d           | [%7.4f, %7.4f, %7.4f]        | %e\n', ...
+    fprintf('%.1e|%3d|[%7.4f, %7.4f, %7.4f]|%e\n', ...
             r.epsilon, r.K, r.x_approx(1), r.x_approx(2), r.x_approx(3), r.error_norm);
 end
 

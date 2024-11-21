@@ -674,11 +674,9 @@ x_exact = A \ b; % Soluzione esatta
 **Punto (b)**
 
 La matrice $S$ di dimensione $3\times12$ contenente le prime 10 iterazioni del metodo di Jacobi è la seguente : 
-$$\begin{bmatrix}
-0 & 2.6000 & 1.2095 & 0.8971 & 0.9536 & 1.0038 & 1.0055 & 1.0006 & 0.9995 & 0.9999 & 1.0000 & 1.0000 \\
+$$\begin{bmatrix}0 & 2.6000 & 1.2095 & 0.8971 & 0.9536 & 1.0038 & 1.0055 & 1.0006 & 0.9995 & 0.9999 & 1.0000 & 1.0000 \\
 0 & 2.2857 & 2.3238 & 2.0163 & 1.9699 & 1.9926 & 2.0020 & 2.0011 & 2.0000 & 1.9999 & 2.0000 & 2.0000 \\
-0 & 2.3333 & 3.0952 & 3.1079 & 3.0054 & 2.9900 & 2.9975 & 3.0007 & 3.0004 & 3.0000 & 3.0000 & 3.0000
-\end{bmatrix}$$
+0 & 2.3333 & 3.0952 & 3.1079 & 3.0054 & 2.9900 & 2.9975 & 3.0007 & 3.0004 & 3.0000 & 3.0000 & 3.0000\end{bmatrix}$$
 **Punto (c)**
 
 Tabella riportante le soluzioni fornite dal metodo di Jacobi, per ogni $\varepsilon$ richiesto
@@ -697,7 +695,7 @@ Tabella riportante le soluzioni fornite dal metodo di Jacobi, per ogni $\varepsi
 | $10^{-10}$    | 21                | $x_{\varepsilon}=\begin{bmatrix} 1.0.000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$ | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0000000003                                         |
 ### Codice
 
-```matlab
+```matlab title="Problema 2.4"
 % Dati del problema
 A = [5, 1, 2; -1, 7, 1; 0, 1, -3];
 b = [13; 16; -7];
@@ -745,7 +743,7 @@ disp('Tabella dei risultati per le varie precisioni:');
 disp('Epsilon | Iterazioni K | x_epsilon                       | Norma errore ||x - x_approx||_inf');
 for i = 1:length(results)
     r = results(i);
-    fprintf('%.1e | %3d           | [%7.4f, %7.4f, %7.4f]        | %e\n', ...
+    fprintf('%.1e|%3d|[%7.4f, %7.4f, %7.4f]|%e\n', ...
             r.epsilon, r.K, r.x_approx(1), r.x_approx(2), r.x_approx(3), r.error_norm);
 end
 ```

@@ -20,8 +20,8 @@
     "landscape": false,
     "marginTop": "10",
     "marginBottom": "10",
-    "marginLeft": "10",
-    "marginRight": "10",
+    "marginLeft": "8",
+    "marginRight": "8",
     "displayHeader": false,
     "displayFooter": true,
     "cssSnippet": "0"
