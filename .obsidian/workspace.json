@@ -20,34 +20,6 @@
               "icon": "lucide-file",
               "title": "Esercizi Crediti Tipo D Salvucci-Noce"
             }
-          },
-          {
-            "id": "9b4b7b31303cb83f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti CN/Lezione 6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lezione 6"
-            }
-          },
-          {
-            "id": "051fe79ef7860137",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti CN/Lezione 7 (6.1).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lezione 7 (6.1)"
-            }
           }
         ]
       }
@@ -138,25 +110,6 @@
             }
           },
           {
-            "id": "a0bdd939fe6d02cd",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
             "id": "7918521bebedec53",
             "type": "leaf",
             "state": {
@@ -168,19 +121,6 @@
               },
               "icon": "links-going-out",
               "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
-            "id": "9a04c7d8092b8f18",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
             }
           }
         ],
@@ -219,7 +159,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0762c8319a947449",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
     "Appunti CN/Esercizi MATLAB crediti D/img/Pasted image 20241111124440.png",
     "Appunti CN/Lezione 7 (6.1).md",
