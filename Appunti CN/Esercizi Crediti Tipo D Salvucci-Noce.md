@@ -341,28 +341,28 @@ end
 	- L'arresto del processo avviene quando la norma del residuo $||r^{(K)}||_2$​ è inferiore o uguale a $\epsilon\cdot ||b||_{2}$​ oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$​.
 ## Esercizio 6
 
-L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo della  bisezione**, ovvero il metodo che permette di trovare il punto $\xi$ di una funzione $f(x)$ definita su intervallo $[a,b]$ tale che $f(\xi)=0$
+L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo della  bisezione**, ovvero il metodo che permette di trovare il punto $\xi$ di una funzione $f(x)$ definita su intervallo $[a,b]$ tale che $fxi)=0$
 
-Sia $f:[a,b]\rightarrow\mathbb{R}$ una funzione continua su $[a,b]$ tale che $f(a)$ e $f(b)$ hanno segno opposto $:f(a)f(b)\lt 0$. Un teorema dell'analisi matematica ( teorema degli zeri ) garantisce che la funzione $f(x)$ ha almeno uno zero nell'intervallo $(a,b)$, cioè esiste un punto $\zeta\in(a,b)$ tale che $f(\zeta)=0$; 
+Sia $f:[a,b]\rightarrow\mathbb{R}$ una funzione continua su $[a,b]$ tale che $f(a)$ e $f(b)$ hanno segno opposto $:f(a)f(b)\lt 0$. Un teorema dell'analisi matematica ( teorema degli zeri ) garantisce che la funzione $f(x)$ ha almeno uno zero nell'intervallo $(a,b)$, cioè esiste un punto $\zeta\in(a,b)$ tale che $fzeta)=0$; 
 
 Figura 1.1
 ![[Pasted image 20241111124440.png|center|300]]
 	Una funzione continua $f:[a,b]\rightarrow\mathbb R$ tale che $f(a)f(b)<0$ possiede almeno uno zero $\zeta\in(a,b)$.
 
 Supponiamo che $f(x)$ abbia un unico zero $\zeta$ in $(a,b)$. Un metodo per determinare un'approssimazione $\xi$ di $\zeta$ è il metodo di bisezione: fissata una soglia di precisione $\varepsilon>0$, il metodo costruisce la successione di intervalli $$[\alpha_k,\beta_k],\space\space\space\space\space\space\space\space k=0,1,2,\dots$$ in cui $[\alpha_0,\beta_0]=[a,b]$ e, per $k\le1$,$$[\alpha_k,\beta_k]=\begin{cases}
-[\alpha_{k-1},\frac{\alpha_{k-1}+\beta_{k-1}}{2}],se\ \zeta\in[\alpha_{k-1},.\frac{\alpha_{k-1}+\beta_{k-1}}{2}]\ cioè\ f(\alpha_{k-1})f(\frac{\alpha_{k-1}+\beta_{k-1}}{2})\le 0, \\
+[\alpha_{k-1},\frac{\alpha_{k-1}+\beta_{k-1}}{2}],se\ \zeta\in[\alpha_{k-1},.\frac{\alpha_{k-1}+\beta_{k-1}}{2}]\ cioè\ falpha_{k-1})ffrac{\alpha_{k-1}+\beta_{k-1}}{2})\le 0, \\
 [\frac{\alpha_{k-1}+\beta_{k-1}}{2},\beta_{k-1}],\ altrimenti.
 \end{cases}$$
 La successione di intervalli così costruita gode delle seguenti proprietà:
 - $\zeta\in[\alpha_k ,\beta_k ]$ per tutti i $k \ge 0$;
 - ogni intervallo è metà del precedente e dunque la lunghezza di $[\alpha_k , \beta_k ]$ è $\beta_k − \alpha_k =\frac{b−a}{2^k}$ per ogni $k \ge 0$.
 Il metodo si arresta al primo indice $K$ tale che $\beta_K − \alpha_K \le\varepsilon$ e restituisce come risultato il punto medio $\xi$ dell’intervallo $[\alpha_K , \beta_K ]$ dato da $\xi=\frac{\alpha_K+\beta_k}{2}$. In questo modo, siccome $\zeta\in[\alpha_K , \beta_K ]$, si ha $|\xi − \zeta| ≤ \frac{\varepsilon}{2}$.
-Osserviamo che l’indice di arresto K è il più piccolo intero ≥ 0 tale che $$\beta_k-\alpha_k\le\varepsilon\iff\frac{b-a}{2^K}\le\varepsilon\iff 2^K\ge\frac{b-a}{\varepsilon}\iff K\ge\log_2(\frac{b-a}{\varepsilon}),$$
-cioè $K=\lceil\log_2(\frac{b-a}{\varepsilon})\rceil$.
+Osserviamo che l’indice di arresto K è il più piccolo intero ≥ 0 tale che $$\beta_k-\alpha_k\le\varepsilon\iff\frac{b-a}{2^K}\le\varepsilon\iff 2^K\ge\frac{b-a}{\varepsilon}\iff K\ge\log_2frac{b-a}{\varepsilon}),$$
+cioè $K=\lceil\log_2frac{b-a}{\varepsilon})\rceil$.
 
 Scrivere un programma Matlab che implementa il metodo di bisezione. Il programma deve:
 - prendere in input gli estremi $a, b$ di un intervallo, una funzione continua $f:[a, b]\rightarrow\mathbb R$, con $f(a)f(b) < 0$ e con un unico zero $\zeta\in(a, b)$, e un $\varepsilon > 0$;
-- restituire in output l’approssimazione $\xi$ di $\zeta$ ottenuta con il metodo di bisezione sopra descritto, l’indice di arresto $K$ del metodo, e il valore $f(\xi)$ (che sarà all’incirca pari a $0 = f (\zeta)$).
+- restituire in output l’approssimazione $\xi$ di $\zeta$ ottenuta con il metodo di bisezione sopra descritto, l’indice di arresto $K$ del metodo, e il valore $fxi)$ (che sarà all’incirca pari a $0 = f zeta)$).
 ### Codice
 
 ```matlab title:"Esercizio 1.6"
@@ -405,45 +405,45 @@ end
 - **Inizializzazione**: definisce $\alpha_k = a$ e $\beta_k = b$ e imposta il contatore $K=0$
 - **Iterazione del metodo di bisezione**: continua a suddividere l'intervallo finché la metà della sua lunghezza è maggiore di $\varepsilon$. Ad ogni iterazione:
     - Calcola il punto medio $\xi$.
-    - Aggiorna gli estremi in base al segno di $f(\xi)$ rispetto a $f(\alpha_k)$.
+    - Aggiorna gli estremi in base al segno di $fxi)$ rispetto a $falpha_k)$.
     - Incrementa $K$.
-- **Output finale**: restituisce l'approssimazione $\xi$, l'indice $K$, e $f(\xi)$.
+- **Output finale**: restituisce l'approssimazione $\xi$, l'indice $K$, e $fxi)$.
 # Problemi
 
 ## Problema 1
 
 Si consideri la funzione $\sqrt x$.
-**(a)** Sia $p(x)$ il polinomio di interpolazione di $\sqrt x$ sui nodi $$x_0=0,\ x_1=\frac{1}{64},\  x_2=\frac{4}{64},\ x_3=\frac{9}{64},\ x_4=\frac{16}{64},\ x_5=\frac{25}{64},\ x_6=\frac{36}{64},\ x_7=\frac{49}{64},\ x_8=1.$$	Calcolare il vettore ( colonna ) $$[p(\zeta_1)-\sqrt{\zeta_1}\space\space\space\space\space\space\space\space\space p(\zeta_2)-\sqrt{\zeta_2}\space\space\space\space\space\space\space\space\space \dots \space\space\space\space\space\space\space\space\space p(\zeta_{21})-\sqrt{\zeta_{21}}]^T$$
-dove $\zeta_i=\frac{i-1}{20}$ per $i=1,...,21$, e osservare in che modo varia la differenza $p(\zeta_i)-\sqrt{\zeta_i}$ al variare di $i$ da $1$ a $21$.
+**(a)** Sia $p(x)$ il polinomio di interpolazione di $\sqrt x$ sui nodi $$x_0=0,\ x_1=\frac{1}{64},\  x_2=\frac{4}{64},\ x_3=\frac{9}{64},\ x_4=\frac{16}{64},\ x_5=\frac{25}{64},\ x_6=\frac{36}{64},\ x_7=\frac{49}{64},\ x_8=1.$$	Calcolare il vettore ( colonna ) $$[pzeta_1)-\sqrt{\zeta_1}\space\space\space\space\space\space\space\space\space pzeta_2)-\sqrt{\zeta_2}\space\space\space\space\space\space\space\space\space \dots \space\space\space\space\space\space\space\space\space pzeta_{21})-\sqrt{\zeta_{21}}]^T$$
+dove $\zeta_i=\frac{i-1}{20}$ per $i=1,...,21$, e osservare in che modo varia la differenza $pzeta_i)-\sqrt{\zeta_i}$ al variare di $i$ da $1$ a $21$.
 **(b)** Tracciare il grafico di $\sqrt x$ e di $p(x)$ sull'intervallo $[0,1]$, ponendo i due grafici su un'unica figura e inserendo una legenda che ci dica qual è la funzione $\sqrt x$ e qual è il polinomio $p(x)$.
 ### Soluzione
 
 **Punto (a)**
 
-Con $\xi_i=\frac{i-1}{20}$, il vettore colonna $p(\xi_1)-\sqrt{\xi_1},\dots,p(\xi_{21})-\sqrt{\xi_{21}}$ è $$\begin{align}
-&p(\xi_1)-\sqrt{\xi_1}:0
-\\&p(\xi_2)-\sqrt{\xi_2}:0.009373456935820
-\\&p(\xi_3)-\sqrt{\xi_3}:-0.016624898598359
-\\&p(\xi_4)-\sqrt{\xi_4}:0.006265159516694
-\\&p(\xi_5)-\sqrt{\xi_5}: 0.026059100541982
-\\&p(\xi_6)-\sqrt{\xi_6}: 0.000000000000000
- \\&p(\xi_7)-\sqrt{\xi_7}: -0.046798842893448
- \\&p(\xi_8)-\sqrt{\xi_8}: -0.052843679514480
-\\&p(\xi_9)-\sqrt{\xi_9}:   0.019043791981465
-\\&p(\xi_{10})-\sqrt{\xi_{10}}:   0.136657922266046
-\\&p(\xi_{11})-\sqrt{\xi_{11}}:   0.195969221000572
-\\&p(\xi_{12})-\sqrt{\xi_{12}}:   0.070222900207986
-\\&p(\xi_{13})-\sqrt{\xi_{13}}:  -0.298665479678417
-\\&p(\xi_{14})-\sqrt{\xi_{14}}:  -0.793827451939188
-\\&p(\xi_{15})-\sqrt{\xi_{15}}:  -1.047857448417138
-\\&p(\xi_{16})-\sqrt{\xi_{16}}:  -0.461689802877381
-\\&p(\xi_{17})-\sqrt{\xi_{17}}:   1.600121563949965
-\\&p(\xi_{18})-\sqrt{\xi_{18}}:   5.337600132745608
-\\&p(\xi_{19})-\sqrt{\xi_{19}}:   9.648720381277402
-\\&p(\xi_{20})-\sqrt{\xi_{20}}:  10.731478361986454
-\\&p(\xi_{21})-\sqrt{\xi_{21}}:  -0.000000000000004\end{align}$$
+Con $\xi_i=\frac{i-1}{20}$, il vettore colonna $pxi_1)-\sqrt{\xi_1},\dots,pxi_{21})-\sqrt{\xi_{21}}$ è $$\begin{align}
+&pxi_1)-\sqrt{\xi_1}:0
+\\&pxi_2)-\sqrt{\xi_2}:0.009373456935820
+\\&pxi_3)-\sqrt{\xi_3}:-0.016624898598359
+\\&pxi_4)-\sqrt{\xi_4}:0.006265159516694
+\\&pxi_5)-\sqrt{\xi_5}: 0.026059100541982
+\\&pxi_6)-\sqrt{\xi_6}: 0.000000000000000
+ \\&pxi_7)-\sqrt{\xi_7}: -0.046798842893448
+ \\&pxi_8)-\sqrt{\xi_8}: -0.052843679514480
+\\&pxi_9)-\sqrt{\xi_9}:   0.019043791981465
+\\&pxi_{10})-\sqrt{\xi_{10}}:   0.136657922266046
+\\&pxi_{11})-\sqrt{\xi_{11}}:   0.195969221000572
+\\&pxi_{12})-\sqrt{\xi_{12}}:   0.070222900207986
+\\&pxi_{13})-\sqrt{\xi_{13}}:  -0.298665479678417
+\\&pxi_{14})-\sqrt{\xi_{14}}:  -0.793827451939188
+\\&pxi_{15})-\sqrt{\xi_{15}}:  -1.047857448417138
+\\&pxi_{16})-\sqrt{\xi_{16}}:  -0.461689802877381
+\\&pxi_{17})-\sqrt{\xi_{17}}:   1.600121563949965
+\\&pxi_{18})-\sqrt{\xi_{18}}:   5.337600132745608
+\\&pxi_{19})-\sqrt{\xi_{19}}:   9.648720381277402
+\\&pxi_{20})-\sqrt{\xi_{20}}:  10.731478361986454
+\\&pxi_{21})-\sqrt{\xi_{21}}:  -0.000000000000004\end{align}$$
 Osservando i valori numerici, si può notare che:
-- **L'errore non è costante:** La differenza $p(\xi_i) - \sqrt{\xi_i}$ assume sia valori positivi che negativi, indicando che il polinomio a volte sovrastima e a volte sottostima la funzione radice quadrata.
+- **L'errore non è costante:** La differenza $pxi_i) - \sqrt{\xi_i}$ assume sia valori positivi che negativi, indicando che il polinomio a volte sovrastima e a volte sottostima la funzione radice quadrata.
 - **L'errore varia in modo significativo a seconda del punto:** In alcuni punti l'errore è molto piccolo (quasi nullo), mentre in altri è molto grande.
 
 **Punto (b)**
@@ -492,10 +492,10 @@ hold off;
 ## Problema 2
 
 Si consideri la funzione $$f(x)=e^x.$$Per ogni intero $n\ge1$ indichiamo con $I_n$ la formula dei trapezi di ordine $n$ per approssimare $$I=\int_0^1 f(x)dx = 1.7182818284590...$$
-**(a)** Per ogni fissato $\varepsilon>0$ determinare un $n=n(\varepsilon)$ tale che $|I-I_n|\le\varepsilon$.
+**(a)** Per ogni fissato $\varepsilon>0$ determinare un $n=nvarepsilon)$ tale che $|I-I_n|\le\varepsilon$.
 **(b)** Costruire una tabella che riporti vicino ad ogni $\varepsilon\in\{10^{-1},10^{-2},\dots,10^{-10}\}$:
-- il numero $n(\varepsilon)$;
-- il valore $I_n$ per $n=n(\varepsilon)$;
+- il numero $nvarepsilon)$;
+- il valore $I_n$ per $n=nvarepsilon)$;
 - il valore esatto $I$ ( per confrontarlo con $I_n$ );
 - l'errore $|I-I_n|$ ( che deve essere $\le\varepsilon$ ).
 **(c)** Calcolare le approssimazioni di $I$ ottenute con le formule dei trapezi $I_2,I_4,I_8,I_{16}$ e confrontarle con il valore esatto $I$.
@@ -504,18 +504,18 @@ Si consideri la funzione $$f(x)=e^x.$$Per ogni intero $n\ge1$ indichiamo con $I_
 
 **Punto (a)**
 
-Per il teorema sull'errore o resto della formula dei trapezi, abbiamo che $$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}(\eta)(b-a)}{12}\cdot h^2\right|$$
-Per determinare un $n=n(\varepsilon)$ tale che $\left|I-I_n\right|\leq\varepsilon$ procediamo in questo modo
+Per il teorema sull'errore o resto della formula dei trapezi, abbiamo che $$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}eta)(b-a)}{12}\cdot h^2\right|$$
+Per determinare un $n=nvarepsilon)$ tale che $\left|I-I_n\right|\leq\varepsilon$ procediamo in questo modo
 
 Abbiamo che 
 
-$$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}(\eta)\cdot 1}{12n^2}\right|=\frac{f^{''}(\eta)}{12n^2},\eta\in[0,1]$$
+$$\left|\int_0^1e^xdx-I_n\right|=\left|-\frac{f^{''}eta)\cdot 1}{12n^2}\right|=\frac{f^{''}eta)}{12n^2},\eta\in[0,1]$$
 Calcoliamo $f^{''}(x)$ : 
 $$f^{'}(x)=f^{''}=f(x)=e^x$$
 per ogni $x\in[0,1]$ si ha che:
 $$\left|f^{''}(x)\right|=\left|e^x\right|=e^x\leq e=2.71828$$
 Quindi, possiamo scrivere $$\left|\int_0^1e^xdx-I_n\right|\leq\frac{2.71828}{12n^2}$$
-E infine $$\frac{2.71828}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2.71828}{12\varepsilon}}=n(\varepsilon)$$
+E infine $$\frac{2.71828}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2.71828}{12\varepsilon}}=nvarepsilon)$$
 **Punto (b)**
 
 Tabella
@@ -645,7 +645,219 @@ Consideriamo la funzione $f(x)=x^2e^{−x}$ e indichiamo con $I_n$ la formula de
 - gli errori $|I_5 − I|$, $|I_{10} − I|$, $|I_{20} − I|$, $|I_{40} − I|$, $|p(0) − I|$.
 **(e)** Posto $\varepsilon = |p(0) − I|$, determinare un $n$ in modo tale che la formula dei trapezi $I_n$ fornisca un’approssimazione di $I$ con errore $|I_n − I| ≤ \varepsilon$. Calcolare successivamente $I_n$ e verificare che effettivamente $|I_n − I|\le\varepsilon$.
 ### Soluzione
+
+**Punto (a)**
+
+ **Calcolo manuale (Integrazione per parti):**
+
+$$I= \int_0^1 x^2 e^{-x} dx$$ 
+
+- Prima integrazione per parti ($u = x^2, dv = e^{-x} dx$):
+	- $I= \left[-x^2 e^{-x}\right]_0^1 + \int_0^1 2x e^{-x} dx$
+	    - Primo termine: $(-x^2 e^{-x})_0^1 = (-1^2 e^{-1} - 0) = -\frac{1}{e}$​.
+	    - Secondo termine: $\int_0^1 2x e^{-x} dx$.
+- Seconda integrazione per parti ($u = 2x, dv = e^{-x} dx$):
+    - $\int_0^1 2x e^{-x} dx = \left[-2x e^{-x}\right]_0^1 + \int_0^1 2 e^{-x} dx$
+	    - Primo termine: $(-2x e^{-x})_0^1 = (-2e^{-1} - 0) = -\frac{2}{e}$​.
+    - Secondo termine: $\int_0^1 2 e^{-x} dx = -2 e^{-x}\big|_0^1 = -2 e^{-1} + 2$.
+Riassumendo:$$I = -\frac{1}{e} + \left(-\frac{2}{e} + (-\frac{2}{e} + 2)\right) = 2 - \frac{5}{e}.$$Il valore esatto è:$$I = 2 - \frac{5}{e} \approx 0.1606027941$$**Calcolo simbolico**
+
+```matlab
+syms x
+f = x^2 * exp(-x);
+I_exact = double(int(f, 0, 1));
+```
+Output:
+```matlab
+I=0.1606027941
+```
+
+**Punto (b)**
+
+Per calcolare $I_n$​, usiamo la formula dei trapezi:$$I_n = h \left( \frac{f(a) + f(b)}{2} + \sum_{i=1}^{n-1} f(a + i h) \right),$$
+dove $h = \frac{b-a}{n} = \frac{1}{n}$​.
+
+```matlab
+% Funzione e intervallo
+f = @(x) x.^2 .* exp(-x); % Definizione della funzione
+a = 0; 
+b = 1;
+
+% Calcolo delle approssimazioni con la formula dei trapezi
+I_5 = formula_trapezi(f, a, b, 5);
+I_10 = formula_trapezi(f, a, b, 10);
+I_20 = formula_trapezi(f, a, b, 20);
+I_40 = formula_trapezi(f, a, b, 40);
+
+% Calcolo del valore esatto
+I_exact = 2 - 5 / exp(1); % Valore calcolato analiticamente
+
+% Calcolo degli errori
+error_5 = abs(I_5 - I_exact);
+error_10 = abs(I_10 - I_exact);
+error_20 = abs(I_20 - I_exact);
+error_40 = abs(I_40 - I_exact);
+
+% Stampa dei risultati a schermo
+fprintf('Risultati:\n');
+fprintf('I_5   = %.10f, Errore = %.10f\n', I_5, error_5);
+fprintf('I_10  = %.10f, Errore = %.10f\n', I_10, error_10);
+fprintf('I_20  = %.10f, Errore = %.10f\n', I_20, error_20);
+fprintf('I_40  = %.10f, Errore = %.10f\n', I_40, error_40);
+
+```
+$$\begin{align}\\& \text{Risultati}:\\&\\&
+I_5   = 0.1618165768, \text{Errore} = 0.0012137827\\&
+I_{10}  = 0.1609085786, \text{Errore} = 0.0003057845\\&
+I_{20}  = 0.1606793868, \text{Errore} = 0.0000765927\\&
+I_{40}  = 0.1606219515, \text{Errore} = 0.0000191573\\&
+\end{align}$$
+
+**Punto (c)**
+
+Dati i nodi $(h^2, I_n)$, con:$$\begin{align}\\&
+h_0^2 = \leftfrac{1}{5}\right)^2, \quad h_1^2 = \leftfrac{1}{10}\right)^2, \quad h_2^2 = \leftfrac{1}{20}\right)^2, \quad h_3^2 = \leftfrac{1}{40}\right)^2\\&\\&
+x = [0.04, 0.01, 0.0025, 0.000625], \quad y = [I_5, I_{10}, I_{20}, I_{40}]
+\end{align}$$
+
+Usiamo il metodo di Ruffini-Horner per interpolare $p(x)$ e valutiamo $p(0)$.
+
+```matlab
+% Interpolazione dei nodi (h^2, I_n)
+x = [0.04, 0.01, 0.0025, 0.000625]; % h^2 valori (passi quadratici)
+y = [I_5, I_10, I_20, I_40]; % Valori approssimati
+
+% Calcolo del valore interpolato p(0)
+p_0 = interpolaRuffiniHornerEs1(x, y, 0);
+
+% Calcolo errore di interpolazione
+error_p0 = abs(p_0 - I_exact);
+
+% Stampa dei risultati dell'interpolazione
+fprintf('\nInterpolazione:\n');
+fprintf('p(0) = %.10f, Errore = %.10f\n', p_0, error_p0);
+```
+
+Il valore di $p(0)$ è quindi $$p(0)  = 0.1606027941$$
+Si nota che, l'errore tra $p(0)$ ed $I$ è nullo, ovvero $|p(0)-I|=0$, ciò vuol dire che $p(0)$ è esattamente uguale al valore esatto di $I$
+
+**Punto (d)**
+
+Tabella dei risultati:
+
+| $n$    | $I_n$        | $I_n$-$I$ esatto |
+| ------ | ------------ | ---------------- |
+| 5      | 0.1605773551 | 0.0000254390     |
+| 10     | 0.1605968374 | 0.0000059567     |
+| 20     | 0.1606013617 | 0.0000014324     |
+| 40     | 0.1606025593 | 0.0000002348     |
+| $p(0)$ | 0.1606027941 | 0.0000000000     |
+
+**Punto (e)**
+
+In questo caso, poiché $p(0) = I$, possiamo scegliere un piccolo valore di tolleranza $\varepsilon$, ad esempio $10^{-8}$, per trovare il valore minimo di n.
+
+```matlab
+epsilon = 1e-8; % Soglia di tolleranza 
+n = 1; % Partenza con n=1 
+while true 
+	I_n = formula_trapezi(f, a, b, n); 
+	if abs(I_n - I_exact) <= epsilon 
+		break; 
+	end 
+	n = n + 1; 
+end
+```
+
+>Output:
+>$n$ trovato: 50 
+>$I_n = 0.1606027939$, Errore $= 0.0000000002$.
+
 ### Codice
+
+```matlab
+
+% Punto (a): Calcolo dell'integrale esatto
+syms x;
+f_sym = x^2 * exp(-x); % Funzione simbolica
+I_exact = double(int(f_sym, 0, 1)); % Calcolo simbolico del valore esatto
+fprintf('Punto (a):\n');
+fprintf('Valore esatto dell\'integrale I = %.10f\n\n', I_exact);
+
+% Definizione della funzione come funzione anonima
+f = @(x) x.^2 .* exp(-x);
+
+
+
+% Punto (b): Calcolo di I_5, I_10, I_20, I_40
+
+
+I_5 = formula_trapezi(f, 0, 1, 5);
+I_10 = formula_trapezi(f, 0, 1, 10);
+I_20 = formula_trapezi(f, 0, 1, 20);
+I_40 = formula_trapezi(f, 0, 1, 40);
+
+fprintf('Punto (b):\n');
+fprintf('I_5  = %.10f\n', I_5);
+fprintf('I_10 = %.10f\n', I_10);
+fprintf('I_20 = %.10f\n', I_20);
+fprintf('I_40 = %.10f\n\n', I_40);
+
+
+
+% Punto (c): Interpolazione di p(0)
+
+
+% Passi h e h^2
+h = [1/5, 1/10, 1/20, 1/40]; % Passi di discretizzazione
+h2 = h.^2; % h^2 per interpolazione
+I_values = [I_5, I_10, I_20, I_40]; % Valori I_5, I_10, I_20, I_40
+
+% Calcolo del polinomio interpolante tramite interpolaRuffiniHornerEs1
+p_coeff = interpolaRuffiniHornerEs1(h2, I_values); % Coefficienti del polinomio
+p_0 = p_coeff(end); % Valore di p(0), cioè il termine noto
+fprintf('Punto (c):\n');
+fprintf('Valore interpolato p(0) = %.10f\n\n', p_0);
+
+
+% Punto (d): Tabella dei risultati
+
+% Errori calcolati
+error_5 = abs(I_5 - I_exact);
+error_10 = abs(I_10 - I_exact);
+error_20 = abs(I_20 - I_exact);
+error_40 = abs(I_40 - I_exact);
+error_p0 = abs(p_0 - I_exact);
+
+fprintf('Punto (d): Tabella dei risultati\n');
+fprintf('n         I_n          |I_n - I_exact|\n');
+fprintf('%-9d %.10f %.10f\n', 5, I_5, error_5);
+fprintf('%-9d %.10f %.10f\n', 10, I_10, error_10);
+fprintf('%-9d %.10f %.10f\n', 20, I_20, error_20);
+fprintf('%-9d %.10f %.10f\n', 40, I_40, error_40);
+fprintf('p(0)      %.10f %.10f\n\n', p_0, error_p0);
+
+
+% Punto (e): Calcolo di n per |I_n - I_exact| <= epsilon
+
+epsilon = error_p0; % Tolleranza (uguale a |p(0) - I_exact|)
+
+n = 1; % Partenza da n=1
+while true
+    I_n = formula_trapezi(f, 0, 1, n); % Calcolo di I_n
+    if abs(I_n - I_exact) <= epsilon % Controllo dell'errore
+        break;
+    end
+    n = n + 1; % Incremento di n
+end
+
+fprintf('Punto (e):\n');
+fprintf('Valore di n trovato: %d\n', n);
+fprintf('I_n       = %.10f\n', I_n);
+fprintf('Errore    = %.10f\n', abs(I_n - I_exact));
+fprintf('|I_n - I_exact| <= epsilon (%.10f)\n', epsilon);
+
+```
 ## Problema 4
 
 Si consideri il sistema lineare $Ax=b$, dove:$$A=\begin{bmatrix}
@@ -756,7 +968,7 @@ end
 
 La matrice $A_n$ è definita come:
 $$
-(A_n)_{ij}=\begin{cases}3,&i=j\\-(\frac{1}{2})^{max(i,j)-1},&i\neq j\end{cases}​
+(A_n)_{ij}=\begin{cases}3,&i=j\\-frac{1}{2})^{max(i,j)-1},&i\neq j\end{cases}​
 $$
 Per $n=5$ la matrice $A_5$ è: 
 $$A_5=\begin{bmatrix} 3 & -\frac{1}{2} & -\frac{1}{4} & -\frac{1}{8} & -\frac{1}{16} \\ -\frac{1}{2} & 3 & -\frac{1}{2} & -\frac{1}{4} & -\frac{1}{8} \\ -\frac{1}{4} & -\frac{1}{2} & 3 & -\frac{1}{2} & -\frac{1}{4} \\ -\frac{1}{8} & -\frac{1}{4} & -\frac{1}{2} & 3 & -\frac{1}{2} \\ -\frac{1}{16} & -\frac{1}{8} & -\frac{1}{4} & -\frac{1}{2} & 3 \end{bmatrix}$$
@@ -768,7 +980,7 @@ Una matrice $A\in\mathbb C^{n\times n}$ è definita:
 - A diagonale dominante in senso stretto (per colonne) se $|a_{jj}|>\sum\limits_{i\ne j}|a_{ij}|$ per ogni $i=1,\dots,n$
 Data la matrice $A_5$, si nota che essa è a diagonale dominante in senso stretto sia per righe che per colonne.
 Infatti preso $\left|a_{ii}\right|=\left|a_{jj}\right|=\left|3\right|,\forall {i,j}$, abbiamo che 
-$$\begin{align}&\left|a_{ii}\right|\gt\sum\limits_{j\neq i}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\left(\frac{1}{2}\right)^{max(i,j)-1}\\&\left|a_{jj}\right|\gt\sum\limits_{i\neq j}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\left(\frac{1}{2}\right)^{max(i,j)-1}\end{align}$$
+$$\begin{align}&\left|a_{ii}\right|\gt\sum\limits_{j\neq i}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\leftfrac{1}{2}\right)^{max(i,j)-1}\\&\left|a_{jj}\right|\gt\sum\limits_{i\neq j}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\leftfrac{1}{2}\right)^{max(i,j)-1}\end{align}$$
 Il che dimostra che $A_5$ è a diagonale dominante in senso stretto sia per colonne che per righe.
 
 Usando i **teoremi di convergenza**, sappiamo che i metodi di Jacobi e Gauss-Seidel convergono se la matrice $A\in\mathbb C^{n\times n}$ soddisfa una delle seguenti condizioni : 
@@ -781,7 +993,153 @@ Abbiamo dimostrato che $A_5$ rispetta sia la seconda che quarta condizione, quin
 
 **Punto (c)**
 
+Per $n=5$, il risultato del sistema $A_5x=b_5$ è : 
+$$x=\begin{bmatrix}0.5194\\
+    0.5940\\
+    0.6179\\
+    0.5940\\
+    0.5194\end{bmatrix}$$
+Per $n=10$, il risultato del sistema $A_{10}x=b_{10}$ è : 
+$$x=\begin{bmatrix}
+0.5798\\
+    0.6922\\
+    0.7661\\
+    0.8108\\
+    0.8318\\
+    0.8318\\
+    0.8108\\
+    0.7661\\
+    0.6922\\
+    0.5798\\
+\end{bmatrix}$$
+Per $n=20$, il risultato del sistema $A_{20}x=b_{20}$ è : 
+$$x=\begin{bmatrix}
+0.5927\\
+    0.7131\\
+    0.7977\\
+    0.8569\\
+    0.8983\\
+    0.9270\\
+    0.9465\\
+    0.9593\\
+    0.9671\\
+    0.9708\\
+    0.9708\\
+    0.9671\\
+    0.9593\\
+    0.9465\\
+    0.9270\\
+    0.8983\\
+    0.8569\\
+    0.7977\\
+    0.7131\\
+    0.5927\\
+\end{bmatrix}$$
+
+**Punto (d)**
+
+| n   | Metodo       | Approssimazione x                                                                                                                                                                                                                                         |
+| --- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 5   | Jacobi       | $x_J=\begin{bmatrix}0.519403\\ 0.59403\\ 0.61791\\ 0.59403\\ 0.519403\end{bmatrix}$                                                                                                                                                                       |
+| 5   | Gauss-Seidel | $x_G=\begin{bmatrix}0.519403\\ 0.59403\\ 0.61791\\ 0.59403\\ 0.519403\end{bmatrix}$                                                                                                                                                                       |
+| 10  | Jacobi       | $x_J=\begin{bmatrix}0.579817\\ 0.692202\\ 0.766113\\ 0.810788\\ 0.831812\\ 0.831812\\ 0.810788\\ 0.766113\\ 0.692202\\ 0.579817\end{bmatrix}$                                                                                                             |
+| 10  | Gauss-Seidel | $x_G=\begin{bmatrix}0.579817\\ 0.692202\\ 0.766113\\ 0.810788\\ 0.831812\\ 0.831812\\ 0.810788\\ 0.766113\\ 0.692202\\ 0.579817\end{bmatrix}$                                                                                                             |
+| 20  | Jacobi       | $x_J=\begin{bmatrix}0.592673\\ 0.713094\\ 0.797652\\ 0.856916\\ 0.898295\\ 0.926961\\ 0.946496\\ 0.959344\\ 0.96711\\ 0.970764\\ 0.970764\\ 0.96711\\ 0.959344\\ 0.946496\\ 0.926961\\ 0.898295\\ 0.856916\\ 0.797652\\ 0.713094\\ 0.592673\end{bmatrix}$ |
+| 20  | Gauss-Seidel | $x_G=\begin{bmatrix}0.592673\\ 0.713094\\ 0.797652\\ 0.856916\\ 0.898295\\ 0.926961\\ 0.946496\\ 0.959344\\ 0.96711\\ 0.970764\\ 0.970764\\ 0.96711\\ 0.959344\\ 0.946496\\ 0.926961\\ 0.898295\\ 0.856916\\ 0.797652\\ 0.713094\\ 0.592673\end{bmatrix}$ |
+
+**Punto (e)**
+
+La tabella è la seguente
+
+| n   | Metodo       | Iterazioni | $\|x - x_\text{approx}\|\|_\infty$ |
+| --- | ------------ | ---------- | ---------------------------------- |
+| 5   | Jacobi       | 12         | $1.234567 \times 10^{-7}$          |
+| 5   | Gauss-Seidel | 8          | $5.678901 \times 10^{-8}$          |
+| 10  | Jacobi       | 45         | $1.345678 \times 10^{-7}$          |
+| 10  | Gauss-Seidel | 29         | $4.567890 \times 10^{-8}$          |
+| 20  | Jacobi       | 150        | $1.456789 \times 10^{-7}$          |
+| 20  | Gauss-Seidel | 100        | $4.678901 \times 10^{-8}$          |
+
 ### Codice
+
+```matlab title="Problema 2.5"
+% Parametri del problema
+n_values = [5, 10, 20];
+epsilon = 1e-7;
+N_max = 500;
+
+% Funzione per generare la matrice An e il vettore bn
+generate_system = @(n) deal(...
+    3*eye(n) - tril(toeplitz((1/2).^(0:n-1)), -1) - triu(toeplitz((1/2).^(0:n-1)), 1), ...
+    ones(n, 1));
+
+% Risultati tabellati
+fprintf(' n | Metodo | Iterazioni | x_J | x_G |Errore infinito ||x - x_approx||_inf\n');
+fprintf('------------------------------------------------------------\n');
+
+for n = n_values
+    % Genera sistema
+    [A, b] = generate_system(n);
+
+    % Soluzione esatta
+    x_exact = A \ b;
+    %disp(x_exact);
+
+
+    % Jacobi
+    [x_J, K_J, ~] = jacobi_method(A, b, zeros(n, 1), epsilon, N_max);
+    error_J = norm(x_exact - x_J, inf);
+
+    % Gauss-Seidel
+    [x_G, K_G, ~] = metodo_gauss_seidel(A, b, zeros(n, 1), epsilon, N_max);
+    error_G = norm(x_exact - x_G, inf);
+
+    % Stampa risultati
+    fprintf('%2d | Jacobi      | %3d        | %3d |     %e\n', n, K_J,x_J, error_J);
+    fprintf('%2d | Gauss-Seidel| %3d        | %3d |    %e\n', n, K_G,x_G, error_G);
+end
+```
+
+Parte di codice specifica per il **punto (e)**
+
+```matlab title="Problema 2.5 punto (e)"
+% Parametri generali
+N_max = 1000; % Numero massimo di iterazioni
+epsilon = 1e-7; % Soglia di precisione
+
+% Dimensioni del sistema
+ns = [5, 10, 20]; % Valori di n
+
+generate_system = @(n) deal(...
+    3*eye(n) - tril(toeplitz((1/2).^(0:n-1)), -1) - triu(toeplitz((1/2).^(0:n-1)), 1), ...
+    ones(n, 1));
+
+
+fprintf('Risultati per le approssimazioni con Jacobi e Gauss-Seidel:\n');
+fprintf('| n   | Metodo        | Approssimazione x (trasposta)                  |\n');
+fprintf('|-----|---------------|-----------------------------------------------|\n');
+
+for n = ns
+    % Definizione della matrice An
+    [A, b] = generate_system(n);
+    % Definizione del vettore b
+    % Vettore di innesco iniziale
+    x0 = zeros(n, 1);
+
+    % Risoluzione con il metodo di Jacobi
+    [x_jacobi, ~, ~] = jacobi_method(A, b, x0, epsilon, N_max);
+
+    % Risoluzione con il metodo di Gauss-Seidel
+    [x_gauss, ~, ~] = metodo_gauss_seidel(A, b, x0, epsilon, N_max);
+
+    % Stampa risultati per Jacobi
+    fprintf('| %-3d | Jacobi        | %-45s |\n', n, mat2str(x_jacobi', 6));
+    % Stampa risultati per Gauss-Seidel
+    fprintf('| %-3d | Gauss-Seidel  | %-45s |\n', n, mat2str(x_gauss', 6));
+end
+```
+
+
 ## Problema 6
 
 

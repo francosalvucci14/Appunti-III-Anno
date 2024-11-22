@@ -136,9 +136,40 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
             }
+          },
+          {
+            "id": "44914fe352ebda80",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Esercizi Crediti Tipo D Salvucci-Noce"
+            }
+          },
+          {
+            "id": "89fec2bbfc316763",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "44d464164230b7ee",
@@ -173,7 +204,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc7c89dc674250ca",
+  "active": "c7e7748393778edf",
   "lastOpenFiles": [
     "Appunti CN/Lezione 12.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
