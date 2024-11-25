@@ -746,13 +746,13 @@ Il valore di $p(0)$ è quindi $$p(0)  = 1.606027941428046e-01$$
 
 Tabella dei risultati:
 
-| $n$    | $I_n$        | $I_n$-$I$ esatto |
-| ------ | ------------ | ---------------- |
-| 5      | 0.1605773551 | 0.0000254390     |
-| 10     | 0.1605968374 | 0.0000059567     |
-| 20     | 0.1606013617 | 0.0000014324     |
-| 40     | 0.1606025593 | 0.0000002348     |
-| $p(0)$ | 0.1606027941 | 0.0000000000     |
+| $n$    | $I_n$                   | $I_n$-$I$ esatto      |
+| ------ | ----------------------- | --------------------- |
+| 5      | $0.1605773551$          | $2.54390\cdot10^{-5}$ |
+| 10     | $0.1605968374$          | $5.9567\cdot10^{-6}$  |
+| 20     | $0.1606013617$          | $1.4324\cdot10^{-6}$  |
+| 40     | $0.1606025593$          | $2.348\cdot10^{-7}$   |
+| $p(0)$ | $1.606027941428046e-01$ | $1.62\cdot10^{-14}$   |
 
 **Punto (e)**
 
@@ -929,6 +929,18 @@ end
 
 ## Problema 5
 
+Si consideri il sistema lineare $A_n x = b_n$, dove $b_n = [1, 1, \ldots, 1]^T$ e $A_n$ è la matrice $n \times n$ definita nel modo seguente:$$(A_n)_{ij} = \begin{cases} 3, & \text{se } i = j, \\ -\left(\frac{1}{2}\right)^{\max(i,j) - 1}, & \text{se } i \neq j. \end{cases}$$
+
+**(a)** Scrivere esplicitamente $A_n$ per $n = 5$.
+**(b)** Dimostrare che, qualunque sia n, $A_n$ è una matrice a diagonale dominante in senso stretto per righe e per colonne. Dedurre che i metodi di Jacobi e Gauss-Seidel per risolvere un sistema lineare di matrice $A_n$ sono convergenti.
+**(c)** Risolvere con il comando `\` il sistema lineare $A_n x = b_n$ per $n=5,10,20$.
+**(d)** Risolvere il sistema lineare $A_n x = b_n$ per $n=5,10,20$ con i metodi di Jacobi e Gauss-Seidel entro una soglia di precisione $\varepsilon = 10^{-7}$, partendo dal vettore d’innesco $x^{(0)} = 0$.
+**(e)** Costruire una tabella che, vicino ad ogni $n = 5, 10, 20$, riporti:
+- la soluzione esatta $x$ del sistema $A_n x = b_n$ ottenuta al punto (c);
+- le soluzioni approssimate $x_J$ e $x_G$ ottenute con i metodi di Jacobi e Gauss-Seidel al punto (d);
+- gli errori $\|x_J - x\|_\infty$ e $\|x_G - x\|_\infty$;
+- i numeri $K_J$ e $K_G$, che contano le iterazioni effettuate da Jacobi e Gauss-Seidel per calcolare $x_J$ e $x_G$, rispettivamente.
+
 ### Soluzione
 
 **Punto (a)**
@@ -945,12 +957,13 @@ $$A_5=\begin{bmatrix} 3 & -\frac{1}{2} & -\frac{1}{4} & -\frac{1}{8} & -\frac{1}
 Una matrice $A\in\mathbb C^{n\times n}$ è definita: 
 - A diagonale dominante in senso stretto (per righe) se $a_{ii}>\sum\limits_{j\ne i}|a_{ij}|$ per ogni $i=1,\dots,n$
 - A diagonale dominante in senso stretto (per colonne) se $|a_{jj}|>\sum\limits_{i\ne j}|a_{ij}|$ per ogni $i=1,\dots,n$
+
 Data la matrice $A_5$, si nota che essa è a diagonale dominante in senso stretto sia per righe che per colonne.
 Infatti preso $\left|a_{ii}\right|=\left|a_{jj}\right|=\left|3\right|,\forall {i,j}$, abbiamo che 
 $$\begin{align}&\left|a_{ii}\right|\gt\sum\limits_{j\neq i}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\left(\frac{1}{2}\right)^{max(i,j)-1}\\&\left|a_{jj}\right|\gt\sum\limits_{i\neq j}\left|a_{ij}\right|,\text{ con}\left|a_{ij}\right|=\left(\frac{1}{2}\right)^{max(i,j)-1}\end{align}$$
 Il che dimostra che $A_5$ è a diagonale dominante in senso stretto sia per colonne che per righe.
 
-Usando i **teoremi di convergenza**, sappiamo che i metodi di Jacobi e Gauss-Seidel convergono se la matrice $A\in\mathbb C^{n\times n}$ soddisfa una delle seguenti condizioni : 
+Usando i **teoremi di convergenza**, sappiamo che i metodi di Jacobi e Gauss-Seidel convergono se la matrice $A\in\mathbb C^{n\times n}$ soddisfa almeno una delle seguenti condizioni : 
 - $A$ è a diagonale dominante e irriducibile
 - $A$ è a diagonale dominante in senso stretto per righe
 - $A$ è a diagonale dominante per colonne e irriducibile
@@ -1131,11 +1144,11 @@ $$f(x) = x^3 + 3x - 1 - e^{-x^2}, [a,b]=[0,1]$$
 1. Calcoliamo $f(a)$ e $f(b)$:
     - $f(0) = 0^3 + 3(0) - 1 - e^{-0^2} = -1 - 1 = -2$,
     - $f(1) = 1^3 + 3(1) - 1 - e^{-1^2} = 1 + 3 - 1 - e^{-1} = 3 - e^{-1} \approx 2.63$.
-2. Poiché $f(0) \cdot f(1) < 0$, possiamo procedere.
+2. Poiché $f(0) \cdot f(1) < 0$, $(\text{ risulta }-2\cdot2,63=-5,26)$ possiamo procedere.
 
 **Punto (b): Grafico di $f(x)$ e verifica di uno zero unico**
 
-Tracciamo il grafico di $f(x)$ su $[0,1]$ con MATLAB per osservare che $f(x)$ ha un unico zero nell'intervallo (0,1). **Il codice MATLAB** è il seguente:
+Tracciamo il grafico di $f(x)$ su $[0,1]$ con MATLAB per osservare che $f(x)$ ha un unico zero nell'intervallo $(0,1)$. **Il codice MATLAB** è il seguente:
 
 ```matlab
 f = @(x) x.^3 + 3.*x - 1 - exp(-x.^2);
