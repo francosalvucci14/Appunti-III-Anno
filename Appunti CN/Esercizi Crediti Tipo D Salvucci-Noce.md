@@ -341,16 +341,16 @@ end
 	- L'arresto del processo avviene quando la norma del residuo $||r^{(K)}||_2$​ è inferiore o uguale a $\epsilon\cdot ||b||_{2}$​ oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$​.
 ## Esercizio 6
 
-L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo della  bisezione**, ovvero il metodo che permette di trovare il punto $\xi$ di una funzione $f(x)$ definita su intervallo $[a,b]$ tale che $fxi)=0$
+L'esercizio 6 chiede di creare una function MATLAB che implementi il **metodo della  bisezione**, ovvero il metodo che permette di trovare il punto $\xi$ di una funzione $f(x)$ definita su intervallo $[a,b]$ tale che $f(\xi)=0$
 
-Sia $f:[a,b]\rightarrow\mathbb{R}$ una funzione continua su $[a,b]$ tale che $f(a)$ e $f(b)$ hanno segno opposto $:f(a)f(b)\lt 0$. Un teorema dell'analisi matematica ( teorema degli zeri ) garantisce che la funzione $f(x)$ ha almeno uno zero nell'intervallo $(a,b)$, cioè esiste un punto $\zeta\in(a,b)$ tale che $fzeta)=0$; 
+Sia $f:[a,b]\rightarrow\mathbb{R}$ una funzione continua su $[a,b]$ tale che $f(a)$ e $f(b)$ hanno segno opposto $:f(a)f(b)\lt 0$. Un teorema dell'analisi matematica ( teorema degli zeri ) garantisce che la funzione $f(x)$ ha almeno uno zero nell'intervallo $(a,b)$, cioè esiste un punto $\zeta\in(a,b)$ tale che $f(\zeta)=0$; 
 
 Figura 1.1
 ![[Pasted image 20241111124440.png|center|300]]
 	Una funzione continua $f:[a,b]\rightarrow\mathbb R$ tale che $f(a)f(b)<0$ possiede almeno uno zero $\zeta\in(a,b)$.
 
 Supponiamo che $f(x)$ abbia un unico zero $\zeta$ in $(a,b)$. Un metodo per determinare un'approssimazione $\xi$ di $\zeta$ è il metodo di bisezione: fissata una soglia di precisione $\varepsilon>0$, il metodo costruisce la successione di intervalli $$[\alpha_k,\beta_k],\space\space\space\space\space\space\space\space k=0,1,2,\dots$$ in cui $[\alpha_0,\beta_0]=[a,b]$ e, per $k\le1$,$$[\alpha_k,\beta_k]=\begin{cases}
-[\alpha_{k-1},\frac{\alpha_{k-1}+\beta_{k-1}}{2}],se\ \zeta\in[\alpha_{k-1},.\frac{\alpha_{k-1}+\beta_{k-1}}{2}]\ cioè\ f(\alpha_{k-1})f(\frac{\alpha_{k-1}+\beta_{k-1}}{2})\le 0, \\
+[\alpha_{k-1},\frac{\alpha_{k-1}+\beta_{k-1}}{2}],se\ \zeta\in[\alpha_{k-1},\frac{\alpha_{k-1}+\beta_{k-1}}{2}]\ cioè\ f(\alpha_{k-1})f(\frac{\alpha_{k-1}+\beta_{k-1}}{2})\le 0, \\
 [\frac{\alpha_{k-1}+\beta_{k-1}}{2},\beta_{k-1}],\ altrimenti.
 \end{cases}$$
 La successione di intervalli così costruita gode delle seguenti proprietà:
@@ -362,7 +362,7 @@ cioè $K=\lceil\log_2(\frac{b-a}{\varepsilon})\rceil$.
 
 Scrivere un programma Matlab che implementa il metodo di bisezione. Il programma deve:
 - prendere in input gli estremi $a, b$ di un intervallo, una funzione continua $f:[a, b]\rightarrow\mathbb R$, con $f(a)f(b) < 0$ e con un unico zero $\zeta\in(a, b)$, e un $\varepsilon > 0$;
-- restituire in output l’approssimazione $\xi$ di $\zeta$ ottenuta con il metodo di bisezione sopra descritto, l’indice di arresto $K$ del metodo, e il valore $fxi)$ (che sarà all’incirca pari a $0 = f zeta)$).
+- restituire in output l’approssimazione $\xi$ di $\zeta$ ottenuta con il metodo di bisezione sopra descritto, l’indice di arresto $K$ del metodo, e il valore $f(\xi)$ (che sarà all’incirca pari a $0 = f (\zeta)$).
 ### Codice
 
 ```matlab title:"Esercizio 1.6"
@@ -405,9 +405,9 @@ end
 - **Inizializzazione**: definisce $\alpha_k = a$ e $\beta_k = b$ e imposta il contatore $K=0$
 - **Iterazione del metodo di bisezione**: continua a suddividere l'intervallo finché la metà della sua lunghezza è maggiore di $\varepsilon$. Ad ogni iterazione:
     - Calcola il punto medio $\xi$.
-    - Aggiorna gli estremi in base al segno di $fxi)$ rispetto a $falpha_k)$.
+    - Aggiorna gli estremi in base al segno di $f(\xi)$ rispetto a $f(\alpha_k)$.
     - Incrementa $K$.
-- **Output finale**: restituisce l'approssimazione $\xi$, l'indice $K$, e $fxi)$.
+- **Output finale**: restituisce l'approssimazione $\xi$, l'indice $K$, e $f(\xi)$.
 # Problemi
 
 ## Problema 1
@@ -498,6 +498,7 @@ Si consideri la funzione $$f(x)=e^x.$$Per ogni intero $n\ge1$ indichiamo con $I_
 - il valore $I_n$ per $n=n_{\varepsilon}$;
 - il valore esatto $I$ ( per confrontarlo con $I_n$ );
 - l'errore $|I-I_n|$ ( che deve essere $\le\varepsilon$ ).
+
 **(c)** Calcolare le approssimazioni di $I$ ottenute con le formule dei trapezi $I_2,I_4,I_8,I_{16}$ e confrontarle con il valore esatto $I$.
 **(d)** Sia $p(x)$ il polinomio di interpolazione dei valori $I_2,I_4,I_8,I_{16}$ sui nodi $h_2^2,h_4^2,h_8^2,h_{16}^2$, dove $h_2=\frac{1}{2},h_4=\frac{1}{4},h_8=\frac{1}{8},h_{16}=\frac{1}{16}$ sono i passi di discretizzazione relativi alle formule dei trapezi $I_2,I_4,I_8,I_{16}$  rispettivamente. Calcolare $p(0)$ e confrontare $I_2,I_4,I_8,I_{16},p(0)$ con il valore esatto $I$. Che cosa si nota?
 ### Soluzione
@@ -643,6 +644,7 @@ Consideriamo la funzione $f(x)=x^2e^{−x}$ e indichiamo con $I_n$ la formula de
 **(d)** Riportare in una tabella:
 - i valori  $I_5$ , $I_{10}$ , $I_{20}$ , $I_{40}, p(0)$ ;
 - gli errori $|I_5 − I|$, $|I_{10} − I|$, $|I_{20} − I|$, $|I_{40} − I|$, $|p(0) − I|$.
+
 **(e)** Posto $\varepsilon = |p(0) − I|$, determinare un $n$ in modo tale che la formula dei trapezi $I_n$ fornisca un’approssimazione di $I$ con errore $|I_n − I| ≤ \varepsilon$. Calcolare successivamente $I_n$ e verificare che effettivamente $|I_n − I|\le\varepsilon$.
 ### Soluzione
 
@@ -739,6 +741,7 @@ fprintf('p(0) = %.10f, Errore = %.10f\n', p_0, error_p0);
 ```
 
 Il valore di $p(0)$ è quindi $$p(0)  = 1.606027941428046e-01$$
+
 **Punto (d)**
 
 Tabella dei risultati:
@@ -765,7 +768,7 @@ per ogni $x\in[0,1]$ si ha che:
 $$\left|f^{''}(x)\right|=\left|e^{-x}(x^2-4x+2)\right|\leq 2$$
 Quindi, possiamo scrivere $$\left|\int_0^1x^2e^{-x}dx-I_n\right|\leq\frac{2}{12n^2}$$
 E infine $$\frac{2}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2}{12\varepsilon}}=n_\varepsilon$$
-Quindi, dato che $\varepsilon=1.62*10^{-14},n=n_\varepsilon\geq3.2075-10^6$
+Quindi, dato che $\varepsilon=1.62*10^{-14},n=n_\varepsilon\geq3.2075\cdot10^6$
 ### Codice
 
 ```matlab
