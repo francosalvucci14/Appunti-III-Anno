@@ -1187,9 +1187,8 @@ disp(results);
 ```
 
 ---
-
 #### Caso 2 
-	$$f(x) = \cos x - x, [a,b]=[0,\pi]$$
+$$f(x) = \cos x - x, [a,b]=[0,\pi]$$
 
 **Punto (a): Verifica che $f(a) f(b) < 0$**
 
