@@ -124,33 +124,6 @@
             }
           },
           {
-            "id": "7918521bebedec53",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
-            "id": "89fec2bbfc316763",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
             "id": "bcbecc3caeb12333",
             "type": "leaf",
             "state": {

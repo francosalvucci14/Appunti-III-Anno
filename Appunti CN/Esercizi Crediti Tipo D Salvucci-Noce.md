@@ -1284,71 +1284,74 @@ Abbiamo dimostrato che $A_5$ rispetta sia la seconda che quarta condizione, quin
 **Punto (c)**
 
 Per $n=5$, il risultato del sistema $A_5x=b_5$ è : 
-$$x=\begin{bmatrix}0.5194\\
-    0.5940\\
-    0.6179\\
-    0.5940\\
-    0.5194\end{bmatrix}$$
-Per $n=10$, il risultato del sistema $A_{10}x=b_{10}$ è : 
-$$x=\begin{bmatrix}
-0.5798\\
-    0.6922\\
-    0.7661\\
-    0.8108\\
-    0.8318\\
-    0.8318\\
-    0.8108\\
-    0.7661\\
-    0.6922\\
-    0.5798\\
-\end{bmatrix}$$
-Per $n=20$, il risultato del sistema $A_{20}x=b_{20}$ è : 
-$$x=\begin{bmatrix}
-0.5927\\
-    0.7131\\
-    0.7977\\
-    0.8569\\
-    0.8983\\
-    0.9270\\
-    0.9465\\
-    0.9593\\
-    0.9671\\
-    0.9708\\
-    0.9708\\
-    0.9671\\
-    0.9593\\
-    0.9465\\
-    0.9270\\
-    0.8983\\
-    0.8569\\
-    0.7977\\
-    0.7131\\
-    0.5927\\
-\end{bmatrix}$$
-
+$$x=\begin{bmatrix}4.728395611573806\cdot10^{-1}\\
+     4.728395611573807\cdot10^{-1}\\
+     4.364672872221975\cdot10^{-1}\\
+     3.986401223296070\cdot10^{-1}\\
+     3.704330527472200\cdot10^{-1}\end{bmatrix}$$
+     
+Per $n=10$, il risultato del sistema $A_{10}x=b_{10}$ è : $$
+x = \begin{bmatrix}
+4.829209469162112 \cdot 10^{-1} \\
+4.829209469162111 \cdot 10^{-1} \\
+4.457731817688103 \cdot 10^{-1} \\
+4.071395060155133 \cdot 10^{-1} \\
+3.783310350848758 \cdot 10^{-1} \\
+3.595809878517137 \cdot 10^{-1} \\
+3.481971245527415 \cdot 10^{-1} \\
+3.415564320733823 \cdot 10^{-1} \\
+3.377789759887189 \cdot 10^{-1} \\
+3.356667963132605 \cdot 10^{-1}
+\end{bmatrix}
+$$
+del sistema $A_{20}x=b_{20}$ è : 
+$$
+x = \begin{bmatrix}
+4.832359353604220 \cdot 10^{-1} \\
+4.832359353604221 \cdot 10^{-1} \\
+4.460639403326973 \cdot 10^{-1} \\
+4.074050655038636 \cdot 10^{-1} \\
+3.785778040537910 \cdot 10^{-1} \\
+3.598155269758799 \cdot 10^{-1} \\
+3.484242384753038 \cdot 10^{-1} \\
+3.417792145594933 \cdot 10^{-1} \\
+3.379992946036253 \cdot 10^{-1} \\
+3.358857372447301 \cdot 10^{-1} \\
+3.347186246657436 \cdot 10^{-1} \\
+3.340803134057811 \cdot 10^{-1} \\
+3.337338945501267 \cdot 10^{-1} \\
+3.335470848650332 \cdot 10^{-1} \\
+3.334468884268689 \cdot 10^{-1} \\
+3.333933967162749 \cdot 10^{-1} \\
+3.333649547349902 \cdot 10^{-1} \\
+3.333498858470857 \cdot 10^{-1} \\
+3.333419274986317 \cdot 10^{-1} \\
+3.333377363838597 \cdot 10^{-1}
+\end{bmatrix}
+$$
 **Punto (d)**
 
-| n   | Metodo       | Approssimazione x                                                                                                                                                                                                                                         |
-| --- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 5   | Jacobi       | $x_J=\begin{bmatrix}0.519403\\ 0.59403\\ 0.61791\\ 0.59403\\ 0.519403\end{bmatrix}$                                                                                                                                                                       |
-| 5   | Gauss-Seidel | $x_G=\begin{bmatrix}0.519403\\ 0.59403\\ 0.61791\\ 0.59403\\ 0.519403\end{bmatrix}$                                                                                                                                                                       |
-| 10  | Jacobi       | $x_J=\begin{bmatrix}0.579817\\ 0.692202\\ 0.766113\\ 0.810788\\ 0.831812\\ 0.831812\\ 0.810788\\ 0.766113\\ 0.692202\\ 0.579817\end{bmatrix}$                                                                                                             |
-| 10  | Gauss-Seidel | $x_G=\begin{bmatrix}0.579817\\ 0.692202\\ 0.766113\\ 0.810788\\ 0.831812\\ 0.831812\\ 0.810788\\ 0.766113\\ 0.692202\\ 0.579817\end{bmatrix}$                                                                                                             |
-| 20  | Jacobi       | $x_J=\begin{bmatrix}0.592673\\ 0.713094\\ 0.797652\\ 0.856916\\ 0.898295\\ 0.926961\\ 0.946496\\ 0.959344\\ 0.96711\\ 0.970764\\ 0.970764\\ 0.96711\\ 0.959344\\ 0.946496\\ 0.926961\\ 0.898295\\ 0.856916\\ 0.797652\\ 0.713094\\ 0.592673\end{bmatrix}$ |
-| 20  | Gauss-Seidel | $x_G=\begin{bmatrix}0.592673\\ 0.713094\\ 0.797652\\ 0.856916\\ 0.898295\\ 0.926961\\ 0.946496\\ 0.959344\\ 0.96711\\ 0.970764\\ 0.970764\\ 0.96711\\ 0.959344\\ 0.946496\\ 0.926961\\ 0.898295\\ 0.856916\\ 0.797652\\ 0.713094\\ 0.592673\end{bmatrix}$ |
+| n   | Metodo       | Soluzione x_J/x_G                                                                                                                                                                                                                                                                                                          |
+| --- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 5   | Jacobi       | $x_J = \begin{bmatrix} 4.7284e-01 \\ 4.7284e-01 \\ 4.3647e-01 \\ 3.9864e-01 \\ 3.7043e-01 \end{bmatrix}$                                                                                                                                                                                                                   |
+| 5   | Gauss-Seidel | $x_G = \begin{bmatrix} 4.7284e-01 \\ 4.7284e-01 \\ 4.3647e-01 \\ 3.9864e-01 \\ 3.7043e-01 \end{bmatrix}$                                                                                                                                                                                                                   |
+| 10  | Jacobi       | $x_J = \begin{bmatrix} 4.8292e-01 \\ 4.8292e-01 \\ 4.4577e-01 \\ 4.0714e-01 \\ 3.7833e-01 \\ 3.5958e-01 \\ 3.4820e-01 \\ 3.4156e-01 \\ 3.3778e-01 \\ 3.3567e-01 \end{bmatrix}$                                                                                                                                             |
+| 10  | Gauss-Seidel | $x_G = \begin{bmatrix} 4.8292e-01 \\ 4.8292e-01 \\ 4.4577e-01 \\ 4.0714e-01 \\ 3.7833e-01 \\ 3.5958e-01 \\ 3.4820e-01 \\ 3.4156e-01 \\ 3.3778e-01 \\ 3.3567e-01 \end{bmatrix}$                                                                                                                                             |
+| 20  | Jacobi       | $x_J = \begin{bmatrix} 4.8324e-01 \\ 4.8324e-01 \\ 4.4606e-01 \\ 4.0741e-01 \\ 3.7858e-01 \\ 3.5982e-01 \\ 3.4842e-01 \\ 3.4178e-01 \\ 3.3800e-01 \\ 3.3589e-01 \\ 3.3472e-01 \\ 3.3408e-01 \\ 3.3373e-01 \\ 3.3355e-01 \\ 3.3345e-01 \\ 3.3339e-01 \\ 3.3336e-01 \\ 3.3335e-01 \\ 3.3334e-01 \\ 3.3334e-01 \end{bmatrix}$ |
+| 20  | Gauss-Seidel | $x_G = \begin{bmatrix} 4.8324e-01 \\ 4.8324e-01 \\ 4.4606e-01 \\ 4.0741e-01 \\ 3.7858e-01 \\ 3.5982e-01 \\ 3.4842e-01 \\ 3.4178e-01 \\ 3.3800e-01 \\ 3.3589e-01 \\ 3.3472e-01 \\ 3.3408e-01 \\ 3.3373e-01 \\ 3.3355e-01 \\ 3.3345e-01 \\ 3.3339e-01 \\ 3.3336e-01 \\ 3.3335e-01 \\ 3.3334e-01 \\ 3.3334e-01 \end{bmatrix}$ |
 
 **Punto (e)**
 
 La tabella è la seguente
 
-| n   | Metodo       | Iterazioni | $\|x - x_\text{approx}\|\|_\infty$ |
-| --- | ------------ | ---------- | ---------------------------------- |
-| 5   | Jacobi       | 12         | $1.234567 \times 10^{-7}$          |
-| 5   | Gauss-Seidel | 8          | $5.678901 \times 10^{-8}$          |
-| 10  | Jacobi       | 45         | $1.345678 \times 10^{-7}$          |
-| 10  | Gauss-Seidel | 29         | $4.567890 \times 10^{-8}$          |
-| 20  | Jacobi       | 150        | $1.456789 \times 10^{-7}$          |
-| 20  | Gauss-Seidel | 100        | $4.678901 \times 10^{-8}$          |
+| n   | Metodo       | Iterazioni | Norma errore $\left\|\left\|x - x_J/x_G\right\|\right\|_\infty$ |
+| --- | ------------ | ---------- | --------------------------------------------------------------- |
+| 5   | Jacobi       | 12         | $4.051786 \times 10^{-8}$                                       |
+| 5   | Gauss-Seidel | 7          | $6.545649 \times 10^{-8}$                                       |
+| 10  | Jacobi       | 12         | $4.884032 \times 10^{-8}$                                       |
+| 10  | Gauss-Seidel | 7          | $9.323449 \times 10^{-8}$                                       |
+| 20  | Jacobi       | 12         | $4.897032 \times 10^{-8}$                                       |
+| 20  | Gauss-Seidel | 7          | $9.398408 \times 10^{-8}$                                       |
 
 ### Codice
 
@@ -1358,74 +1361,60 @@ n_values = [5, 10, 20];
 epsilon = 1e-7;
 N_max = 500;
 
-% Funzione per generare la matrice An e il vettore bn
-generate_system = @(n) deal(...
-    3*eye(n) - tril(toeplitz((1/2).^(0:n-1)), -1) - triu(toeplitz((1/2).^(0:n-1)), 1), ...
-    ones(n, 1));
+% Inizializza output per le tabelle
+tabella1 = "";
+tabella2 = "";
 
-% Risultati tabellati
-fprintf(' n | Metodo | Iterazioni | x_J | x_G |Errore infinito ||x - x_approx||_inf\n');
-fprintf('------------------------------------------------------------\n');
-
+% Genera i risultati per entrambe le tabelle
 for n = n_values
     % Genera sistema
     [A, b] = generate_system(n);
-
+    
     % Soluzione esatta
     x_exact = A \ b;
-    %disp(x_exact);
-
 
     % Jacobi
-    [x_J, K_J, ~] = jacobi_method(A, b, zeros(n, 1), epsilon, N_max);
+    [x_J, K_J, ~] = JacobiIterativo(A, b, zeros(n, 1), epsilon, N_max);
     error_J = norm(x_exact - x_J, inf);
-
+    
     % Gauss-Seidel
-    [x_G, K_G, ~] = metodo_gauss_seidel(A, b, zeros(n, 1), epsilon, N_max);
+    [x_G, K_G, ~] = GaussSeidelIt(A, b, zeros(n, 1), epsilon, N_max);
     error_G = norm(x_exact - x_G, inf);
-
-    % Stampa risultati
-    fprintf('%2d | Jacobi      | %3d        | %3d |     %e\n', n, K_J,x_J, error_J);
-    fprintf('%2d | Gauss-Seidel| %3d        | %3d |    %e\n', n, K_G,x_G, error_G);
+    
+    % Aggiorna Tabella 1
+    tabella1 = tabella1 + sprintf('%2d | Jacobi         | [%s]\n', n, num2str(x_J', '%.4e '));
+    tabella1 = tabella1 + sprintf('%2d | Gauss-Seidel   | [%s]\n', n, num2str(x_G', '%.4e '));
+    
+    % Aggiorna Tabella 2
+    tabella2 = tabella2 + sprintf('%2d | Jacobi         | %3d        | %e\n', n, K_J, error_J);
+    tabella2 = tabella2 + sprintf('%2d | Gauss-Seidel   | %3d        | %e\n', n, K_G, error_G);
 end
-```
 
-Parte di codice specifica per il **punto (e)**
+% Stampa Tabella 1
+fprintf('Tabella 1: Soluzioni approssimate (x_J e x_G)\n');
+fprintf(' n | Metodo         | Soluzione x_J/x_G\n');
+fprintf('-------------------------------------------\n');
+fprintf('%s', tabella1);
 
-```matlab title="Problema 2.5 punto (e)"
-% Parametri generali
-N_max = 1000; % Numero massimo di iterazioni
-epsilon = 1e-7; % Soglia di precisione
+% Stampa Tabella 2
+fprintf('\nTabella 2: Iterazioni e norma dell errore\n');
+fprintf(' n | Metodo         | Iterazioni | Norma errore ||x - x_J/x_G||_inf\n');
+fprintf('-------------------------------------------------------------------\n');
+fprintf('%s', tabella2);
 
-% Dimensioni del sistema
-ns = [5, 10, 20]; % Valori di n
+function [A, b] = generate_system(n)
+    A = zeros(n);
+    b = ones(n, 1);  % Create a column vector of ones
 
-generate_system = @(n) deal(...
-    3*eye(n) - tril(toeplitz((1/2).^(0:n-1)), -1) - triu(toeplitz((1/2).^(0:n-1)), 1), ...
-    ones(n, 1));
-
-
-fprintf('Risultati per le approssimazioni con Jacobi e Gauss-Seidel:\n');
-fprintf('| n   | Metodo        | Approssimazione x (trasposta)                  |\n');
-fprintf('|-----|---------------|-----------------------------------------------|\n');
-
-for n = ns
-    % Definizione della matrice An
-    [A, b] = generate_system(n);
-    % Definizione del vettore b
-    % Vettore di innesco iniziale
-    x0 = zeros(n, 1);
-
-    % Risoluzione con il metodo di Jacobi
-    [x_jacobi, ~, ~] = jacobi_method(A, b, x0, epsilon, N_max);
-
-    % Risoluzione con il metodo di Gauss-Seidel
-    [x_gauss, ~, ~] = metodo_gauss_seidel(A, b, x0, epsilon, N_max);
-
-    % Stampa risultati per Jacobi
-    fprintf('| %-3d | Jacobi        | %-45s |\n', n, mat2str(x_jacobi', 6));
-    % Stampa risultati per Gauss-Seidel
-    fprintf('| %-3d | Gauss-Seidel  | %-45s |\n', n, mat2str(x_gauss', 6));
+    for i = 1:n
+        for j = 1:n
+            if i == j
+                A(i,j) = 3;
+            else
+                A(i,j) = -0.5^(max(i,j)-1);
+            end
+        end
+    end
 end
 ```
 
