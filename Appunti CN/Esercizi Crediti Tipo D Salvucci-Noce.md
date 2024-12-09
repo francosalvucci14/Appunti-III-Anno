@@ -250,6 +250,7 @@ _**Esercizio d’implementazione del metodo di Jacobi**_
 
 ### Codice Esercizo 4
 
+Questo codice implementa il metodo di Jacobi componente per componente:
 
 ```matlab title:"Esercizio 1.4"
 function [x, K, r_norm] = jacobi_method(A, b, x0, epsilon, N_max)
@@ -306,6 +307,66 @@ function [x, K, r_norm] = jacobi_method(A, b, x0, epsilon, N_max)
     % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
 end
 ```
+
+Questo codice implementa il metodo di Jacobi con il metodo iterativo:
+
+```matlab
+function [x, K, r_norm] = jacobiIterativo(A, b, x0, epsilon, N_max)
+    % Metodo di Jacobi - Versione Iterativa
+    % Input:
+    % A: matrice del sistema lineare Ax = b
+    % b: vettore dei termini noti
+    % x0: vettore di innesco (stima iniziale di x)
+    % epsilon: soglia di precisione
+    % N_max: numero massimo di iterazioni consentite
+    
+    % Output:
+    % x: vettore approssimato x^(K) dopo K iterazioni o x^(N_max)
+    % K: numero di iterazioni effettivamente eseguite
+    % r_norm: norma ||r^(K)||_2 del residuo alla fine del processo
+    
+    % Separazione di D, L e U dalla matrice A
+    D = diag(diag(A));           % Matrice diagonale
+    L = tril(A, -1);             % Parte triangolare inferiore
+    U = triu(A, 1);              % Parte triangolare superiore
+    
+    % Pre-calcolo della matrice iterativa M = D^(-1) * (L + U)
+    D_inv = inv(D);              % Inversa della diagonale
+    M = -D_inv * (L + U);        % Matrice di iterazione
+    
+    % Pre-calcolo del termine costante c = D^(-1) * b
+    c = D_inv * b;
+    
+    % Inizializza il vettore soluzione con la stima iniziale
+    x = x0;
+    
+    % Itera il metodo di Jacobi
+    for K = 1:N_max
+        % Aggiornamento vettoriale: x^(k+1) = M * x^(k) + c
+        x_new = M * x + c;
+        
+        % Calcola il residuo r^(K) = b - A * x^(K)
+        r = b - A * x_new;
+        
+        % Calcola la norma del residuo ||r^(K)||_2
+        r_norm = norm(r, 2);
+        
+        % Condizione di arresto: ||r^(K)||_2 <= epsilon * ||b||_2
+        if r_norm <= epsilon * norm(b, 2)
+            x = x_new;
+            return;  % Arresta l'algoritmo e restituisce il risultato
+        end
+        
+        % Aggiorna la soluzione corrente x^(K)
+        x = x_new;
+    end
+    
+    % Se si raggiunge N_max iterazioni senza soddisfare il criterio, si restituisce
+    % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
+end
+
+```
+
 ### Spiegazione del codice
 
 1. **Input:**
@@ -321,12 +382,15 @@ end
 3. **Procedura:**
     - Il metodo di Jacobi viene applicato iterativamente fino a quando il residuo $||r^{(K)}||_2$​ diventa minore o uguale a $\epsilon\cdot ||b||_{2}$​, oppure si raggiunge il numero massimo di iterazioni $N_{\text{max}}$.
     - Se nessuna delle iterazioni soddisfa la condizione di arresto, il programma restituisce $x^{(N_{\text{max}})}$.
+
 ## Esercizio 5
 
 L'esercizio chiede di creare una function MATLAB per implementare il **metodo di Gauss-Sidel**.
 
 ***Esercizio d’implementazione del metodo di Gauss-Seidel***
 ### Codice Esercizio 5
+
+Questo è il codice di Gauss-Seidel componente per componente
 
 ```matlab title:"Esercizio 1.5"
 function [x, K, r_norm] = metodo_gauss_seidel(A, b, x0, epsilon, N_max)
@@ -380,6 +444,61 @@ function [x, K, r_norm] = metodo_gauss_seidel(A, b, x0, epsilon, N_max)
 end
 ```
 
+Questo è il metodo di Gauss-Seidel iterativo
+
+```matlab
+function [x, K, r_norm] = gauss_seidelIterativo(A, b, x0, epsilon, N_max)
+    % Metodo di Gauss-Seidel - versione Iterativa
+    % Input:
+    % A: matrice del sistema lineare Ax = b
+    % b: vettore dei termini noti
+    % x0: vettore di innesco (stima iniziale di x)
+    % epsilon: soglia di precisione
+    % N_max: numero massimo di iterazioni consentite
+    
+    % Output:
+    % x: vettore approssimato x^(K) dopo K iterazioni o x^(N_max)
+    % K: numero di iterazioni effettivamente eseguite
+    % r_norm: norma ||r^(K)||_2 del residuo alla fine del processo
+    
+    % Separazione della matrice A in E (triangolare inferiore) e U (triangolare superiore)
+    E = tril(A);               % Parte triangolare inferiore (inclusa diagonale)
+    U = triu(A, 1);            % Parte triangolare superiore (esclusa diagonale)
+    
+    % Pre-calcolo della matrice iterativa G = E^(-1) * U
+    G = -E \ U;                % G = -inv(E) * U (calcolo efficace tramite backslash operator)
+    
+    % Pre-calcolo del termine costante c = E^(-1) * b
+    c = E \ b;                 % c = inv(E) * b
+    
+    % Inizializza la soluzione corrente con il vettore di innesco x0
+    x = x0;
+    
+    % Itera il metodo di Gauss-Seidel
+    for K = 1:N_max
+        % Aggiornamento vettoriale: x^(k+1) = G * x^(k) + c
+        x_new = G * x + c;
+        
+        % Calcola il residuo r^(K) = b - A * x^(K)
+        r = b - A * x_new;
+        
+        % Calcola la norma del residuo ||r^(K)||_2
+        r_norm = norm(r, 2);
+        
+        % Condizione di arresto: ||r^(K)||_2 <= epsilon * ||b||_2
+        if r_norm <= epsilon * norm(b, 2)
+            x = x_new;
+            return;  % Arresta l'algoritmo e restituisce il risultato
+        end
+        
+        % Aggiorna la soluzione corrente x^(K)
+        x = x_new;
+    end
+    
+    % Se si raggiunge N_max iterazioni senza soddisfare il criterio, si restituisce
+    % x^(N_max), il relativo indice N_max e la norma del residuo ||r^(N_max)||_2
+end
+```
 ### Spiegazione Codice
 
 1. **Input:**
@@ -773,7 +892,7 @@ Consideriamo la funzione $f(x)=x^2e^{−x}$ e indichiamo con $I_n$ la formula de
 **(b)** Calcolare $I_5$ , $I_{10}$ , $I_{20}$ , $I_{40}$ .
 **(c)** Calcolare $p(0)$, dove $p(x)$ è il polinomio d’interpolazione dei dati $(h^2_0 , I_5 ), (h^2_1 , I_{10} ), (h^2_2 , I_{20} ), (h^2_3 , I_{40} )$ e $h_0 , h_1 , h_2 , h_3$ sono i passi di discretizzazione delle formule dei trapezi  $I_5$ , $I_{10}$ , $I_{20}$ , $I_{40}$ .
 **(d)** Riportare in una tabella:
-- i valori  $I_5$ , $I_{10}$ , $I_{20}$ , $I_{40}, p(0)$ ;
+- i valori  $I_5$ , $I_{10}$ , $I_{20}$ , $I_{40}, p(0)$;
 - gli errori $|I_5 − I|$, $|I_{10} − I|$, $|I_{20} − I|$, $|I_{40} − I|$, $|p(0) − I|$.
 
 **(e)** Posto $\varepsilon = |p(0) − I|$, determinare un $n$ in modo tale che la formula dei trapezi $I_n$ fornisca un’approssimazione di $I$ con errore $|I_n − I| ≤ \varepsilon$. Calcolare successivamente $I_n$ e verificare che effettivamente $|I_n − I|\le\varepsilon$.
@@ -895,8 +1014,13 @@ Calcoliamo $f^{''}(x)$ :
 $$\begin{align}&f^{'}(x)=2xe^{-x}-x^2e^{-x}\\&f^{''}(x)=e^{-x}(x^2-4x+2)\end{align}$$
 per ogni $x\in[0,1]$ si ha che:
 $$\left|f^{''}(x)\right|=\left|e^{-x}(x^2-4x+2)\right|\leq 2$$
+Questo lo possiamo verificare guardando il grafico di $|f^{''}(x)|$, che è il seguente
+
+![[f_2(x).png|center|500]]
+
+
 Quindi, possiamo scrivere $$\left|\int_0^1x^2e^{-x}dx-I_n\right|\leq\frac{2}{12n^2}$$
-E infine $$\frac{2}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2}{12\varepsilon}}=n_\varepsilon$$
+E infine $$\frac{2}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2}{12\varepsilon}}=n(\varepsilon)$$
 Quindi, dato che $\varepsilon=1.62*10^{-14},n=n_\varepsilon\geq3.2075\cdot10^6$
 ### Codice
 
@@ -983,9 +1107,29 @@ x_exact = A \ b; % Soluzione esatta
 **Punto (b)**
 
 La matrice $S$ di dimensione $3\times12$ contenente le prime 10 iterazioni del metodo di Jacobi è la seguente : 
-$$\begin{bmatrix}0 & 2.6000 & 1.2095 & 0.8971 & 0.9536 & 1.0038 & 1.0055 & 1.0006 & 0.9995 & 0.9999 & 1.0000 & 1.0000 \\
-0 & 2.2857 & 2.3238 & 2.0163 & 1.9699 & 1.9926 & 2.0020 & 2.0011 & 2.0000 & 1.9999 & 2.0000 & 2.0000 \\
-0 & 2.3333 & 3.0952 & 3.1079 & 3.0054 & 2.9900 & 2.9975 & 3.0007 & 3.0004 & 3.0000 & 3.0000 & 3.0000\end{bmatrix}$$
+
+$$
+\begin{array}{|c|c|}
+\hline
+\textbf{Iterazione} & \textbf{Valori di x} \\
+\hline
+0 & [0.0000000, 0.0000000, 0.0000000] \\
+\hline
+1 & [2.6000000, 2.2857143, 2.3333333] \\
+2 & [1.2095238, 2.3238095, 3.0952381] \\
+3 & [0.8971429, 2.0163265, 3.1079365] \\
+4 & [0.9535601, 1.9698866, 3.0054422] \\
+5 & [1.0038458, 1.9925883, 2.9899622] \\
+6 & [1.0054975, 2.0019834, 2.9975294] \\
+7 & [1.0005916, 2.0011383, 3.0006611] \\
+8 & [0.9995079, 1.9999901, 3.0003794] \\
+9 & [0.9998502, 1.9998755, 2.9999967] \\
+10 & [1.0000262, 1.9999791, 2.9999585] \\
+\text{Sol. Esatta} & [1.0000000, 2.0000000, 3.0000000] \\
+\hline
+\end{array}
+$$
+
 **Punto (c)**
 
 Tabella riportante le soluzioni fornite dal metodo di Jacobi, per ogni $\varepsilon$ richiesto
@@ -1002,6 +1146,24 @@ Tabella riportante le soluzioni fornite dal metodo di Jacobi, per ogni $\varepsi
 | $10^{-8}$     | 17                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.00000001                                           |
 | $10^{-9}$     | 19                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.000000002                                          |
 | $10^{-10}$    | 21                | $x_{\varepsilon}=\begin{bmatrix} 1.0.000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$ | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0000000003                                         |
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\textbf{Epsilon} & \textbf{Iterazioni K} & \textbf{x\_epsilon} & \textbf{Norma errore} \\
+\hline
+1.0 \cdot 10^{-1} & 3 & [0.8971429, 2.0163265, 3.1079365] & 1.079365 \cdot 10^{-1} \\
+1.0 \cdot 10^{-2} & 5 & [1.0038458, 1.9925883, 2.9899622] & 1.003779 \cdot 10^{-2} \\
+1.0 \cdot 10^{-3} & 7 & [1.0005916, 2.0011383, 3.0006611] & 1.138291 \cdot 10^{-3} \\
+1.0 \cdot 10^{-4} & 9 & [0.9998502, 1.9998755, 2.9999967] & 1.497845 \cdot 10^{-4} \\
+1.0 \cdot 10^{-5} & 11 & [1.0000208, 2.0000097, 2.9999930] & 2.078563 \cdot 10^{-5} \\
+1.0 \cdot 10^{-6} & 13 & [0.9999979, 1.9999997, 3.0000013] & 2.083214 \cdot 10^{-6} \\
+1.0 \cdot 10^{-7} & 15 & [1.0000001, 2.0000000, 2.9999998] & 1.621496 \cdot 10^{-7} \\
+1.0 \cdot 10^{-8} & 17 & [1.0000000, 2.0000000, 3.0000000] & 1.450418 \cdot 10^{-8} \\
+1.0 \cdot 10^{-9} & 19 & [1.0000000, 2.0000000, 3.0000000] & 1.823506 \cdot 10^{-9} \\
+1.0 \cdot 10^{-10} & 21 & [1.0000000, 2.0000000, 3.0000000] & 2.567879 \cdot 10^{-10} \\
+\hline
+\end{array}
+$$
 ### Codice
 
 ```matlab title="Problema 2.4"
