@@ -1108,62 +1108,41 @@ x_exact = A \ b; % Soluzione esatta
 
 La matrice $S$ di dimensione $3\times12$ contenente le prime 10 iterazioni del metodo di Jacobi è la seguente : 
 
+
+Abbiamo diviso la matrice $S$ in due matrici, ognuna contenente $6$ colonne per maggior chiarezza.
 $$
-\begin{array}{|c|c|}
-\hline
-\textbf{Iterazione} & \textbf{Valori di x} \\
-\hline
-0 & [0.0000000, 0.0000000, 0.0000000] \\
-\hline
-1 & [2.6000000, 2.2857143, 2.3333333] \\
-2 & [1.2095238, 2.3238095, 3.0952381] \\
-3 & [0.8971429, 2.0163265, 3.1079365] \\
-4 & [0.9535601, 1.9698866, 3.0054422] \\
-5 & [1.0038458, 1.9925883, 2.9899622] \\
-6 & [1.0054975, 2.0019834, 2.9975294] \\
-7 & [1.0005916, 2.0011383, 3.0006611] \\
-8 & [0.9995079, 1.9999901, 3.0003794] \\
-9 & [0.9998502, 1.9998755, 2.9999967] \\
-10 & [1.0000262, 1.9999791, 2.9999585] \\
-\text{Sol. Esatta} & [1.0000000, 2.0000000, 3.0000000] \\
-\hline
-\end{array}
+S_1=\begin{bmatrix}
+0.0000000 & 2.6000000 & 1.2095238 & 0.8971429 & 0.9535601 & 1.0038458 \\
+0.0000000 & 2.2857143 & 2.3238095 & 2.0163265 & 1.9698866 & 1.9925883  \\
+0.0000000 & 2.3333333 & 3.0952381 & 3.1079365 & 3.0054422 & 2.9899622
+\end{bmatrix}
 $$
+
+$$S_2=\begin{bmatrix}1.0054975 & 1.0005916 & 0.9995079 & 0.9998502 & 1.0000262 & 1.0000000\\2.0019834 & 2.0011383 & 1.9999901 & 1.9998755 & 1.9999791 & 2.0000000\\ 2.9975294 & 3.0006611 & 3.0003794 & 2.9999967 & 2.9999585 & 3.0000000\end{bmatrix}$$
 
 **Punto (c)**
 
 Tabella riportante le soluzioni fornite dal metodo di Jacobi, per ogni $\varepsilon$ richiesto
 
-| $\varepsilon$ | $K_{\varepsilon}$ | Soluzione approssimata $x_{\varepsilon}$                                    | Soluzione esatta x                      | Norma dell'errore $\|\|x − x_\varepsilon\|\|_\infty$ |
-| ------------- | ----------------- | --------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------- |
-| $10^{-1}$     | 3                 | $x_{\varepsilon}=\begin{bmatrix} 0.8971 \\ 2.0163 \\ 3.1079 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.1079                                               |
-| $10^{-2}$     | 5                 | $x_{\varepsilon}=\begin{bmatrix} 1.0038 \\ 1.9926 \\ 2.9900 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0100                                               |
-| $10^{-3}$     | 7                 | $x_{\varepsilon}=\begin{bmatrix} 1.0006 \\ 2.0011 \\ 3.0007 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0011                                               |
-| $10^{-4}$     | 9                 | $x_{\varepsilon}=\begin{bmatrix} 0.9999 \\ 1.9999 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0001                                               |
-| $10^{-5}$     | 11                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.00002                                              |
-| $10^{-6}$     | 13                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.000002                                             |
-| $10^{-7}$     | 15                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0000002                                            |
-| $10^{-8}$     | 17                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.00000001                                           |
-| $10^{-9}$     | 19                | $x_{\varepsilon}=\begin{bmatrix} 1.0000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$  | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.000000002                                          |
-| $10^{-10}$    | 21                | $x_{\varepsilon}=\begin{bmatrix} 1.0.000 \\ 2.0000 \\ 3.0000 \end{bmatrix}$ | $x=\begin{bmatrix}1\\2\\3\end{bmatrix}$ | 0.0000000003                                         |
 $$
-\begin{array}{|c|c|c|c|}
+\begin{array}{|c|c|c|c|c|}
 \hline
-\textbf{Epsilon} & \textbf{Iterazioni K} & \textbf{x\_epsilon} & \textbf{Norma errore} \\
+\varepsilon & K_{\varepsilon} & \text{Soluzione approssimata } x_{\varepsilon} & \text{Soluzione esatta } x & \|\ x-x_\varepsilon\|_{\infty} \\
 \hline
-1.0 \cdot 10^{-1} & 3 & [0.8971429, 2.0163265, 3.1079365] & 1.079365 \cdot 10^{-1} \\
-1.0 \cdot 10^{-2} & 5 & [1.0038458, 1.9925883, 2.9899622] & 1.003779 \cdot 10^{-2} \\
-1.0 \cdot 10^{-3} & 7 & [1.0005916, 2.0011383, 3.0006611] & 1.138291 \cdot 10^{-3} \\
-1.0 \cdot 10^{-4} & 9 & [0.9998502, 1.9998755, 2.9999967] & 1.497845 \cdot 10^{-4} \\
-1.0 \cdot 10^{-5} & 11 & [1.0000208, 2.0000097, 2.9999930] & 2.078563 \cdot 10^{-5} \\
-1.0 \cdot 10^{-6} & 13 & [0.9999979, 1.9999997, 3.0000013] & 2.083214 \cdot 10^{-6} \\
-1.0 \cdot 10^{-7} & 15 & [1.0000001, 2.0000000, 2.9999998] & 1.621496 \cdot 10^{-7} \\
-1.0 \cdot 10^{-8} & 17 & [1.0000000, 2.0000000, 3.0000000] & 1.450418 \cdot 10^{-8} \\
-1.0 \cdot 10^{-9} & 19 & [1.0000000, 2.0000000, 3.0000000] & 1.823506 \cdot 10^{-9} \\
-1.0 \cdot 10^{-10} & 21 & [1.0000000, 2.0000000, 3.0000000] & 2.567879 \cdot 10^{-10} \\
+10^{-1} & 3 & x_{\varepsilon} = \begin{bmatrix} 0.8971429 \\ 2.0163265 \\ 3.1079365 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.079365 \cdot 10^{-1} \\
+10^{-2} & 5 & x_{\varepsilon} = \begin{bmatrix} 1.0038458 \\ 1.9925883 \\ 2.9899622 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.003779 \cdot 10^{-2} \\
+10^{-3} & 7 & x_{\varepsilon} = \begin{bmatrix} 1.0005916 \\ 2.0011383 \\ 3.0006611 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.138291 \cdot 10^{-3} \\
+10^{-4} & 9 & x_{\varepsilon} = \begin{bmatrix} 0.9998502 \\ 1.9998755 \\ 2.9999967 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.497845 \cdot 10^{-4} \\
+10^{-5} & 11 & x_{\varepsilon} = \begin{bmatrix} 1.0000208 \\ 2.0000097 \\ 2.9999930 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 2.078563 \cdot 10^{-5} \\
+10^{-6} & 13 & x_{\varepsilon} = \begin{bmatrix} 0.9999979 \\ 1.9999997 \\ 3.0000013 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 2.083214 \cdot 10^{-6} \\
+10^{-7} & 15 & x_{\varepsilon} = \begin{bmatrix} 1.0000001 \\ 2.0000000 \\ 2.9999998 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.621496 \cdot 10^{-7} \\
+10^{-8} & 17 & x_{\varepsilon} = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.450418 \cdot 10^{-8} \\
+10^{-9} & 19 & x_{\varepsilon} = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 1.823506 \cdot 10^{-9} \\
+10^{-10} & 21 & x_{\varepsilon} = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & x = \begin{bmatrix} 1.0000000 \\ 2.0000000 \\ 3.0000000 \end{bmatrix} & 2.567879 \cdot 10^{-10} \\
 \hline
 \end{array}
 $$
+
 ### Codice
 
 ```matlab title="Problema 2.4"
