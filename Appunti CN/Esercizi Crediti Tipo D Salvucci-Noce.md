@@ -1263,11 +1263,11 @@ Combinando le due parti, otteniamo:$$\sum_{j \neq i} |A_{ij}| = (i-1) \cdot \lef
 Di conseguenza, la condizione di dominanza diagonale per righe $|A_{ii}| > \sum_{j \neq i} |A_{ij}|$ diventa:$$3 > (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
 **Verifica**
 
-Per $i = 1$:$$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)
+Per $i = 1$: $$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)
 $$
 La disuguaglianza è soddisfatta poiché il lato destro è minore di $1$.
 
-Per $i = n$:$$3 > (n-1) \cdot \left(\frac{1}{2}\right)^{n-1}.$$
+Per $i = n$: $$3 > (n-1) \cdot \left(\frac{1}{2}\right)^{n-1}.$$
 
 Anche qui la disuguaglianza è verificata perché $\left(\frac{1}{2}\right)^{n-1}$ decresce rapidamente.
 
