@@ -1253,7 +1253,6 @@ La somma degli elementi prima della diagonale è:$$(i-1) \cdot \left(\frac{1}{2}
 Gli elementi dopo la diagonale formano una serie geometrica:$$\sum_{k=0}^{n-i-1} \left(\frac{1}{2}\right)^{i+k}.$$
 
 Usando la formula per la somma di una serie geometrica:$$\sum_{k=0}^m r^k = \frac{1 - r^{m+1}}{1 - r},$$
-
 qui $r = \frac{1}{2}$, $m = n-i-1$, e il primo termine della serie è $\left(\frac{1}{2}\right)^i$. 
 Quindi otteniamo che:
 $$\sum_{k=0}^{n-i-1} \left(\frac{1}{2}\right)^{i+k} = \left(\frac{1}{2}\right)^i \cdot \frac{1 - \left(\frac{1}{2}\right)^{n-i}}{1 - \frac{1}{2}} = 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
@@ -1263,12 +1262,11 @@ Combinando le due parti, otteniamo:$$\sum_{j \neq i} |A_{ij}| = (i-1) \cdot \lef
 Di conseguenza, la condizione di dominanza diagonale per righe $|A_{ii}| > \sum_{j \neq i} |A_{ij}|$ diventa:$$3 > (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
 **Verifica**
 
-Per $i = 1$: $$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)
+Per $i = 1$ : $$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)
 $$
 La disuguaglianza è soddisfatta poiché il lato destro è minore di $1$.
 
 Per $i = n$: $$3 > (n-1) \cdot \left(\frac{1}{2}\right)^{n-1}.$$
-
 Anche qui la disuguaglianza è verificata perché $\left(\frac{1}{2}\right)^{n-1}$ decresce rapidamente.
 
 In generale, la disuguaglianza è verificata per ogni $i$, dimostrando che $A_n$ è diagonale dominante per righe.
@@ -1331,7 +1329,7 @@ x = \begin{bmatrix}
 $$
 **Punto (d)**
 
-| n   | Metodo       | Soluzione x_J/x_G                                                                                                                                                                                                                                                                                                          |
+| n   | Metodo       | Soluzione $x_J/x_G$                                                                                                                                                                                                                                                                                                        |
 | --- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 5   | Jacobi       | $x_J = \begin{bmatrix} 4.7284e-01 \\ 4.7284e-01 \\ 4.3647e-01 \\ 3.9864e-01 \\ 3.7043e-01 \end{bmatrix}$                                                                                                                                                                                                                   |
 | 5   | Gauss-Seidel | $x_G = \begin{bmatrix} 4.7284e-01 \\ 4.7284e-01 \\ 4.3647e-01 \\ 3.9864e-01 \\ 3.7043e-01 \end{bmatrix}$                                                                                                                                                                                                                   |
