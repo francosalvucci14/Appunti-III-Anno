@@ -714,10 +714,10 @@ $$
 
 Le approssimazioni di $I$ ottenute con la formula dei trapezi sono le seguenti :
 
-$I_2 = 1.75393109246482525876$ (Errore = $3.5649264006e-02$)
-$I_4 = 1.72722190455751656302$ (Errore = $8.9400760985e-03$)
-$I_8 = 1.72051859216430180766$ (Errore = $2.2367637053e-03$)
-$I_{16} = 1.71884112857999449275$ (Errore = $5.5930012095e-04$)
+$I_2 = 1.75393109246482525876$ (Errore = $3.5649264006\cdot10^{-2}$)
+$I_4 = 1.72722190455751656302$ (Errore = $8.9400760985\cdot10^{-3}$)
+$I_8 = 1.72051859216430180766$ (Errore = $2.2367637053\cdot10^{-3}$)
+$I_{16} = 1.71884112857999449275$ (Errore = $5.5930012095\cdot10^{-4}$)
 
 Valore esatto di $I$ è : $1.718281828459045$
 
@@ -726,7 +726,7 @@ Valore esatto di $I$ è : $1.718281828459045$
 Il valore di $p(0) = 1.718281828460389$
 Confronto con il valore esatto di $I$ = $1.718281828459045$
 
-Si nota che il valore $p(0)$ si avvicina di molto al valore esatto di $I$, infatti l'errore $\left|p(0)-I\right|=1.343813949006289e-12$ (ovvero $1.3438\times10^{-12}$).
+Si nota che il valore $p(0)$ si avvicina di molto al valore esatto di $I$, infatti l'errore $\left|p(0)-I\right|=1.343813949006289\cdot10^{-12}$ (ovvero $1.3438\cdot10^{-12}$).
 
 ### Codice
 
@@ -1021,7 +1021,7 @@ Questo lo possiamo verificare guardando il grafico di $|f^{''}(x)|$, che è il s
 
 Quindi, possiamo scrivere $$\left|\int_0^1x^2e^{-x}dx-I_n\right|\leq\frac{2}{12n^2}$$
 E infine $$\frac{2}{12n^2}\leq\varepsilon\iff n\geq\sqrt{\frac{2}{12\varepsilon}}=n(\varepsilon)$$
-Quindi, dato che $\varepsilon=1.62*10^{-14},n=n_\varepsilon\geq3.2075\cdot10^6$
+Quindi, dato che $\varepsilon=1.62\cdot10^{-14},n=n_\varepsilon\geq3.2075\cdot10^6$
 ### Codice
 
 ```matlab
