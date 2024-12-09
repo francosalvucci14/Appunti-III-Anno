@@ -1261,9 +1261,9 @@ $$\sum_{k=0}^{n-i-1} \left(\frac{1}{2}\right)^{i+k} = \left(\frac{1}{2}\right)^i
 
 Combinando le due parti, otteniamo:$$\sum_{j \neq i} |A_{ij}| = (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
 Di conseguenza, la condizione di dominanza diagonale per righe $|A_{ii}| > \sum_{j \neq i} |A_{ij}|$ diventa:$$3 > (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
-> Verifica
+**Verifica**
 
-Per $i = 1$:$$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right).
+Per $i = 1$:$$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)
 $$
 La disuguaglianza è soddisfatta poiché il lato destro è minore di $1$.
 
@@ -1289,7 +1289,7 @@ $$x=\begin{bmatrix}4.728395611573806\cdot10^{-1}\\
      4.364672872221975\cdot10^{-1}\\
      3.986401223296070\cdot10^{-1}\\
      3.704330527472200\cdot10^{-1}\end{bmatrix}$$
-     
+
 Per $n=10$, il risultato del sistema $A_{10}x=b_{10}$ è : $$
 x = \begin{bmatrix}
 4.829209469162112 \cdot 10^{-1} \\
