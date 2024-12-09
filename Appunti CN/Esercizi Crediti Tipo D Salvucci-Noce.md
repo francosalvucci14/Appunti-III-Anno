@@ -1340,14 +1340,14 @@ $$
 
 La tabella è la seguente
 
-| n   | Metodo       | Iterazioni | Norma errore $\left\|\left\|x - x_J/x_G\right\|\right\|_\infty$ |
-| --- | ------------ | ---------- | --------------------------------------------------------------- |
-| 5   | Jacobi       | 12         | $4.051786 \times 10^{-8}$                                       |
-| 5   | Gauss-Seidel | 7          | $6.545649 \times 10^{-8}$                                       |
-| 10  | Jacobi       | 12         | $4.884032 \times 10^{-8}$                                       |
-| 10  | Gauss-Seidel | 7          | $9.323449 \times 10^{-8}$                                       |
-| 20  | Jacobi       | 12         | $4.897032 \times 10^{-8}$                                       |
-| 20  | Gauss-Seidel | 7          | $9.398408 \times 10^{-8}$                                       |
+| n   | Metodo       | Iterazioni | Norma errore $\|x - x_J/x_G\|_\infty$ |
+| --- | ------------ | ---------- | ------------------------------------- |
+| 5   | Jacobi       | 12         | $4.051786 \times 10^{-8}$             |
+| 5   | Gauss-Seidel | 7          | $6.545649 \times 10^{-8}$             |
+| 10  | Jacobi       | 12         | $4.884032 \times 10^{-8}$             |
+| 10  | Gauss-Seidel | 7          | $9.323449 \times 10^{-8}$             |
+| 20  | Jacobi       | 12         | $4.897032 \times 10^{-8}$             |
+| 20  | Gauss-Seidel | 7          | $9.398408 \times 10^{-8}$             |
 
 ### Codice
 
