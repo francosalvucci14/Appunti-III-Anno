@@ -1466,7 +1466,8 @@ Usiamo il teorema di Bolzano e la monotonicità derivata dall'analisi di $f'(x)$
 1. $f'(x) > 0$ per ogni $x \in [0, 1]$ (la funzione è strettamente crescente su $[0,1]$).
 2. Poiché $f(x)$ è crescente e cambia segno in $[0,1]$, per il teorema di Bolzano esiste un unico zero $\zeta \in (0, 1)$.
 
-**Punto (d): Tabella per $\varepsilon \in \{10^{-1}, 10^{-2}, \dots, 10^{-10}\}$**
+**Punto (d): Tabella per**
+$\varepsilon \in \{10^{-1}, 10^{-2}, \dots, 10^{-10}\}$
 
 Abbiamo usato il **metodo di bisezione** per calcolare:
 
@@ -1547,8 +1548,8 @@ Usiamo $f'(x) = -\sin(x) - 1$:
 1. $f'(x) < 0$ per ogni $x \in [0, \pi]$ (la funzione è strettamente decrescente su $[0, \pi]$).
 2. Poiché $f(x)$ è decrescente e cambia segno in $[0, \pi]$, per il teorema di Bolzano esiste un unico zero $\zeta \in (0, \pi)$.
 
-**Punto (d): Tabella per $$\varepsilon \in \{10^{-1}, 10^{-2}, \dots, 10^{-10}\}$$**
-
+**Punto (d): Tabella per** 
+$$\varepsilon \in \{10^{-1}, 10^{-2}, \dots, 10^{-10}\}$$
 Abbiamo usato il **metodo di bisezione** per calcolare:
 
 - L'approssimazione $\xi_\varepsilon$,
