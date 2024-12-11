@@ -141,6 +141,33 @@
               "icon": "links-coming-in",
               "title": "Backlinks for Esercizi Crediti Tipo D Salvucci-Noce"
             }
+          },
+          {
+            "id": "bd84962bce4103e0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
+            }
+          },
+          {
+            "id": "4997f135b5e684c4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
         ],
         "currentTab": 1
@@ -178,8 +205,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "fc7c89dc674250ca",
   "lastOpenFiles": [
+    "Appunti CN/Esercizi MATLAB crediti D/img/Pasted image 20241111102714.png",
     "Appunti CN/Report Crediti Tipo D.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
     "Appunti CN/Esercizi MATLAB crediti D/img/f_2(x).png",
@@ -224,7 +252,6 @@
     "Appunti PW/Lezione 9 - CSS (7).md",
     "Appunti PW/Lezione 3 - CSS (1).md",
     "Appunti PW/Lezione 4 - CSS (2).md",
-    "Appunti PW/Lezione 2 - HTML e GIT.md",
-    "Appunti VSDI/ProvaEsame/WriteUp.md"
+    "Appunti PW/Lezione 2 - HTML e GIT.md"
   ]
 }
