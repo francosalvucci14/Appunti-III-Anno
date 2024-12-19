@@ -70,22 +70,23 @@ end
 ```
 
 Questo codice genera la **matrice** delle differenze divise:
+
 ```matlab
-function p_t = interpola_ruffini_horner(x, y, t)
+function p_t = interpolaRuffiniHornerMatrixEs1(x, y, t)
     % Input:
     % x: vettore dei punti x0, x1, ..., xn (devono essere distinti)
     % y: vettore dei valori corrispondenti y0, y1, ..., yn
     % t: vettore dei punti t1, t2, ..., tm dove si vuole valutare il polinomio interpolante
-    
+
     % Output:
     % p_t: vettore contenente le valutazioni del polinomio interpolante nei punti t
-    
+
     % Calcola la matrice delle differenze divise
     diff_matrix = differenze_divise(x, y);
-    
+
     % Estrai i coefficienti dalla diagonale principale della matrice
     coeff = diag(diff_matrix);
-    
+
     % Valuta il polinomio nei punti t usando lo schema di Horner
     p_t = horner_eval(coeff, x, t);
 end
@@ -94,39 +95,49 @@ function diff_matrix = differenze_divise(x, y)
     % Calcola la matrice delle differenze divise
     n = length(x);
     diff_matrix = zeros(n, n);  % Inizializza la matrice delle differenze divise
-    
+
     % Copia il vettore y nella prima colonna
     diff_matrix(:, 1) = y(:);
-    
+
     % Costruisce la tabella delle differenze divise
+
     for j = 2:n
-        for i = j:n
-            diff_matrix(i, j) = (diff_matrix(i, j-1) - diff_matrix(i-1, j-1)) / (x(i) - x(i-j+1));
+        for i = j:n % Questo calcola i valori diagonali
+                diff_matrix(i, j) = (diff_matrix(i, j-1) - diff_matrix(i-1, j-1)) / (x(i) - x(i-j+1));
         end
     end
+    for j=2:n
+        for i=j:n
+            if (i ~= j) % Questo non calcola i valori diagonali
+                diff_matrix(i,j) = (diff_matrix(i,j-1)-diff_matrix(j-1, j-1))/ (x(i)-x(j-1));
+            end
+        end
+    end
+    diff_matrix
 end
+
 
 function p_t = horner_eval(coeff, x, t)
     % Valuta il polinomio usando lo schema di Horner
     n = length(coeff);
     m = length(t);
     p_t = zeros(1, m);
-    
+
     for k = 1:m
         % Inizializza il polinomio con il termine di grado più alto
         p = coeff(n);
-        
+
         % Applica lo schema di Horner
         for i = n-1:-1:1
             p = p * (t(k) - x(i)) + coeff(i);
         end
-        
+
         % Salva il risultato della valutazione nel punto t(k)
         p_t(k) = p;
     end
 end
-
 ```
+
 ### Spiegazione
 
 1) **Funzione principale (`interpola_ruffini_horner`)**:
@@ -247,7 +258,7 @@ end
 L'esercizio chiede di creare una function MATLAB per implementare il **metodo di Jacobi**.
 
 _**Esercizio d’implementazione del metodo di Jacobi**_
-### Codice Esercizo 4
+### Codice Esercizio 4
 
 Questo codice implementa il metodo di Jacobi componente per componente:
 
@@ -1388,21 +1399,80 @@ Quindi otteniamo che:
 $$\sum_{k=0}^{n-i-1} \left(\frac{1}{2}\right)^{i+k} = \left(\frac{1}{2}\right)^i \cdot \frac{1 - \left(\frac{1}{2}\right)^{n-i}}{1 - \frac{1}{2}} = 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
 
 
-Combinando le due parti, otteniamo:$$\sum_{j \neq i} |A_{ij}| = (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
-****
-CORREGGERE
-****
+Combinando le due parti, otteniamo:$$\sum_{j \neq i} |A_{ij}| = (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right)\le(i-1)\left(\frac{1}{2}\right)^{i-1}+2\left(\frac{1}{2}\right)^i.$$
+È possibile semplificare ed ottenere $$(i-1)\left(\frac{1}{2}\right)^{i-1}+2\left(\frac{1}{2}\right)^i=\left(\frac{1}{2}\right)^{i-1}(i-1+1)=i\left(\frac{1}{2}\right)^{i-1}\lt 3\ \forall i\in\mathbb N$$
 
-Di conseguenza, la condizione di dominanza diagonale per righe $|A_{ii}| > \sum_{j \neq i} |A_{ij}|$ diventa:$$3 > (i-1) \cdot \left(\frac{1}{2}\right)^{i-1} + 2 \cdot \left(\frac{1}{2}\right)^i \cdot \left(1 - \left(\frac{1}{2}\right)^{n-i}\right).$$
 **Verifica**
 
-Per $i = 1$ : $$3 > 0 + 2 \cdot \left(\frac{1}{2}\right)^1 \cdot \left(1 - \left(\frac{1}{2}\right)^{n-1}\right)$$
-La disuguaglianza è soddisfatta poiché il lato destro è minore di $1$.
+Dobbiamo dimostrare che:
+$$i\left(\frac{1}{2}\right)^{i-1}\lt 3 \quad \forall i \in \mathbb{N}.$$
 
-Per $i = n$: $$3 > (n-1) \cdot \left(\frac{1}{2}\right)^{n-1}.$$
-Anche qui la disuguaglianza è verificata perché $\left(\frac{1}{2}\right)^{n-1}$ decresce rapidamente.
+**Dimostrazione tramite studio della derivata**
 
-In generale, la disuguaglianza è verificata per ogni $i$, dimostrando che $A_n$ è diagonale dominante per righe.
+Consideriamo la funzione $f(x)$ definita su $x \in \mathbb{R}^+$ (generalizziamo a valori reali per applicare le derivate):
+$$f(x) = x \cdot \left( \frac{1}{2} \right)^{x-1}.$$
+Possiamo riscrivere la funzione come:
+$$f(x) = x \cdot 2^{-(x-1)} = x \cdot 2^{1-x}.$$
+
+Il nostro obiettivo è determinare se $f(x) \leq 3$ per ogni $x \geq 1$.
+
+**Derivata prima della funzione**
+
+Per studiare il comportamento della funzione $f(x)$, calcoliamo la derivata prima $f'(x)$. Utilizziamo la regola del prodotto:
+$$f(x) = x \cdot 2^{1-x}.$$
+La derivata è:
+$$f'(x) = \frac{d}{dx} \left[ x \right] \cdot 2^{1-x} + x \cdot \frac{d}{dx} \left[ 2^{1-x} \right].
+$$
+La derivata di $2^{1-x}$ rispetto a $x$ si ottiene tramite la regola delle esponenziali:
+$$\frac{d}{dx} \left[ 2^{1-x} \right] = 2^{1-x} \cdot \ln(2) \cdot (-1).$$
+
+Pertanto:
+$$f'(x) = 1 \cdot 2^{1-x} + x \cdot \left( 2^{1-x} \cdot (-\ln(2)) \right).$$
+
+Raccogliamo $2^{1-x}$ come fattore comune:
+$$f'(x) = 2^{1-x} \left[ 1 - x \ln(2) \right].$$
+
+**Studio del segno della derivata**
+
+Per studiare i punti critici della funzione $f(x)$, poniamo $f'(x) = 0$:
+$$2^{1-x} \left[ 1 - x \ln(2) \right] = 0.$$
+
+Poiché $2^{1-x} > 0$ per ogni $x \in \mathbb{R}$, la condizione $f'(x) = 0$ si riduce a:
+$$1 - x \ln(2) = 0 \quad \implies \quad x = \frac{1}{\ln(2)}.$$
+**Determinazione del massimo**
+
+La costante $\ln(2) \approx 0.693$, quindi:
+$$x = \frac{1}{\ln(2)} \approx 1.4427.$$
+
+A questo punto $x = 1.4427$ è un candidato massimo. Per verificare che si tratti di un massimo globale, studiamo il segno della derivata $f'(x)$ nei dintorni di $x = 1.4427$:
+
+- Per $x<1.4427$, abbiamo $1 - x \ln(2) > 0 \implies f'(x) > 0$: la funzione è crescente.
+- Per $x>1.4427$, abbiamo $1 - x \ln(2) < 0 \implies f'(x) < 0$: la funzione è decrescente.
+
+Quindi $x = 1.4427$ è un **massimo locale** (e globale, poiché la funzione tende a zero per $x \to \infty$).
+
+**Valore massimo della funzione**
+
+Calcoliamo $f(x)$ nel punto $x = \frac{1}{\ln(2)}$:
+$$f\left( \frac{1}{\ln(2)} \right) = \frac{1}{\ln(2)} \cdot 2^{1 - \frac{1}{\ln(2)}}.$$
+Semplificando l'esponente $1 - \frac{1}{\ln(2)}$, otteniamo:
+$$2^{1 - \frac{1}{\ln(2)}} = 2^{1 - \log_2(e)} = 2^{\log_2(2) - \log_2(e)} = 2^{\log_2\left( \frac{2}{e} \right)} = \frac{2}{e}.$$
+Quindi:
+$$f\left( \frac{1}{\ln(2)} \right) = \frac{1}{\ln(2)} \cdot \frac{2}{e}.$$
+
+Sostituendo i valori numerici $\ln(2) \approx 0.693$ ed $e \approx 2.718$, otteniamo:
+$$f\left( \frac{1}{\ln(2)} \right) \approx \frac{1}{0.693} \cdot \frac{2}{2.718}.$$
+Calcoliamo i valori:
+$$\frac{1}{0.693} \approx 1.442, \quad \frac{2}{2.718} \approx 0.736.$$
+
+Moltiplicando:
+$$f\left( \frac{1}{\ln(2)} \right) \approx 1.442 \cdot 0.736 \approx 1.06.$$
+**Conclusione**
+
+La funzione $f(x) = x \cdot \left( \frac{1}{2} \right)^{x-1}$ raggiunge il suo massimo valore $f(x) \approx 1.06$ per $x \approx 1.4427$.
+
+Poiché $1.06 < 3$, possiamo concludere che per ogni $x \geq 1$ (e quindi per ogni $i \in \mathbb{N}$):
+$$f(i) = i \cdot \left( \frac{1}{2} \right)^{i-1} < 3.$$
 
 Usando i **teoremi di convergenza**, sappiamo che i metodi di Jacobi e Gauss-Seidel convergono se la matrice $A\in\mathbb C^{n\times n}$ soddisfa almeno una delle seguenti condizioni : 
 - $A$ è a diagonale dominante e irriducibile
