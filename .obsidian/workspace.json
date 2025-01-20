@@ -93,10 +93,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md"
+                "file": "Appunti ISW/Risposte-Domande orali.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Esercizi Crediti Tipo D Salvucci-Noce"
+              "title": "Outline of Risposte-Domande orali"
             }
           },
           {
@@ -134,35 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
+                "file": "Appunti ISW/Risposte-Domande orali.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
-            "id": "4997f135b5e684c4",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "49733c177993dd37",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "title": "Outgoing links from Risposte-Domande orali"
             }
           }
         ],
@@ -201,7 +178,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d7f7ef57e57da5a",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/Waterfall.png",
     "Appunti ISW/img_risposte_domande/Spirale.png",
@@ -248,6 +225,4 @@
     "Appunti PW/Lezione 8 - CSS (6).md",
     "Appunti PW/Esame/Risposte Domande.md",
     "Appunti PW/Indice delle lezioni.md",
-    "Appunti PW/Esame/Untitled.md"
-  ]
-}
+    "Appunti PW

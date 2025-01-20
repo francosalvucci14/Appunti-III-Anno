@@ -404,6 +404,9 @@ Dopo aver stimato la dimensione, possiamo usare sostanzialmente due approcci per
     1. Suddividendo il progetto in attività specifiche e stimare la durata di ogni attività
     2. Sommare tutte le durate per ottenere una stima complessiva
 
+# Domanda 22 - Motivazioni dietro Abstract Factory
+
+
 # Domanda 23 - Diagramma UML per interazione tra oggetti
 
 Per specificare l'interazione tra oggetti, usando la struttura dei diagrammi UML, possiamo usare il cosi detto **sequence diagram**.
