@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fc7c89dc674250ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
             "id": "8d7f7ef57e57da5a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CN/Lezione 12.md",
+                "file": "Appunti ISW/Risposte-Domande orali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezione 12"
+              "title": "Risposte-Domande orali"
             }
           }
         ]
@@ -168,6 +154,16 @@
               "icon": "lucide-tags",
               "title": "Tags"
             }
+          },
+          {
+            "id": "49733c177993dd37",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
         ],
         "currentTab": 1
@@ -205,38 +201,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "8d7f7ef57e57da5a",
   "lastOpenFiles": [
-    "Appunti CN/Report davide.md",
+    "Appunti ISW/img_risposte_domande/Waterfall.png",
+    "Appunti ISW/img_risposte_domande/Spirale.png",
+    "Appunti ISW/img_risposte_domande/PetriNet_t2.jpg",
+    "Appunti ISW/img_risposte_domande/PetriNet_t1.jpg",
+    "Appunti ISW/img_risposte_domande/PetriNetjpg",
+    "Appunti ISW/img_risposte_domande/PetriNet.jpg",
+    "Appunti ISW/img_risposte_domande/EsempioUseCase.png",
+    "Appunti ISW/img_risposte_domande/EsempioLOC.png",
+    "Appunti ISW/img_risposte_domande/effettiModifiche.png",
+    "Appunti ISW/img_risposte_domande/ComponentFramework.png",
+    "Appunti ISW/img_risposte_domande/CMM.jpg",
+    "Appunti ISW/img_risposte_domande/ArchitetturaDistribuita2.jpg",
+    "Appunti ISW/img_risposte_domande",
+    "Appunti ISW/Lezione 1.md",
+    "Appunti ISW/Risposte-Domande orali.md",
+    "Appunti ISW/Indice appunti ISW.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-    "Appunti CN/Esercizi MATLAB crediti D/img/Pasted image 20241111102714.png",
+    "Appunti CN/Report davide.md",
     "Appunti CN/Report Crediti Tipo D.md",
-    "Appunti CN/Esercizi MATLAB crediti D/img/f_2(x).png",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/Problema6.m",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/problema5_parte_d.m",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/Problema5.m",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.pdf",
-    "Appunti CN/Esercizi MATLAB crediti D/img/caso1.png",
-    "Appunti CN/Esercizi MATLAB crediti D/img/caso2.png",
     "Appunti CN/Lezione 12.md",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/Problema4.m",
-    "Appunti CN/Esercizi MATLAB crediti D/img/Pasted image 20241111124440.png",
     "Appunti CN/Lezione 7 (6.1).md",
     "Appunti CN/Lezione 6.md",
-    "Appunti CN/Esercizi MATLAB crediti D/img/grafico_es1.jpg",
-    "Appunti CN/Esercizi MATLAB crediti D/img/problema 1.png",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/problema1.m",
     "Appunti CN/Esercizi MATLAB crediti D/Problemi/problema2.m",
-    "Appunti CN/Esercizi MATLAB crediti D/img/problema 2.png",
     "Appunti CN/Esercizi MATLAB crediti D/img",
-    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/bisezione(es6).m",
-    "Appunti CN/Esercizi MATLAB crediti D/Esercizi-Function/bisezione.m",
     "Appunti VSDI/ProvaEsame/WriteUp Esame 10-09-24.md",
     "Appunti ISW/Progetto Noce-Salvucci-Sfeir.md",
     "Appunti VSDI/ProvaEsame/WriteUp2.md",
-    "Appunti VSDI/ProvaEsame/img3/Screenshot_2024-09-10_12_33_53.png",
     "Untitled.md",
-    "Appunti VSDI/ProvaEsame/img3/photo_1_2024-09-10_13-07-00.jpg",
     "README.md",
     "Appunti PW/Esame/Domande.md",
     "Appunti PW/Lezioni 10-14 Javascript.md",
@@ -248,10 +248,6 @@
     "Appunti PW/Lezione 8 - CSS (6).md",
     "Appunti PW/Esame/Risposte Domande.md",
     "Appunti PW/Indice delle lezioni.md",
-    "Appunti PW/Esame/Untitled.md",
-    "Appunti PW/Lezione 9 - CSS (7).md",
-    "Appunti PW/Lezione 3 - CSS (1).md",
-    "Appunti PW/Lezione 4 - CSS (2).md",
-    "Appunti PW/Lezione 2 - HTML e GIT.md"
+    "Appunti PW/Esame/Untitled.md"
   ]
 }

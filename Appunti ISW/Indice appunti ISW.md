@@ -1,2 +1,0 @@
-- [[Appunti ISW/Lezione 1|Lezione 1]]
-- 

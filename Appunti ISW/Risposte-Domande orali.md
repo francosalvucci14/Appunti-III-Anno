@@ -1,0 +1,709 @@
+>[!definition]-  Definizione ciclo di vita
+>- Intervallo i tempo che intercorre tra l'istante in cui nasce l'esigenza di costrutire un prodotto Sw e l'istante in cui il prodotto viene dismesso
+>- Include le fasi di definizione dei requisiti, specifica, pianificazione, progetto preliminare, progetto dettagliato, codifica, itergrazione, testing, uso, manutenzione e dismissione
+
+# Domanda 1
+
+Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.
+Esaminiamo i concetti di include ed extend nel contesto dell'immagine fornita (esempio use case Arbitro, vedi sotto).
+
+**Significato di "include" ed "extend"**
+
+- **Include**
+    - Indica che un caso d'uso ***obbligatoriamente include*** un altro caso d'uso per completare la sua funzionalità.
+    - È utilizzato quando una parte del comportamento di un caso d'uso è riutilizzabile da altri casi d'uso.
+    - **Relazione**: Linea tratteggiata con freccia verso il caso d’uso incluso, etichettata come `<<include>>`.
+    - **Esempio dall'immagine**:
+        - Nel caso d’uso "Inserisci risultato incontro", possiamo immaginare che ci sia un `<<include>>` per un caso come "Verifica autenticazione", poiché il login è una precondizione obbligatoria per eseguire l’operazione.-
+- **Extend**
+    - Indica che un caso d'uso può opzionalmente estendere un altro caso d'uso, aggiungendo funzionalità opzionali o alternative.
+    - È utilizzato per rappresentare comportamenti che si verificano solo in determinate condizioni.
+    - **Relazione**: Linea tratteggiata con freccia verso il caso d'uso principale, etichettata come `<<extend>>`.
+    - **Esempio dall'immagine**:
+        - Il caso d'uso "Inserisci risultato incontro" potrebbe essere esteso da un caso come "Correggi risultato", che si attiva solo se l’arbitro commette un errore durante l’inserimento del risultato.
+
+**Chi attiva chi?**
+
+- **Include**:
+    - È **obbligatorio**: il caso d'uso principale richiede l'esecuzione del caso d'uso incluso.
+    - ***Esempio***: "Inserisci risultato incontro" include il caso "Verifica autenticazione". L'attivazione di "Inserisci risultato incontro" attiva necessariamente "Verifica autenticazione"
+
+- **Extend**:
+    - È **opzionale**: l'attivazione del caso d'uso esteso dipende da una specifica condizione.
+    - ***Esempio***: "Inserisci risultato incontro" può essere esteso da "Correggi risultato". Questo caso d'uso si attiva solo se l’arbitro commette un errore durante l’inserimento del risultato.
+
+# Domanda 2
+# Domanda 3 - Differenze tra requisiti funzionali/non funzionali
+
+>[!definition]-  Requisiti SW (**SW Requirements**)
+>Descrizione dei servizi che un sistema SW deve fornire, insieme ai vincoli da rispettare sia in fase di sviluppo che durante la fase di operatività del SW.
+
+Ci sono 2 tipi di requisiti SW, e sono :
+
+- **Requisiti utente** : Descrizione in linguaggio naturale dei servizi che il sistema deve fornire e dei vincoli operativi
+- **Requisiti di sistema** : Specificati mediante la stesura di un documento strutturato che descrive in modo dettagliato i servizi che il sistema SW deve fornire
+
+I requisiti SW si dividono in 3 categorie principali, che sono :
+
+- ***Requisiti Funzionali***
+    - Descrivono le funzionalità del sistema SW, in termini di *servizi* che il sistema SW deve fornire, di come il sistema SW *reagisce* a specifici tipi di input e di come si *comporta* in situazioni particolari
+- ***Requisiti Non Funzionali***
+    - Descrivono le *proprietà* del sistema SW in relazione a determinati servizi o funzioni e possono anche essere relativi al *processo*
+        - Caratteristiche di **efficienza,affidabilità,safety**,etc...
+        - Caratteristiche del **processo di sviluppo**
+        - Caratteristiche **esterne**
+- **Requisiti di dominio**
+    - Requisiti derivati dal dominio applicativo del sistema SW piuttosto che da necessità dettate dagli utenti
+
+Le principali differenze tra req. funzionali/non funzionali sono quindi che :
+
+- I primi identificano tutte quelle operazioni che il sistema deve eseguire, ad esempio **"Arriva la richiesta di cancellazione di un account, il sistema deve essere in grado di eseguire tale operazione senza problemi"**
+- Gli altri identificano tutte quelle funzionalità che il sistema deve avere e rispettare, ad esempio **"il sistema deve essere affidabile, sicuro e deve garantire la crittografia dei dati"**, oppure **"Il sistema deve garantire perfomance adeguate al numero di query che arrivano"**, etc..
+
+Altri esempi possono essere :
+**Req. Funzionali**
+
+- Il sistema Sw deve fornire un appropriato visualizzatore per i documenti memorizzati
+- L'utente deve essere in grado di effettuare ricerche
+
+**Req. Non Funzionali**
+
+- Il tempo di risposta del sistema all'inserimento della password deve essere inferiore ai 10 sec.
+- I documenti di progetto devono essere conformi allo standard XYZ-ABC-12345
+
+# Domanda 4 - Caratteristiche modello a spirale
+
+>[!definition]-  Modello del ciclo di vita del SW
+>Il modello del ciclo di vita del SW specifica la serie di fasi attraverso cui il prodotto SW
+>progredisce e l'ordine con cui vanno eseguite, dalla definizione dei requisiti alla dismissione
+
+La scelta del modello dipende dalla natura dell'organizzazione, dalla maturità dell'organizzazione, da metodi e tecnologie usate e da eventuali vincoli dettati dal cliente.
+
+Ci sono vari modelli, tra cui i più importanti sono :
+- **Build & Fix** : Non è un vero modello, infatti si usa in assenza di uno degli altri modelli.
+    - Qui il prodotto SW viene prima sviluppato e poi rilavorato fino a soddisfare le esigenze del cliente
+- **Modello Waterfall** : Modello dove le operazioni vengono effettuate a "cascata", con approccio **sequenziale** e **lineare**.
+    - Ogni fase deve essere completata prima di passare alla successiva
+    - Ad ogni fine fase è associata la verifica, per poter passare alla successiva
+    - Ideale per progetti i cui requisiti sono chiari e ben definiti dall'inizio.
+- **Modello a Spirale** : Modello con approccio **iterativo** che combina elementi del modello Waterfall con attenzione particolare per l'analisi dei rischi
+    - Il SW viene sviluppato attraverso iterazioni, ognugna delle quali affronta una parte del progetto.
+    - Ideale per progetti complessi e ad alto rischio, in cui i requisiti possono cambiare durante il ciclo di vita
+
+Le caratteristiche principali del modello a spirale sono :
+- **Struttura iterativa**
+    - Il progetto è suddiviso in cicli (spirali), ognuno dei quali comporta pianificazione, progettazione, implementazione e valutazione.
+    - Ogni iterazione aggiunge valore al prodotto.
+- **Fasi principali in ogni ciclo**
+    - ***Customer communication*** (Comunicazione con il cliente): Interazione costante per raccogliere e aggiornare i requisiti.
+    - ***Planning*** (Pianificazione): Definizione degli obiettivi, stime di costo, tempi e gestione dei rischi.
+    - ***Risk analysis*** (Analisi dei rischi): Identificazione e gestione dei rischi associati al progetto.
+    - ***Engineering*** (Ingegnerizzazione): Progettazione e implementazione tecnica.
+    - ***Construction & Release*** (Costruzione e rilascio): Realizzazione e rilascio dei deliverable.
+    - ***Customer evaluation*** (Valutazione del cliente): Feedback e valutazione del prodotto per prepararsi al ciclo successivo.
+
+- **Gestione dei rischi**
+    - L'identificazione e la mitigazione dei rischi sono centrali in questo modello.
+
+- **Incrementalità**
+    - Ogni ciclo produce una versione incrementale del software, migliorando il prodotto fino alla versione finale.
+
+**Modello Waterfall**
+![[Waterfall.png|center|400]]
+
+**Modello a Spirale**
+![[Spirale.png|center|400]]
+
+# Domanda 4.1 - Cosa significa fare Risk analysis
+
+L'analisi dei rischi è un processo fondamentale per identificare, valutare e gestire i possibili problemi o incertezze che potrebbero influenzare negativamente il successo di un progetto. Nel contesto dello sviluppo software (e in particolare nel modello a spirale), l'analisi dei rischi aiuta a prevenire problemi futuri, ottimizzare i costi e garantire che il progetto rimanga nei limiti previsti di tempo e qualità.
+
+## Fasi principali
+
+- **Identificazione dei rischi**
+
+    - Obiettivo: Trovare tutte le possibili minacce che potrebbero compromettere il progetto.
+    - Tipologie di rischi da considerare:
+        - Tecnici: Incertezza nella fattibilità tecnica, utilizzo di nuove tecnologie o complessità del sistema.
+        - Gestionali: Budget insufficiente, risorse non adeguate o scadenze non realistiche.
+        - Operativi: Cambiamenti nei requisiti del cliente, modifiche alle priorità del progetto.
+        - Esterni: Fattori esterni come problemi legali, economici o di mercato.
+        - Di qualità: Il software potrebbe non soddisfare i requisiti di qualità stabiliti.
+    - Strumenti utilizzati: Brainstorming, checklist, interviste con esperti, studio di progetti simili.
+
+- **Valutazione dei rischi**
+
+    - Obiettivo: Stimare l'impatto e la probabilità di ogni rischio.
+    - Due parametri principali:
+        - **Probabilità (Likelihood)**: Quanto è probabile che il rischio si verifichi? (es. alta, media, bassa).
+        - **Impatto (Impact)**: Qual è l'effetto sul progetto se il rischio si verifica? (es. critico, moderato, lieve).
+    - Matrici di rischio: Tabelle che classificano i rischi combinando probabilità e impatto. Ad esempio :
+
+| Probabilità / Impatto | Basso  | Medio  | Alto   |
+| --------------------- | ------ | ------ | ------ |
+| Basso                 | Verde  | Verde  | Giallo |
+| Medio                 | Verde  | Giallo | Rosso  |
+| Alto                  | Giallo | Rosso  | Rosso  |
+
+- **Prioritizzazione dei rischi**
+
+    - Obiettivo: Stabilire quali rischi devono essere affrontati immediatamente.
+    - Tecniche comuni:
+        - Analisi Pareto (80/20): Concentrarsi sui pochi rischi che causano la maggior parte dei problemi.
+        - Diagramma di Ishikawa: Visualizzare le cause principali dei rischi.
+
+- **Pianificazione delle azioni di mitigazione**
+
+    - Obiettivo: Definire le azioni per ridurre la probabilità o l'impatto dei rischi.
+    - Azioni comuni:
+        - **Evitare**: Cambiare il piano per eliminare il rischio (es. evitare l'uso di tecnologie inaffidabili).
+        - **Ridurre**: Prendere misure per diminuire la probabilità o l'impatto (es. formazione del personale, aggiungere test approfonditi).
+        - **Trasferire**: Delegare il rischio a terzi (es. contratti di outsourcing o assicurazioni).
+        - **Accettare**: Decidere di non agire e gestire le conseguenze se il rischio si verifica (spesso per rischi minori).
+
+- **Monitoraggio e revisione continua**
+
+    - Obiettivo: Assicurarsi che i rischi siano costantemente gestiti durante tutto il ciclo di vita del progetto.
+    - Strumenti utilizzati:
+        - Revisioni periodiche dei rischi.
+        - Aggiornamenti alle matrici di rischio.
+        - Verifica delle azioni di mitigazione intraprese.
+
+# Domanda 6 - Architettura Oggetti Distribuiti
+
+**Architetture software - Che cos'è e per cosa si usa l'architettura ad oggetti distribuiti?**
+
+L'architettura di sistema **definisce** la struttura dei **componenti** del sistema software, insieme alle **relazioni tra questi** componenti.
+L'architettura ad **oggetti distribuiti** è un'architettura di sistema che non fa distinzioni tra client/server, infatti ogni oggetto distribuito può fungere sia da client che da server.
+La comunicazione remota fra gli oggetti è resa **trasparente** usando *middlewar* basati sul concetto di **software bus**.
+Le applicazioni basate sul questa architettura consistono in un **insieme di oggetti** che sono eseguiti su piattaforme **distribuite ed eterogenee**, e comunicano tramite invocazioni remote dei metodi
+
+**Esempio 1**
+![[ArchitetturaDistribuita1.jpg|center|450]]
+
+**Esempio 2**
+![[ArchitetturaDistribuita2.jpg|center|450]]
+
+# Domanda 7 - ORB
+
+>[!definition]-  ORB (Object Request Broker)
+>Componente SW (*Middleware*) che permette la comunicazione tra oggetti distribuiti su una rete, indipendentemente dalla loro posizione fisica, dal linguaggio di programmazione utilizzato o dal S.O. su cui sono in esecuzione.
+
+Funge quindi da **intermediario** per facilitare l'interazione tra oggetti in [un'architettura distribuita](#domanda-6---architettura-oggetti-distribuiti)
+
+## Funzionamento
+- **Intermediazione delle richieste:**
+
+    - L'ORB consente a un oggetto client (richiedente) di invocare metodi su un oggetto server (fornitore di servizi) che può risiedere su una macchina remota o locale.
+    - Il client non deve conoscere i dettagli sull'implementazione o sulla posizione fisica dell'oggetto server.
+
+- **Astrazione:**
+
+    - Fornisce un'interfaccia standard che permette agli sviluppatori di concentrarsi sulla logica applicativa, senza preoccuparsi della complessità della comunicazione a basso livello.
+
+- **Gestione della comunicazione:**
+
+    - L'ORB si occupa della serializzazione (marshalling) e deserializzazione (unmarshalling) dei dati trasmessi tra il client e il server.
+    - Gestisce i protocolli di rete necessari per il trasporto dei dati.
+
+- **Trasparenza:**
+
+    - Fornisce trasparenza sia nella posizione (**location transparency**) che nell'implementazione (**implementation transparency**), garantendo che gli oggetti possano interagire senza preoccuparsi dei dettagli di dove o come sono implementati
+
+Ci sono varie implementazioni per l'ORB, ma la più famosa è **CORBA** (Common Object Request Broker Architecture)
+
+# Domanda 8 - Attivazione Use Case Progetto
+
+Esempio Use Case
+
+![[EsempioUseCase.png|center|400]]
+
+L'attivazione di un caso d'uso avviene tramite l'interazione dell'utente con il sistema, generalmente attraverso un'interfaccia grafica.
+
+Nel caso in questione:
+
+- **Attore**: L'arbitro seleziona un'opzione specifica (es. "Inserisci risultato incontro") dalla pagina dedicata nel software.
+- **Precondizioni**:
+    - L'utente deve aver effettuato il login.
+    - Deve aver completato l'arbitraggio della partita di cui vuole inserire il risultato.
+
+**Cosa succede quando un Use Case viene attivato?**
+
+Quando l'arbitro attiva un caso d'uso (es. "Inserisce risultato incontro"), il software esegue i seguenti passi:
+
+1. **Input dell'utente**: L'arbitro seleziona il match dall'elenco delle partite disponibili.
+2. **Elaborazione del sistema**:
+    1. Il software aggiorna il risultato della partita e ricalcola la classifica.
+    2. Aggiorna i dati interni relativi al match (es. stato, punteggi).
+3. **Notifica agli utenti**:
+    1. Il sistema invia notifiche ai partecipanti e agli utenti registrati (tramite app, email, o SMS) per comunicare l'aggiornamento.
+
+**Comportamento del SW**
+
+Il software, una volta attivato il caso d'uso:
+
+- **Controlla le precondizioni**: Verifica che l'arbitro abbia effettuato il login e completato le fasi preliminari (es. arbitraggio).
+- **Gestisce scenari alternativi**:
+    - Se l'arbitro commette un errore nell'inserimento del risultato, il sistema permette di cancellare e reinserire i dati.
+- **Post-condizioni**:
+    - Dopo l'aggiornamento, il sistema rende disponibili i dati aggiornati per ulteriori elaborazioni o visualizzazioni.
+    - L'arbitro può proseguire con altre operazioni (es. compilazione del rapporto di gara)
+
+
+# Domanda 11 - Implementazione SOA
+
+>[!definition]-  SOA (Service Oriented Architecture)
+>La **SOA** è un'architettura software distribuita che consiste in molteplici *servizi*.
+>I servizi sono distribuiti in modo tale da poter essere eseguiti su nodi differenti con differenti service provider.
+>L'obiettivo di SOA è quello di sviluppare **applicazioni SW che sono composte da servizi distributi**, in modo tale che i singoli servizi possano essere eseguiti su più pattaforme differenti e implementati con differenti linguaggi di programmazione
+
+All'interno di SOA troviamo [l'ORB](#domanda-7---orb), che gestisce la comunicazione tra i client e i servizi offerti nel SOA.
+
+Anche se le SOA sono concettualmente platform-indipendent, attualmente vengono fornite con grande successo su piattaforme tecnologiche di **Web Services**.
+
+Da un punto di vista SW, i Web Services sono le API (Application Programming Interface) che forniscono i metodi standard di comunicazione
+Da un punto di vista del business, i Web Services sono funzionalità di business fornite da una compagnia nella forma di servizio esplicito in Internet.
+
+I Web Services sono quindi il fulcro dell'implementazione SOA, e sfruttano vari protocolli per far comunicare i servizi fra di loro.
+
+Tra questi troviamo :
+- **SOAP** (Simple Object Access Protocol) :
+    - Protocollo basato su linguaggio XML e HTML che permette lo scambio di informazioni in un sistema distribuito
+    - Utilizza protocolli di trasporto come HTTP,SMTP e altri
+- **REST** (Representational State Transfer)
+    - Architettura che utilizza i metodi HTTP per performare le operazioni **CRUD** (Create Read Update Delete)
+
+Otre ai Web Services, le architetture SOA utilizzano altre tecnologie, tra cui :
+- **UDDI** (Universal Description,Discovery, and Integration)
+    - Registro per pubblicare e trovare servizi web all'interno di un'architettura SOA
+    - Aiuta a localizzazare e identificare i servizi disponibili su una rete
+- **WSDL** (Web Services Description Language)
+    - Linguaggio basato su XML utilizzato per descrivere le interfacce dei servizi in un'architettura SOA
+    - Specifica cosa il servizio fa, come può essere invocato e dove si trovare
+
+# Domanda 16 - Ciclo di vita del SW
+
+>[!definition]-  Ciclo di vita del SW
+>Il ciclo di vita del SW è un processo strutturato utilizzato per progettare, sviluppare, testare, distribuire e mantenere un sistema software.
+>Garantisce che il software sia sviluppato in modo efficiente, rispettando i requisiti del cliente e mantenendo alta la qualità.
+
+Il ciclo di vita del SW è suddiviso in 3 Stadi e 6 Fasi
+
+**Sviluppo (Stadio 1)** = 6 fasi
+- Requisiti
+- Specifiche (analisi dei requisiti)
+- Pianificazione
+- Progetto
+- Codifica
+- Integrazione
+
+**Manutenzione (Stadio 2)**
+- Copre circa il 60% dei costi del ciclo di vita
+
+**Dismissione (Stadio 3)**
+
+## Dettaglio delle fasi
+
+### 1. Requisiti
+**Obiettivo**: Identificare e raccogliere le esigenze degli stakeholder.
+
+**Descrizione:**
+- In questa fase, vengono raccolte tutte le informazioni necessarie per capire cosa si aspetta il cliente dal software. Gli stakeholder (utenti, manager, tecnici) discutono le funzionalità richieste e i vincoli.
+
+**Attività principali:**
+- Interviste con gli utenti e i clienti.
+- Analisi delle esigenze funzionali (cosa il sistema deve fare).
+- Identificazione dei requisiti non funzionali (prestazioni, sicurezza, scalabilità).
+- Creazione di una lista iniziale di requisiti.
+
+### 2. Specifiche (Analisi dei requisiti)
+
+**Obiettivo**: Documentare e dettagliare i requisiti raccolti.
+**Descrizione:**
+- Questa fase traduce i requisiti generali in specifiche chiare e dettagliate. I requisiti sono formalizzati in documenti che serviranno come base per le fasi successive.
+
+**Attività principali:**
+- Analisi di fattibilità tecnica ed economica.
+- Stesura di un documento di specifiche dei requisiti software (**Software Requirements Specification, SRS**).
+- Validazione dei requisiti con il cliente per assicurarsi che siano completi e corretti.
+
+### 3. Pianificazione
+
+**Obiettivo**: Organizzare il lavoro necessario per completare il progetto.
+**Descrizione:**
+- In questa fase si definiscono le tempistiche, le risorse, il budget e i rischi. Si crea un piano per guidare l'intero processo di sviluppo.
+
+**Attività principali:**
+- Creazione di una roadmap del progetto.
+- Definizione delle milestone e dei deliverable.
+- Assegnazione dei ruoli ai membri del team.
+- Identificazione dei potenziali rischi e pianificazione delle strategie di mitigazione.
+
+### 4. Progetto
+
+**Obiettivo**: Progettare l'architettura e i dettagli tecnici del software.
+**Descrizione:**
+- Qui si definisce la struttura del sistema e le sue componenti, fornendo un modello chiaro da seguire nella fase di sviluppo.
+
+**Attività principali:**
+- Progettazione dell'architettura (es.: modelli client-server o microservizi).
+- Creazione di diagrammi UML, diagrammi di flusso e design delle interfacce.
+- Progettazione di database e definizione delle entità.
+- Redazione del piano di test iniziale per assicurarsi che il progetto sia verificabile.
+
+### 5. Codifica
+
+**Obiettivo**: Tradurre il design in un software funzionante.
+**Descrizione:**
+- I programmatori implementano il sistema scrivendo il codice sorgente basato sul progetto. Il lavoro è suddiviso in moduli o componenti.
+
+**Attività principali:**
+- Scrittura del codice seguendo standard e best practice.
+- Utilizzo di strumenti di controllo versione per gestire il codice (es.: Git).
+- Implementazione di test unitari per verificare il funzionamento dei singoli moduli.
+
+### 6. Integrazione
+
+**Obiettivo**: Collegare i diversi moduli e testare il sistema completo.
+**Descrizione:**
+- In questa fase, i singoli moduli sviluppati vengono combinati per creare il sistema completo. Si eseguono test approfonditi per verificare il corretto funzionamento dell'intero software.
+
+**Attività principali:**
+- Integrazione di moduli e componenti.
+- Esecuzione di test di integrazione per garantire che i moduli lavorino insieme senza errori.
+- Correzione dei bug emersi durante i test.
+- Preparazione per il rilascio o la distribuzione finale.
+
+# Domanda 18 - Regola 10-90
+
+Esperimenti condotti su programmi di notevoli dimensione mostrano che :
+
+>[!definition]-  Regola 10-90
+>Il 90% del tempo di esecuzione totale è speso eseguendo solo il 10% delle istruzioni
+
+Tale 10% viene chiamato **core** (nucleo) del programma
+# Domanda 19 - Stima durata progetto
+
+Per stimare la durata di un progetto software partendo dal documento di specifica, è necessario utilizzare tecniche di pianificazione e stima che si basano su diversi fattori come la dimensione stimata del prodotto, le risorse disponibili e i processi di sviluppo.
+
+La prima fase della stima è quella di stimare la **dimensione** del prodotto SW, usando le tecniche [viste qua](#domanda-30---stima-della-dimensione-del-prodotto-sw)
+
+Dopo aver stimato la dimensione, possiamo usare sostanzialmente due approcci per stimare la durata :
+1. Usando il modello algoritmico [COCOMO](#domanda-24---cocomo)
+    1. Stimando prima Effort e poi Tempo, vedi sopra
+2. Usando metodi empirici (Bottom-UP)
+    1. Suddividendo il progetto in attività specifiche e stimare la durata di ogni attività
+    2. Sommare tutte le durate per ottenere una stima complessiva
+
+# Domanda 23 - Diagramma UML per interazione tra oggetti
+
+Per specificare l'interazione tra oggetti, usando la struttura dei diagrammi UML, possiamo usare il cosi detto **sequence diagram**.
+
+L'altro diagramma UML che permette di fare questa cosa si chiama **Collaboration Diagram**.
+Questo diagramma è una rappresentazione *equivalente* del sequence diagram, infatti a partire da uno possiamo generare l'altro e viceversa.
+
+Il funzionamento del Collaboration diagram è identico a quello del sequence diagram, le uniche cose che cambiano sono che :
+- Il sequence descrive lo scambio di messaggi tra oggetti in ordine temporale, mentre **il collaboration descrive lo scambio di messaggi tra oggetti mediante relazioni**
+- I sequence vengono usati in fase di **OOA**, mentre i collaboration in fase di **OOD**
+
+# Domanda 24 - COCOMO
+
+>[!definition]-  COCOMO (**CO**nstructive **CO**st **MO**del)
+>Modello introdotto da Boehm per determinare il valore dell'effort in base alla dimensione del progetto. 
+>Il valore dell'**effort** viene successvamente utilizzato per determinare **durata** e **costi** di sviluppo
+
+COCOMO comprende 3 ***modelli*** :
+- **Basic** : Per stime iniziali
+- **Intermediate** : Usato dopo aver suddiviso il sistema in sottosistemi
+- **Advanced** Usato dopo aver suddiviso in moduli ciascun sottosistema
+
+La stima dell'effort viene effettuata a partire da :
+- Stima delle dimensioni del progetto in **KLOC** (*Kilo Lines of Code*)
+- Stima del modo di sviluppo del prodotto, che misura il livello intrinseco di difficoltà nello sviluppo, tra (anche detti modi/categorie):
+    - **organic** : per prodotti di piccole dimensioni
+    - **Semi-detached** : per prodotti di dimensioni intermedie
+    - **embedded** : per prodotti complessi
+
+## Formula di COCOMO
+
+Formula base di COCOMO
+
+**Stima dell'effort** : $$Effort=a\cdot(KLOC)^b$$
+$a,b$ sono coefficienti specifici per ciascuna categoria di progetto
+
+**Stima del tempo**
+$$Time=c\cdot(Effort)^d$$
+$c,d$ come $a,b$
+
+## Esempio
+
+**MM** = Uomo/Mesi, quante persone per mese devono lavorare al progetto
+
+Modello *Intermediate*, modo *organic*
+- Passo 1 : Determinare l'**effort nominale** con la formula : $$3.2\cdot(KLOC)^{1.05}\space MM$$ Esempio : $$3.2\cdot(33)^{1.05}=126\space MM$$
+- Passo 2 : Ottenere la stima dell'effort applicando un fattore moltiplicativo C basato su 15 **cost drivers** (spolier non li metterò) : $$effort=\text{effort nominale}\cdot C$$ Esempio $$126\cdot1.15=145\space MM$$
+- Passo 3 : Stima del tempo alla consegna, usando la formula $$T=2.5\cdot E^{0.38}\space M$$ Esempio $$T=2.5\cdot145^{0.38}\sim16.56\space M$$
+
+>[!definition]-  C (Cost driver multiplier) 
+>Si ottiene come la *produttoria* dei cost driver $c_i$.
+>Ogni $c_i$ determina la complessità del fattore $i$ che influenza il progetto e può assumere uno tra più valori assegnati con variazioni intorno al valore unitario (VEDITE STE CAZZO DE SLIDE CHE NSE CAPISCE NA SEGA)
+
+In generale, il time schedule di COCOMO è questo :
+- Modo *organic* : $T=2.5\cdot E^{0.38}$ (mesi M)
+- Modo *semi-detached* : $T=2.5\cdot E^{0.35}$ (mesi M)
+- Modo *embedded* : $T=2.5\cdot E^{0.32}$ (mesi M)
+
+# Domanda 25 - Caratteristiche del modello Microsoft
+
+La **Microsoft** ha dovuto affrontare problemi di :
+- ***incremento della qualità*** dei prodotti SW
+- ***riduzione di tempi e costi*** di sviluppo
+
+Per risolvere questi problemi si è adottato un processo che allo stesso tempo è **iterativo**,**incrementale** e **concorrente**, e che permette di esaltare le doti di creatività delle persone coinvolte nello sviluppo di prodotti SW.
+
+Con il modello di Microsoft, otteniamo un ciclo di sivluppo a 3 fasi
+**Planning**
+- Definisce la visione del prodotto, le specifiche e la pianificazione
+
+**Development**
+- Sviluppo di funzionalità in 3/4 sottoprogetti sequenziali, ognuno dei quali si traduce in un rilascio milestone.
+
+**Stabilizzazione**
+- Test interni ed esterno completi, prodotto finale, stabilizzazione e spedizione.
+
+Le carattestiche principali di questo modello sono :
+- Sviluppo Sw e testing eseguiti in parallelo
+- Features prioritizzate e integrate in 3/4 sottoprogetti cardine
+- Sincronizzazioni frequenti e stabilizzazioni intermedie
+- Continuo feedback dei customer durante il processo di sviluppo
+- Progettazione diprodotto e processi in modo che teams grandi possano lavorare come teams piccoli
+
+# Domanda 27 - Affidabilità SW
+
+**Parlami dell'affidabilità del software**
+
+L'affidabilità del software in modo informale la possiamo definire come la **credibilità** del software, mentre in modo formale come la
+
+>[!definition]- Affidabilità
+> Probabilità che il prodotto software lavori "correttamente" in un determinato intervallo temporale.
+
+Prima di continuare, diamo le definizioni di
+
+>[!info]
+>- Difetto (defect) : Anomalia presente in un prodotto SW
+>- Guasto (failure) : Comportamento anomalo del prodotto SW dovuto alla presenza di un Difetto
+>- Errore : Azione errata di chi introduce un difetto nel prodotto SW
+
+## Affidabilità
+
+Intuitivamente, un prodotto SW con molti difetti è poco affidabile (GRAZIE AR CAZZO)
+
+È chiaro che. l'affidabilità del prodotto **migliora** via via che si riduce il numero di difetti
+
+## Caratteristiche dell'affidabilità SW
+
+È una relazione non semplice tra  :
+- affidabilità osservata
+- numero di difetti latenti
+
+(1) Eliminare difetti dalle parti del prodotto raramente usate ha piccoli effetti sull'affidabilità osservata.
+
+(2) Il miglioramento dell'affidabilità per l'eliminazione di un difetto dipende dalla localizzazione del difetto (ovvero se appartiene o meno al nucleo del programa [vedi regola 10-90](#domanda-18---regola-10-90)
+
+(3) Quindi, l'affidabilità osservata dipende da come è usato il prodotto, ovvero in termini tecnici, dal suo profilo operativo (**operational profile**).
+
+(4) Dunque, dato che utenti differenti usano il software secondo profili operativi diversi, si ha che i difetti che si manifestano per un utente potrebbero non manifestarsi per l'altro (ALTRO GRAZIE AR CAZZO)
+
+Quindi, possiamo affermare che l'affidabilità di un prodotto SW **dipende dall'utente**
+
+# Domanda 29 - Impatto sui costi
+
+L'effetto delle modifiche varia molto a seconda della fase in cui vengono introdotte.
+In fasi avanzate, una modifica può comportare rivolgimenti che richiedono nuove risorse o correzioni importanti al progetto, cioè costi supplementari.
+
+Man mano che si avanza nello sviluppo, l'impatto delle modifiche aumenta significativamente
+Come possiamo notare dall'immagine sottostante, l'impatto delle modifiche sui costi aumenta vertiginosamente, fino ad arrivare a creare interruzioni e blocchi del prodotto post rilascio.
+
+![[effettiModifiche.png|center]]
+
+I modi per mitigare l'impatto delle modifiche sono :
+- **Investire in un'analisi dettagliata dei requisiti**
+- Integrare strumenti di **version control**
+- Effettuare un'adeguata pianificazione del rischio
+- etc...
+
+# Domanda 30 - Stima della dimensione del prodotto SW
+
+Per stimare la dimensione del prodotto software a partire dal documento di specifica, vengono utilizzate diverse tecniche che analizzano i requisiti del sistema e cercano di quantificare la dimensione in termini di linee di codice (LOC), funzionalità, o altri parametri.
+Tra i metodi principali troviamo:
+- **Analisi Bottom-Up (tecniche di scomposizione)** : Di cui fanno parte
+    - **FPA (Function Points Analysis)**
+    - **LOC (Lines of Code)**
+- **Modelli algoritmici empirici**
+- **Stime** su progetti simili già completati
+
+Vediamo nel dettaglio le tecniche di scomposizione **LOC** e **FPA**
+
+## Tecniche di scomposizione
+
+Le tecniche di scomposizione utilizzano una strategia "*divide et impera*", e sono basate su :
+- Stime dimensionali, come **LOC** o **FP**
+- Suddivisione dei task e/o delle funzioni con relativa stime di allocazione dell'effort
+
+### LOC - Lines of Codes
+
+Come dice la parola stessa, ***LOC stima il numero complessivo di linee di codice all'interno dell'intero SW***
+
+![Esempio Stima LOC](EsempioLOC.png)
+
+### FP - Function Points
+
+FP è una misura pesata delle funzionalità del SW.
+FP misura l'ammontare di funzionalità all'interno del sistema basandosi sulle specifiche dello stesso.
+
+FP viene calcolato in due step :
+1. Calcolare **Unadjusted Function point Count (UFC)**
+2. Moltiplicare UFC per il **Technical Complexity Factor (TCF)**
+
+Il FP finale sarà quindi $$FP=UFC\cdot TCF$$
+#### Componenti FP
+
+FP è diviso in componenti, a loro volta divisi in due categorie :
+- Componenti per il conteggio delle **categorie di dati** :
+    - **Number of Internal Logical Files (ILF)** : Un gruppo di dati o informazioni di controllo generati, utilizzati o mantenuti dal sistema SW.
+    - **Number of External Interface Files (EIF)** : Un gruppo di dati o informazioni di controllo che passano o vengono condivisi tra le applicazioni, ovvero interfacce leggibili dalla macchina verso altri sistemi e/o l'utente.
+- Componenti per il conteggio delle **categorie di transazioni** :
+    - **Number of External Inputs (EI)** : Gli elementi forniti dall'utente che descrivono dati orientati all'applicazione, informazioni di controllo (come i nomi di nomi di file e selezioni di menu), o output di altri sistemi che entrano in un'applicazione e modificano lo stato dei suoi file logici interni.
+    - **Number of External Outputs (EO)** : Tutti i dati unici o le informazioni di controllo prodotte dai sistemi software, ad esempio report e messaggi.
+    - **Number of External Inquiries (EQ)** : Tutte le combinazioni uniche di input/output, in cui un input causa e genera un'uscita immediata senza senza modificare lo stato dei file logici interni.
+### Calcolo TCF
+
+Esistono 15 fattori chiamati **fattori di degree of influence**.
+
+Ad ogni fattore viene associato un valore intero compreso fra :
+- 0 (influenza **irrilevante**)
+- 5 (influenza **essenziale**)
+
+A questo punto, il TCF viene calcolato come : $$TCF=0.65+0.01\sum_{j=1}^{14}F_j$$
+con $F_j$ il j-esimo fattore.
+
+Il TCF varia da $0.65$ (se tutti i fattori $F_j$ sono a $0$) a $1.35$ (se tutti i fattori $F_j$ sono a 5), quindi abbiamo un *aggiustamento* di $\pm 35\%$
+
+**Esempio**
+
+UFC = $55$
+TCF = $0.65+0.01(18+10)= 0.93$
+Quindi $$FP = 55\cdot 0.93\sim51$$
+
+# Domanda 32 - PetriNet
+
+Le **Reti di Petri (PetriNet)** sono tecniche **formali** di **analisi (e specifica) dei requisiti**, ovvero servono a descrivere la struttura di un sistema distribuito.
+
+Una PetriNet è formata da un grafo diretto, costituito da :
+
+**Posti (Places)**
+- Sono rappresentati come i **nodi** del grafo
+- Simbolizzano stati, condizioni o risorse
+- Possono contenere **token** (marcature) che indicano la disponibilità di risorse o il verificarsi di una condizione
+- Possono essere di due tipi :
+    - *input* : se da loro escono archi (equivalente a nodo sorgente)
+    - *output* : se da loro entrano archi (equivalente a nodo pozzo)
+
+**Transizioni (Transitions)**
+- Rappresentate graficamente con **rettangoli** o **barre**
+- Simbolizzano eventi o attività che possono avvenire nel sistema
+- Una transizione può essere abilitata (vedi sotto) ed eseguire un’azione se soddisfa certe condizioni basate sui token.
+
+**Archi (Arcs)**
+- Collegano posti e transizioni (o viceversa).
+- Definiscono la relazione di input e output tra posti e transizioni.
+- Possono avere un peso, che indica il numero di token richiesti o prodotti.
+
+**Token**
+- Rappresentati come puntini all’interno dei posti.
+- Indicano lo stato corrente del sistema e vengono spostati dai posti alle transizioni e viceversa.
+
+Si parla di **Marked PetriNet** quando vi è una distribuzione di token all'interno dei posti.
+
+## Esecuzione delle PetriNet
+
+L'esecuzione delle PetriNet è ***non deterministica*** (!!!)
+
+Una transizione si dice **abilitata** se e solo se $\exists$ token $\forall$ posto di input connesso alla transizione stessa.
+
+Una trasizione **agisce** sui token secondo la cosi detta **regola di scatto**
+- Lo scatto consuma token dai posti di input, e assegna ai posti di output tanti token quanti sono gli archi di output sulla transizione
+
+**Esempio**
+Vediamo un esempio di marked petrinet
+![[PetriNet.jpg|center|400]]
+
+Dopo aver "lanciato" la transizione $t_1$ la situazione è la seguente :
+![[PetriNet_t1.jpg|center|400]]
+
+Si può vedere come la transizione $t_1$ abbia "consumato" i token di $p_2$ e $p_4$
+
+Dopo aver "lanciato" la transizione $t_2$ la situazione sarà la seguente :
+
+![[PetriNet_t2.jpg|center|400]]
+
+# Domanda 33/33.1 - Component Framework
+
+>[!definition]-  Component Framework
+>Un **Component Framework** è una struttura software generica che formalizza classi specifiche di applicazioni, fornendo un modo per assemblare sistemi software utilizzando componenti riutilizzabili.
+>Questi componenti sono progettati per risolvere problemi comuni di coordinamento e sintesi, garantendo efficienza e affidabilità.
+
+Le caratteristiche principali del Component Framework sono :
+
+- **Componenti riutilizzabili:**
+
+    - I componenti sono astrazioni che incapsulano strutture software.
+    - Possono essere configurati per soddisfare requisiti specifici tramite parametri o legami con altri componenti.
+
+- **Black-box reuse:**
+
+    - I componenti nascondono i dettagli della loro implementazione, offrendo un'interfaccia chiara per l'integrazione.
+    - La composizione di sistemi avviene collegando i "plugs" dei componenti secondo regole predefinite.
+
+- **Encapsulation e Composition:**
+
+    - (**Variability**) L'encapsulation consente di rappresentare componenti con una variabilità definita.
+    - (**Adaptability**) La composition permette di legare parametri o altri componenti per creare sistemi complessi.
+
+- **Differenze tra oggetti e componenti:**
+
+    - Gli oggetti incapsulano servizi e sono entità runtime, mentre i componenti sono solitamente statici e servono a costruire sistemi al momento del build.
+    - I componenti possono essere più granulari degli oggetti e possiedono un'interfaccia di composizione esplicita e verificabile.
+
+## Funzionamento
+
+I componenti si collegano tramite interfacce definite che specificano le modalità di interazione.
+Ogni componente è progettato per essere utilizzato in molteplici applicazioni, fornendo flessibilità e modularità.
+I framework offrono una base strutturata su cui sviluppatori possono creare software, utilizzando i componenti come blocchi costitutivi.
+
+![[ComponentFramework.png|center|400]]
+
+# Domanda 37 - CMM
+
+**Parlami del CMM**
+
+Il **CMM** è un modello atto a determinare il livello di maturità del processo software di una organizzazione.
+In altre parole, il CMM è una misura dell'efficacia globale dell'applicazione di tecniche di ingegneria del software.
+
+Predisposto dal **SEI (Software Engineering Institute)**, il CMM è un modello basato su un questionario ed uno schema valutativo a **cinque livello**.
+
+Ogni livello comprende le caratteristiche definite per il livello precedente
+
+I 5 livelli del CMM sono :
+![[CMM.jpg|center|500]]
+
+Il CMM associa a ogni livello di maturità alcune **KPA (Key Process Area)**, tra le 18 definite, che descrivono le funzioni che devono essere presenti per garantire l'appartenenza ad un certo livello.
+
+Ogni KPA è descritta rispetto a :
+
+- obiettivi
+- impegni e responsabilità da assumere
+- capacità e risorse necessarie per la realizzazione
+- attività da realizzare
+- metodi di "monitoring" della realizzazione
+- metodi di verifica della realizzazione
