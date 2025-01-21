@@ -123,7 +123,8 @@
               "title": "Outgoing links from Risposte-Domande orali"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "44d464164230b7ee",
@@ -158,7 +159,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0762c8319a947449",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/StrutturaTM.png",
     "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
