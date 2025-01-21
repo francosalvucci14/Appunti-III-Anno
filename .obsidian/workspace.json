@@ -110,25 +110,6 @@
             }
           },
           {
-            "id": "bcbecc3caeb12333",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Esercizi Crediti Tipo D Salvucci-Noce"
-            }
-          },
-          {
             "id": "bd84962bce4103e0",
             "type": "leaf",
             "state": {
@@ -141,22 +122,8 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Risposte-Domande orali"
             }
-          },
-          {
-            "id": "ce1638aa99cb9924",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "44d464164230b7ee",
@@ -191,7 +158,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "c7e7748393778edf",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
     "Appunti ISW/img_risposte_domande/ApproccioOBS.png",

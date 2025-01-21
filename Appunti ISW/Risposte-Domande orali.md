@@ -461,6 +461,51 @@ Otre ai Web Services, le architetture SOA utilizzano altre tecnologie, tra cui :
     - Linguaggio basato su XML utilizzato per descrivere le interfacce dei servizi in un'architettura SOA
     - Specifica cosa il servizio fa, come può essere invocato e dove si trovare
 
+# Domanda 14 - Adapter
+
+L'**Adapter** è un design pattern strutturale che permette a classi o oggetti con interfacce incompatibili di lavorare insieme. L’obiettivo è quello di creare una classe che faccia da “adattatore”, traducendo le richieste di una classe in un formato che l’altra classe possa comprendere.
+
+L'Adapter si utilizza principalmente per:
+
+1. **Integrare codice esistente** con nuove librerie o framework senza modificare il codice originale.
+2. **Rendere compatibili** interfacce diverse, fungendo da "ponte" tra due classi o oggetti.
+3. **Facilitare il riutilizzo del codice**, evitando di riscrivere componenti per farli funzionare insieme.
+
+## Differenze tra Adapter su classi e oggetti
+
+### Adapter su Classi
+
+- Si realizza tramite **ereditarietà**.
+- La classe Adapter eredita sia dall'interfaccia che dalla classe da adattare, implementando i metodi richiesti dall’interfaccia target.
+- Questo approccio è possibile solo nei linguaggi che supportano **ereditarietà multipla** (come C++). In linguaggi come Java, si può simulare l'approccio con l'uso delle interfacce.
+
+**Caratteristiche:**
+
+1. È **statico**, poiché utilizza la struttura delle classi a tempo di compilazione.
+2. Ha una relazione forte con la classe adattata, in quanto l’ereditarietà vincola a quella classe.
+3. Meno flessibile: non può essere utilizzato per adattare classi che non sono correlate tramite ereditarietà.
+
+### Adapter su Oggetti
+
+- Si realizza tramite **composizione**.
+- L’Adapter contiene un riferimento a un’istanza della classe da adattare (Adaptee) e delega le chiamate ai metodi dell’Adaptee.
+- È più flessibile rispetto all’Adapter su classi perché non dipende dall’ereditarietà.
+
+**Caratteristiche:**
+
+1. È **dinamico**, poiché la relazione tra le classi viene stabilita a runtime.
+2. Più flessibile: può essere utilizzato per adattare più classi, anche non correlate tra loro.
+3. Può adattare più di una classe contemporaneamente, grazie alla composizione
+### **Quando usare Class Adapter o Object Adapter?**
+
+- Usa **Class Adapter** quando:
+    - Hai bisogno di un’implementazione semplice e diretta.
+    - Puoi usare l’ereditarietà multipla (e.g., in C++).
+    - Sei sicuro che il tuo Adapter non debba adattare più classi o cambiare dinamicamente.
+- Usa **Object Adapter** quando:
+    - Vuoi maggiore flessibilità e indipendenza dall’Adaptee.
+    - Devi adattare più classi diverse.
+    - Stai lavorando con linguaggi che non supportano l’ereditarietà multipla (e.g., Java, Python).
 # Domanda 16 - Ciclo di vita del SW
 
 >[!definition]-  Ciclo di vita del SW
@@ -575,6 +620,20 @@ Dopo aver stimato la dimensione, possiamo usare sostanzialmente due approcci per
     1. Suddividendo il progetto in attività specifiche e stimare la durata di ogni attività
     2. Sommare tutte le durate per ottenere una stima complessiva
 
+# Domanda 21 - Factory Method a cosa serve
+
+Lo scopo dell'utilizzo del Desing Pattern **Factory Method** è il seguente : 
+
+> Definire una interfaccia per la creazione di un oggetto, che consenta di decidere a tempo di esecuzione quale specifico oggetto istanziare.
+
+Quali sono le situazioni in cui si applica il Desing Pattern Factory Method? 
+Ce ne sono varie, per esempio : 
+- Una classe vuole che le sue sottoclassi scelgano gli oggetti da creare
+- Quando una classe non è in grado di sapere in anticipo le classi di oggetti che deve creare
+- etc...
+
+Quali sono le conseguenze dell'applicazione di questo DS? 
+- L'utilizzo di questo DS **elimina** la necessità di riferirsi a classi dipendendi dall'applicazione all'interno del codice.
 # Domanda 22 - Motivazioni dietro Abstract Factory
 
 
