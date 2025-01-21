@@ -182,6 +182,28 @@ Criterio raggio di azione :
 		- il *Subject* non si occupa di quanti sono gli *Observer* registrati
 	- Attenzione perché una modifica al Subject scatena una serie di modifiche su tutti gli osservatori e su tutti gli oggetti da questi dipendenti
 
+### Template Method
+
+- **Scopo**: Definire la struttura di un algoritmo all’interno di un metodo, delegando alcuni passi alle sottoclassi
+
+>Le sottoclassi ridefiniscono solo alcuni passi dell’algoritmo ma non la sua struttura
+
+- **Motivazione**: consideriamo un framework per costruire applicazioni in grado di gestire documenti diversi. Il Template Method definisce un algoritmo in base adoperazioni astratte che saranno definite nelle sottoclassi specifiche.
+
+![[StrutturaTM.png|center]]
+
+- **Applicabilità** 
+	- E’ utilizzato per implementare la parte invariante di un algoritmo, lasciando alle sottoclassi la definizione degli step variabili
+	- E’ utile quando ci sono comportamenti comuni che possono essere inseriti nel template
+- **Partecipanti**
+	- AbstractClass e ConcreteClass
+	- Client
+- **Conseguenze**
+	- I metodi template permettono il riuso del codice
+	- Creano una struttura di controllo invertito dove è la classe padre che chiama le operazioni ridefinite nei figli e non viceversa
+	- Per controllare l’estendibilità delle sottoclassi, i metodi richiamati dal template sono chiamati metodi **gancio** (hook)
+	- I metodi hook possono essere implementati, offrendo un comportamento standard, che la sottoclasse può volendo ridefinire
+
 # Domanda 1
 
 Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.
@@ -512,7 +534,7 @@ L'Adapter si utilizza principalmente per:
 >Il ciclo di vita del SW è un processo strutturato utilizzato per progettare, sviluppare, testare, distribuire e mantenere un sistema software.
 >Garantisce che il software sia sviluppato in modo efficiente, rispettando i requisiti del cliente e mantenendo alta la qualità.
 
-Il ciclo di vita del SW è suddiviso in 3 Stadi e 6 Fasi
+Il ciclo di vita del SW è suddiviso in 3 Stadi e 6 Fasi ^e23ae9
 
 **Sviluppo (Stadio 1)** = 6 fasi
 - Requisiti
@@ -636,7 +658,15 @@ Quali sono le conseguenze dell'applicazione di questo DS?
 - L'utilizzo di questo DS **elimina** la necessità di riferirsi a classi dipendendi dall'applicazione all'interno del codice.
 # Domanda 22 - Motivazioni dietro Abstract Factory
 
+Quali sono le motivazioni dietro l'utilizzo del DS Abstract Factory? 
 
+l'Abstract Factory è un pattern potente per mantenere il codice scalabile, configurabile e indipendente, offrendo una soluzione elegante per gestire famiglie di prodotti correlati in modo coerente e flessibile.
+
+Per esempio, lo usiamo quando vogliamo realizzare strumenti per lo sviluppo di User Interface in grado di supportare diversi tipi di *look & feel*. Per garantire la portabilità di una applicazione tra look & feel divertsi, gli oggetti non devono essere cablati nel codice.
+
+Il design pattern **Abstract Factory** trova la sua applicabilità in contesti in cui è necessario garantire l'indipendenza del sistema dalle modalità di creazione dei prodotti con cui opera. Questo pattern si rivela particolarmente utile quando il sistema deve poter essere configurato per utilizzare **famiglie di prodotti diversi**, mantenendo una coerenza nell'interfaccia e senza richiedere modifiche al codice client.
+
+Un aspetto fondamentale dell'Abstract Factory è che il **client non deve essere legato** a una specifica famiglia di prodotti. Questo significa che il codice del client può funzionare con qualsiasi famiglia di oggetti fornita, a patto che essa aderisca all'interfaccia definita dalla factory astratta. In questo modo, si ottiene un sistema flessibile, in grado di evolversi nel tempo con nuove famiglie di prodotti senza richiedere cambiamenti strutturali nel codice esistente.
 # Domanda 23 - Diagramma UML per interazione tra oggetti
 
 Per specificare l'interazione tra oggetti, usando la struttura dei diagrammi UML, possiamo usare il cosi detto **sequence diagram**.
@@ -925,6 +955,20 @@ I framework offrono una base strutturata su cui sviluppatori possono creare soft
 
 ![[ComponentFramework.png|center|400]]
 
+# Domanda 36 - Cosa si intende per durata di un prodotto SW?
+
+La **durata di un prodotto software** si riferisce al periodo di tempo durante il quale il software è considerato utile, operativo e rilevante per soddisfare i bisogni degli utenti o degli stakeholder. 
+Quindi, la durata del prodotto altro non è che il ciclo di vita stesso del prodotto
+
+Le varie fasi e stadi sono spiegate [qua]([[#^e23ae9]]) 
+
+La durata può essere misurata in termini di anni o mesi e viene spesso analizzata attraverso indicatori come:
+
+- Il tempo trascorso dalla messa in produzione fino al ritiro.
+- La frequenza e il costo degli interventi di manutenzione.
+- Il livello di soddisfazione degli utenti durante l'intero ciclo di vita.
+
+In sintesi, la durata di un prodotto software non è solo un parametro temporale, ma un indicatore della capacità del software di evolvere e continuare a fornire valore nel tempo.
 # Domanda 37 - CMM
 
 **Parlami del CMM**
