@@ -11,6 +11,177 @@ debugInConsole: false # Print debug info in Obsidian console
 >- Intervallo i tempo che intercorre tra l'istante in cui nasce l'esigenza di costrutire un prodotto Sw e l'istante in cui il prodotto viene dismesso
 >- Include le fasi di definizione dei requisiti, specifica, pianificazione, progetto preliminare, progetto dettagliato, codifica, itergrazione, testing, uso, manutenzione e dismissione
 
+# Desing pattern
+
+**Caratteristiche** : 
+- Rappresentano soluzioni a problematiche ricorrenti che si incontrano durante le varia fasi di sviluppo del software.
+- Organizzano l'esperienza di OOD favorendone il riuso
+- Permettono di definire un linguaggio comune che semplicifica la comunicazione tra gli addetti ai lavori.
+- Portano di norma ad una buona progettazione
+
+## Classificazione
+
+2 criteri, *scopo* (purpose) e *raggio di azione* (scope)
+
+Criterio scopo : 
+- **Creazionali** : I pattern di questo tipo sono relativi alle operazioni di creazione di oggetti
+- **Strutturali** : Sono utilizzati per definire la struttura del sistema in termini della composizione di classi ed oggetti
+- **Comportamentali** : Permettono di modellare il comportamento del sistema definendo le responsabilità delle sue componenti e definendo le modalità di interazione.
+
+Criterio raggio di azione : 
+- **Classi** : Pattern che definiscono le relazioni fra classi e sottoclassi. Le relazioni sono ***statiche***
+- **Oggetti** : Pattern che definiscono relazioni tra oggetti. Le relazioni sono ***dinamiche***
+
+![[ClassificazioneCompletaDS.png|center|500]]
+
+## Descrizione dei DS
+
+- **Nome e Classificazione** : Il nome illustra l'essenza di un pattern definendo un vocabolario; la classificazione lo identifica in termini di scopo e raggio
+- **Motivazione** : Scenario che descrive in modo astratto il **problema al quale applicare il pattern**
+- **Applicabilità** : Descrive le situazioni in cui il pattern può essere applicato
+- **Struttura** : Descrive graficamente la configurazione
+- **Partecipanti** : Classi ed oggetti che fanno parte del pattern con le relative responsabilità
+- **Conseguenze** . Risultati che si ottengono applicando il pattern
+- **Implementazioni** : Tecniche e suggerimenti utili all'implementazione
+- **Codice di esempio**
+- **Usi conosciuti** : Esempi di applicazione in sistemi reali
+- **Pattern Correlati** : Altri pattern correlati
+
+## Lista DS
+
+### Abstract Factory
+
+- **Scopo** : Fornire una interfaccia per la creazione di famiglie di oggetti tra loro correlati
+- **Motivazione** : Realizzazione di uno strumento per lo sviluppo di *user interface* (UI) in grado di sopportare diversi tipi di *look & fell*. Per garantire la portabilità di una applicazione tra look & feel diversi, gli oggetti non devono essere cabliati nel codice.
+
+> Classificazione : Creazionale basato su oggetti
+
+**Struttura**
+
+![[StrutturaAF.png|center]]
+
+- **Applicabilità** :
+	- A sistema che deve essere **indipendente** dalle modalità di creazione dei prodotti con cui opera
+	- A sistema che deve poter essere configurato per usare **famiglie di prodotti diversi**
+	- Il client **non deve essere legato** ad una specifica famiglia
+- **Partecipanti**
+	- AbstractFactory e ConcreteFactory
+	- AbstracProduct e ConcreteProduct
+	- Applicazione Client
+- **Conseguenze** : 
+	- Le classi concrete sono isolate e sotto controllo
+	- La famiglia di prodotti può essere cambiata rapidamente perché la factory completa compare in un unico punto del codice
+	- Aggiungere nuove famiglie di prodotti richiede ricompilazione perché l’insieme di prodotti gestiti è legato all’interfaccia della factory
+### Factory Method
+
+- **Scopo** : Definire una interfaccia per la creazione di un oggetto, che consenta di decidere a tempo di esecuzione quale specifico oggetto istanziare
+- **Motivazione** : È un pattern ampiamente usato nei framework, dove le classi astratte definisciono le relazioni tra gli elementi del dominio, e sono responsabili per la creazione degli oggetti concreti.
+
+> Classificazione : Creazionale basato su classi
+
+![[StrutturaFM.png|center]]
+
+- **Affidabilità** : 
+	- Una classe non è in grado di sapere in anticipo le classi di oggetti che deve creare.
+	- Una classe vuole che le sue sottoclassi scelgano gli oggetti da creare.
+	- Le classi delegano la responsabilità di creazione.
+- **Partecipanti** 
+	- Product e ConcreteProduct
+	- Creator e ConcreteCreator
+- **Conseguenze**
+	- Elimina la necessità di riferisi a classi dipendenti dall'applicazione all'interno del codice.
+
+### Adapter
+
+- **Scopo** : **Convertire** l'interfaccia di una classe esistente **incompatibile** con un client, in una **compatibile**
+- **Motivazione** : Consideriamo un editor che consente di disegnare e comporre elementi grafici. L'astrazione chiave è un singolo oggetto grafico. Supponiamo di voler integrare un nuovo componente, ma che questo non abbia una interfaccia compatibile con l'editor
+
+> Classificazione : Strutturale basato su classi/oggetti
+
+![[StrutturaABS.png|center]]
+
+- **Applicabilità**
+	- Si usa quando si vuole riusare una classe esistente, ma con interfaccia incompatibile con quella desiderata.
+- **Partecipanti**
+	- Client
+	- Target
+	- Adapter ed Adaptee
+- **Conseguenze**: E’ necessario prendere in considerazione l’effort necessario all’adattamento
+
+### Composite
+
+- **Scopo**: Comporre oggetti in strutture che consentano di trattare i singoli elementi e la composizione in modo uniforme.
+- **Motivazione**: Le applicazioni grafiche consentono di trattare in modo uniforme sia le forme geometriche di base (linee, cerchi,…) sia gli oggetti complessi che si creano a partire da questi elementi semplici. Molti editor grafici ad esempio hanno la funzione raggruppa
+
+> Classificazione : Strutturale basato su oggetti
+
+![[StrutturaComp.png|center]]
+
+- **Applicabilità**
+	- Si usa quando si vogliono rappresentare gerarchie di oggetti in modo che oggetti semplici e oggetti compositi siano trattati in modo uniforme.
+- **Partecipanti**
+	- Component e Composite
+	- Leaf
+	- Client
+- **Conseguenze**
+	- I client sono semplificati perché gli oggetti semplici e quelli compositi sono trattati allo stesso modo.
+	- L’aggiunta di nuovi oggetti Leaf o Composite è semplice, e questi potranno sfruttare il codice dell’applicazione Client già esistente.
+	- Può rendere il sistema troppo generico. Non è possibile fare in modo che un oggetto composito contenga solo un certo tipo di oggetti
+
+### Decorator
+
+- **Scopo**: Aggiungere dinamicamente funzionalità (responsabilità) ad un oggetto.
+
+> Il subclassing è una alternativa statica e il cui scope è a livello di classe e non di singolo oggetto.
+
+- **Motivazione**: Uno scenario classico di applicabilità per questo pattern è la realizzazione di interfacce utente. Responsabilità quali il testo scorrevole o un particolare bordo devono poter essere aggiunti a livello di singolo oggetto
+
+> Classificazione : Strutturale basato su oggetti
+
+![[StrutturaDec.png|center]]
+
+- **Applicabilità**
+	- Si applica quando è necessario aggiungere responsabilità agli oggetti in modo trasparente e dinamico.
+	- Si applica quando il subclassing non è adatto.
+- **Partecipanti** 
+	- Component e ConcreteComponent
+	- Decorator e ConcreteDecorator(s)
+- **Conseguenze**:
+	- Maggiore flessibilità rispetto all’approccio statico
+	- Evita di definire stutture gerarchiche complesse
+
+### Observer
+
+- **Scopo**: Definire una *dipendenza uno a molti tra oggetti*, mantenendo basso il grado di coupling. In altre parole la variazione dello stato di un oggetto deve essere osservata da altri oggetti, in modo che possano aggiornarsi automaticamente.
+- **Motivazione**: Lo scenario classico è quello di applicazioni con GUI, realizzate secondo il paradigma **Model-View-Control**. Quando il Model cambia, gli oggetti che implementano la View devono aggiornarsi
+
+> Classificazione : Comportamentale basato su oggetti
+
+**Idea di fondo**
+
+![[IdeaFondoOBS.png|center]]
+
+**Approccio corretto**
+
+![[ApproccioOBS.png|center]]
+
+**Struttura**
+
+![[StrutturaOBS.png|center]]
+
+- **Applicabilità**
+	- Si applica quando una azione può essere scomposta in due ambiti, ciascuno dei quali incapsulato in oggetti separati per mantenere basso il livello di coupling.
+	- Gestire le modifiche di oggetti conseguenti alla variazione dello stato di un oggetto.
+- **Partecipanti**
+	- Subject e ConcreteSubject
+	- Observer e ConcreteObserver
+- **Conseguenze**
+	- L’accoppiamento tra Subject ed Observer è astratto
+		- il *Subject* conosce solo la lista degli osservatori
+	- La notifica è una comunicazione di tipo broadcast
+		- il *Subject* non si occupa di quanti sono gli *Observer* registrati
+	- Attenzione perché una modifica al Subject scatena una serie di modifiche su tutti gli osservatori e su tutti gli oggetti da questi dipendenti
+
 # Domanda 1
 
 Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.

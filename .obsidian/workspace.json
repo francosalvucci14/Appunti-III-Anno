@@ -141,6 +141,19 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Risposte-Domande orali"
             }
+          },
+          {
+            "id": "ce1638aa99cb9924",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
         ],
         "currentTab": 1
@@ -180,18 +193,18 @@
   },
   "active": "f93ea91c596c0818",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
+    "Appunti ISW/img_risposte_domande/ApproccioOBS.png",
+    "Appunti ISW/img_risposte_domande/IdeaFondoOBS.png",
+    "Appunti ISW/img_risposte_domande/StrutturaDec.png",
+    "Appunti ISW/img_risposte_domande/StrutturaComp.png",
+    "Appunti ISW/img_risposte_domande/StrutturaABS.png",
+    "Appunti ISW/img_risposte_domande/StrutturaFM.png",
+    "Appunti ISW/img_risposte_domande/StrutturaAF.png",
+    "Appunti ISW/img_risposte_domande/ClassificazioneCompletaDS.png",
     "Appunti ISW/img_risposte_domande/Waterfall.png",
     "Appunti ISW/img_risposte_domande/Spirale.png",
-    "Appunti ISW/img_risposte_domande/PetriNet_t2.jpg",
-    "Appunti ISW/img_risposte_domande/PetriNet_t1.jpg",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
-    "Appunti ISW/img_risposte_domande/PetriNet.jpg",
-    "Appunti ISW/img_risposte_domande/EsempioUseCase.png",
-    "Appunti ISW/img_risposte_domande/EsempioLOC.png",
-    "Appunti ISW/img_risposte_domande/effettiModifiche.png",
-    "Appunti ISW/img_risposte_domande/ComponentFramework.png",
-    "Appunti ISW/img_risposte_domande/CMM.jpg",
-    "Appunti ISW/img_risposte_domande/ArchitetturaDistribuita2.jpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
     "Appunti ISW/Risposte-Domande orali.md",
@@ -225,4 +238,6 @@
     "Appunti PW/Lezione 8 - CSS (6).md",
     "Appunti PW/Esame/Risposte Domande.md",
     "Appunti PW/Indice delle lezioni.md",
-    "Appunti PW
+    "Appunti PW/Esame/Untitled.md"
+  ]
+}
