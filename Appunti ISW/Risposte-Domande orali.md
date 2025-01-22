@@ -204,6 +204,32 @@ Criterio raggio di azione :
 	- Per controllare l’estendibilità delle sottoclassi, i metodi richiamati dal template sono chiamati metodi **gancio** (hook)
 	- I metodi hook possono essere implementati, offrendo un comportamento standard, che la sottoclasse può volendo ridefinire
 
+Il Templat Method è simile al Factory Method
+Indirizzo però problemi diversi
+- Il Template Method è il metodo che invoca i metodi astratti, al fine di **generalizzare un algoritmo**
+- Il Factory Method è un metodo astratto che deve creare e restituire l'istanza di classe concreta, al fine di **sganciare il cliente dalla scelta del tipo specifico**
+
+### Strategy
+
+- **Scopo**: Definire ed incapsulare una famiglia di algoritmi in modo da renderli intercambiabili indipendentemente dal client che li usa.
+- **Motivazione**: Consideriamo la famiglia degli algoritmi di ordinamento. Ne esistono diversi (QuickSort, BubbleSort, MergeSort, etc). Costruiamo una applicazione che li supporti tutti, che possa essere facilmente estendibile, e che permetta una scelta rapida del tipo di algoritmo
+
+> Classificazione : Comportamentale basato su oggetti
+
+![[StrutturaSTR.png|center]]
+
+- **Applicabilità**
+	- Molte classi correlate differiscono solo per il comportamento
+		- Il pattern fornisce un modo per avere una interfaccia comune.
+	- Sono necessarie più varianti di uno stesso algoritmo, a seconda dei tipi di dato in ingresso o delle condizioni operative.
+- **Partecipanti**
+	- Strategy e ConcreteStrategy
+	- Client
+- Conseguenze:
+	- Il pattern separa l’implementazione degli algoritmi dal contesto dell’applicazione
+		- usare il subclassing della classe Client per aggiungere un algoritmo non sarebbe stata una buona scelta.
+	- Le diverse strategie eliminano i blocchi condizionali che sarebbero necessari inserendo tutti i diversi comportamenti in una unica classe
+	- Lo svantaggio principale è che i client devono conoscere le diverse strategie
 # Domanda 1
 
 Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.
@@ -955,6 +981,52 @@ I framework offrono una base strutturata su cui sviluppatori possono creare soft
 
 ![[ComponentFramework.png|center|400]]
 
+# Domanda 35 - Modello McCall
+
+![[McCall.png|center|400]]
+
+L'immagine mostra il **Triangolo della Qualità** nel contesto del **modello di McCall**, una rappresentazione grafica che evidenzia come le attività legate alla qualità del software si distribuiscano nel tempo e contribuiscano alla longevità del prodotto.
+
+**Interpretazione dell'immagine**
+
+Il triangolo collega tre principali tipi di attività di qualità:
+
+1. **Operation activities** (attività operative):
+    - Sono legate all'uso effettivo del software nel suo ciclo di vita.
+    - Si concentrano su aspetti come **affidabilità, efficienza e correttezza**.
+    - Rappresentano le attività che garantiscono il funzionamento quotidiano del software.
+2. **Revision activities** (attività di revisione):
+    - Includono la manutenzione correttiva, necessaria per risolvere i bug o correggere errori.
+    - Si riferiscono alla capacità del software di essere aggiornato per mantenere la sua funzionalità.
+3. **Transition activities** (attività di transizione):
+    - Includono la manutenzione **adattiva e perfettiva**.
+    - Queste attività permettono al software di adattarsi a nuovi ambienti o requisiti e migliorano le funzionalità esistenti.
+
+**Elementi chiave rappresentati**
+
+1. **Asse verticale: Tempo**    
+    - Rappresenta la durata del ciclo di vita del prodotto.
+    - Parte dal **delivery time** (tempo di consegna del software) e termina al **dismissal time** (tempo di dismissione del software).
+    - Include momenti importanti, come il riutilizzo del software legacy o il suo ritiro.
+2. **Asse orizzontale: Percentuale di attività**    
+    - Indica la proporzione relativa delle diverse attività di qualità che vengono svolte durante il ciclo di vita del prodotto.
+3. **Forma triangolare: Equilibrio delle attività**    
+    - La distribuzione delle attività deve essere bilanciata per massimizzare la qualità del software durante il suo ciclo di vita.
+    - L'apice del triangolo (new use of the legacy system) rappresenta la capacità del software di essere riutilizzato o adattato a nuovi scenari.
+
+**Significato del triangolo nel ciclo di vita del software**
+
+- **Fase iniziale (operation activities predominanti):**    
+    - Nella fase iniziale del ciclo di vita, l'attenzione è principalmente sul rilascio e sul corretto funzionamento del software.
+    - Le attività operative occupano la maggior parte dello sforzo.
+- **Fase intermedia (revision activities):**
+    - Man mano che il software viene utilizzato, emergono errori o cambiamenti nei requisiti, e il focus si sposta sulla manutenzione correttiva.
+- **Fase avanzata (transition activities):**
+    - Quando il software si avvicina alla fine del ciclo di vita, diventa cruciale adattarlo a nuovi ambienti o sostituirlo con sistemi più moderni.
+
+**Collegamenti al modello di McCall**
+
+L'immagine riflette l'idea centrale di McCall: la qualità del software è il risultato di un equilibrio tra le attività operative, di revisione e di transizione. Ogni fase richiede un'attenzione diversa a fattori come **manutenibilità, portabilità e testabilità** per garantire la longevità del prodotto.
 # Domanda 36 - Cosa si intende per durata di un prodotto SW?
 
 La **durata di un prodotto software** si riferisce al periodo di tempo durante il quale il software è considerato utile, operativo e rilevante per soddisfare i bisogni degli utenti o degli stakeholder. 

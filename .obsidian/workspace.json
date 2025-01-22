@@ -122,9 +122,40 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Risposte-Domande orali"
             }
+          },
+          {
+            "id": "1ff2c1a713642f5f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appunti ISW/Risposte-Domande orali.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Risposte-Domande orali"
+            }
+          },
+          {
+            "id": "8daeb1c15c1bbeb1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "44d464164230b7ee",
@@ -159,8 +190,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "0762c8319a947449",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/McCall.png",
+    "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
     "Appunti ISW/img_risposte_domande/StrutturaTM.png",
     "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
     "Appunti ISW/img_risposte_domande/ApproccioOBS.png",
@@ -170,8 +203,6 @@
     "Appunti ISW/img_risposte_domande/StrutturaABS.png",
     "Appunti ISW/img_risposte_domande/StrutturaFM.png",
     "Appunti ISW/img_risposte_domande/StrutturaAF.png",
-    "Appunti ISW/img_risposte_domande/ClassificazioneCompletaDS.png",
-    "Appunti ISW/img_risposte_domande/Waterfall.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
