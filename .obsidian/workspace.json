@@ -155,7 +155,8 @@
               "title": "Outgoing links from Risposte-Domande orali"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "44d464164230b7ee",
@@ -190,7 +191,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d7f7ef57e57da5a",
+  "active": "f93ea91c596c0818",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/Nesting.png",
     "Appunti ISW/Risposte-Domande orali.md",
