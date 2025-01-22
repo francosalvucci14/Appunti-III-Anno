@@ -230,7 +230,7 @@ Indirizzo però problemi diversi
 		- usare il subclassing della classe Client per aggiungere un algoritmo non sarebbe stata una buona scelta.
 	- Le diverse strategie eliminano i blocchi condizionali che sarebbero necessari inserendo tutti i diversi comportamenti in una unica classe
 	- Lo svantaggio principale è che i client devono conoscere le diverse strategie
-# Domanda 1
+# Domanda 1 - Significato Include/Exclude negli Use Case
 
 Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.
 Esaminiamo i concetti di include ed extend nel contesto dell'immagine fornita (esempio use case Arbitro, vedi sotto).
@@ -271,7 +271,7 @@ Ci sono 2 tipi di requisiti SW, e sono :
 - **Requisiti utente** : Descrizione in linguaggio naturale dei servizi che il sistema deve fornire e dei vincoli operativi
 - **Requisiti di sistema** : Specificati mediante la stesura di un documento strutturato che descrive in modo dettagliato i servizi che il sistema SW deve fornire
 
-I requisiti SW si dividono in 3 categorie principali, che sono :
+I requisiti SW di sistema si dividono in 3 categorie principali, che sono :
 
 - ***Requisiti Funzionali***
     - Descrivono le funzionalità del sistema SW, in termini di *servizi* che il sistema SW deve fornire, di come il sistema SW *reagisce* a specifici tipi di input e di come si *comporta* in situazioni particolari
@@ -668,6 +668,107 @@ Dopo aver stimato la dimensione, possiamo usare sostanzialmente due approcci per
     1. Suddividendo il progetto in attività specifiche e stimare la durata di ogni attività
     2. Sommare tutte le durate per ottenere una stima complessiva
 
+# Domanda 22 - Organizzazione modello di qualità del SW
+
+**Com’è organizzato il modello di qualità del software a livello di standard utilizzati?**
+
+Il modello di qualità del software si basa principalmente sullo **standard IEEE 1061**, che fornisce una guida strutturata per la definizione e valutazione della qualità del software attraverso l'identificazione e l'utilizzo di metriche specifiche.
+
+La definizione dello **standard IEEE 1061** è questo : 
+
+>[!definition]- IEEE 1061 - Software Quality Metrics Methodology
+>Si definisce **qualità del software** il livello con cui un software presenta una combinazione di attributi auspicabili
+
+
+**1. Struttura del modello secondo lo standard IEEE 1061**
+
+Lo standard IEEE 1061 organizza la qualità del software seguendo i principi chiave che permettono di:
+
+- Identificare gli **obiettivi di qualità** rilevanti per il progetto o sistema in questione.
+- Determinare gli **attributi di qualità** che rappresentano aspetti misurabili del software.
+- Sviluppare e applicare **metriche** che consentano di valutare tali attributi.
+
+**2. Indici di qualità**
+
+Un concetto centrale dello standard è l’utilizzo di **indici di qualità** che aggregano metriche per fornire un quadro d’insieme delle prestazioni del software rispetto a determinati obiettivi di qualità.
+Gli indici sono suddivisi in 3 gruppi principali, che rispettano le attività nel modello [McCall](#^24c90b) 
+
+- **Attività di revisione** : 
+	- *Manutenibilità* : 
+		- effort necessario per individuare e correggere un errore in un programma operativo.
+	- *Flessibilità* : 
+		- effort necessario per modificare un prodotto operativo
+	- *Testabilità* : 
+		- effort necessario per testare un prodotto al fine di garantire che svolga la funzione prevista
+- **Attività di Transizione** : 
+	- *Portabilità* : 
+		- effort necessario per trasferire un prodotto da un ambiente hardware e/o software ad un altro
+	- *Riusabilità* : 
+		- misura in cui un prodotto (o parti di esso) può essere riutilizzare in altre applicazioni
+	- *Interoperabilità* : 
+		- effort necessario per accoppiare un prodotto con un altro
+	- *Evolutibilità* : 
+		- effort richiesto per aggiornare il prodotto al fine di soddisfare nuovi requisiti
+- **Attivitià di Operazioni** : 
+	- *Correttezza* : 
+		- misura in cui un prodotto soddisfa le specifiche e risponde agli obiettivi degli utenti
+	- *Affidabilità* : 
+		- in che misura ci si può aspettare che un prodotto svolga la funzione prevista con la precisione richiesta
+	- *Efficienza* : 
+		- quantità di risorse di calcolo e di codice necessarie a un prodotto per eseguire una funzione
+	- *Integrità* : 
+		- misura in cui l'accesso al software o ai dati da parte di persone non autorizzate persone non autorizzate
+	- *Usabilità* : 
+		- sforzo necessario per apprendere, utilizzare, preparare l'input e interpretare l'output di un prodotto.
+
+**3. Attributi di qualità**
+
+Gli attributi di qualità definiti nello standard sono categorie specifiche che descrivono le caratteristiche essenziali per valutare la qualità di un sistema software. Gli attributi comuni includono:
+
+- **Complessità** : livello di comprensibilità e verificabilità degli elementi del software e della loro software e delle loro interazioni.
+- **Precisione** : precisione dei calcoli e dei risultati
+- **Completezza** : completa implementazione delle funzionalità richieste
+- **Coerenza** :  utilizzo di tecniche di progettazione e tecniche di implementazione e notazioni uniformi
+- **Tolleranza agli errori** : continuità di funzionamento garantita in condizioni avverse condizioni avverse
+- **Tracciabilità** : grado in cui una relazione può essere relazione tra due o più prodotti prodotti del processo di sviluppo processo di sviluppo
+- **Espandibilità** : le memorie o le funzioni possono essere espanse
+- **Generalità** : ampiezza delle potenziali applicazioni
+- **Modularità** : disposizioni di moduli altamente indipendenti
+- **Autodocumentazione** : documenti in linea
+
+Questi attributi sono correlati alle metriche che li misurano e agli obiettivi di qualità del progetto.
+
+**4. Processo di valutazione della qualità**
+
+Lo standard IEEE 1061 descrive un processo chiaro e iterativo per valutare la qualità del software:
+
+1. **Definizione degli obiettivi di qualità:** Gli obiettivi dipendono dal contesto applicativo del software (es. sicurezza per applicazioni critiche, usabilità per software consumer, ecc.).
+2. **Identificazione degli attributi:** In base agli obiettivi di qualità, vengono scelti gli attributi da misurare.
+3. **Selezione delle metriche:** Per ogni attributo vengono identificate metriche che lo rappresentano in modo quantitativo.
+4. **Misurazione e valutazione:** Le metriche vengono calcolate e confrontate con valori attesi o accettabili.
+5. **Feedback e miglioramento:** I risultati dell’analisi guidano il miglioramento continuo del software.
+
+## SQA (Software Quality Assurance)
+
+La garanzia della qualità del software (SQA) è un approccio pianificato e sistematico per garantire che sia il processo che il prodotto software siano conformi agli standard, processi e procedure stabiliti.
+
+L'obiettivo della SQA è quello di migliorare la qualità del software monitorarando sia il software che il processo di sviluppo per garantire la piena conformità con gli standard e le procedure stabiliti.
+
+Il ruolo della SQA è quello di fornire al management la garanzia che il processo ufficialmente stabilito sia effettivamente implementato.
+
+Gli standard IEEE per la preparazione di un piano SQA sono : 
+
+- Gestione
+- Documentazione
+- Standard, pratiche e convenzioni
+- Revisioni e audit
+- Gestione della configurazione del software
+- Segnalazione dei problemi e azioni correttive
+- Strumenti, tecniche e metodologie
+- Controllo del codice
+- Controllo dei supporti
+- Controllo dei fornitori
+- Raccolta, manutenzione e conservazione dei documenti
 # Domanda 21 - Factory Method a cosa serve
 
 Lo scopo dell'utilizzo del Desing Pattern **Factory Method** è il seguente : 
@@ -983,6 +1084,8 @@ I framework offrono una base strutturata su cui sviluppatori possono creare soft
 
 # Domanda 35 - Modello McCall
 
+^24c90b
+
 ![[McCall.png|center|400]]
 
 L'immagine mostra il **Triangolo della Qualità** nel contesto del **modello di McCall**, una rappresentazione grafica che evidenzia come le attività legate alla qualità del software si distribuiscano nel tempo e contribuiscano alla longevità del prodotto.
@@ -1065,3 +1168,146 @@ Ogni KPA è descritta rispetto a :
 - attività da realizzare
 - metodi di "monitoring" della realizzazione
 - metodi di verifica della realizzazione
+
+# Domanda Bonus - Metriche di Struttura
+
+>[!definition]- Modulo
+>Un modulo è una sequenza contigua di statements del programma,
+
+
+Si rappresenta l'architettura dei moduli come un albero diretto $S=\{N,R\}$, dove : 
+- ogni nodo $n\in N$ corrisponde a un modulo
+- ogni arco $r\in R$ indica le relazioni
+## Tree Impurity
+
+La Tree Impurity $m(G)$ misura quanto il grafo $G$ è differente da essere un albero
+Più piccolo è questo valore, migliore è il design
+
+La Tree Impurity può essere definita cosi : 
+$$m(G)=\frac{2(e-n+1)}{(n-1)(n-2)}$$
+
+## Riuso Interno (Misura di Yin e Winchester)
+
+È una misura che indica il grado di riutilizzo dei moduli all'interno dello stesso prodotto
+Più piccolo è il valore $r(G)$ meno è il riutilizzo
+
+**Criticità** : Non può tener conto delle chiamate ripetitive e non può tener conto delle dimensioni del modulo riutilizzato.
+
+Il valore del Riuso si calcola cosi : $$r(G)=e-n+1$$
+## Information Flow
+
+Le misure di Information Flow assumono che la complessità di un modulo dipende da 2 fatori
+- La complessità del codice del modulo
+- La complessità delle interfacce del modulo
+
+Le misure di Information Flow sono contate basandosi su l'interconnessione che un modulo ha von altri moduli nel sistema (es. il *Fan-In* e *Fan-Out* del modulo)
+
+Le misure di Information Flow si basano su : 
+- flusso di informazioni **locale**
+- flusso di informazioni **globale**
+
+### Fan-In e Fan-Out
+
+>[!definition]- Fan-In e Fan-Out
+>- **Fan-In** : di un modulo M è il numero di flussi locali (diretti+indiretti) che terminano su M più il numero di flussi globali le cui informazioni sono prelevate da M
+>- **Fan-Out** : di un modulo M è il numero di flussi locali (diretti+indiretti) che iniziano da M più il numero di flussi globali aggiornati da M
+
+Un valore **alto** di Fan-Out di un modulo indica che lui **influenza/controlla** molti altri moduli
+
+Un valore **basso** di Fan-In di un modulo indica che lui è **influenzato/controllato** da molti altri moduli
+
+### Ritornando a IF
+
+L'Information Flow (IF) per un modulo $M_i$ è definito cosi : $$IF(M_i)=[\text{fan-in}(M_i)\cdot\text{fan-out}(M_i)]^2$$
+Il valore di IF per un sistema con $n$ moduli è calcolato così $$IF=\sum\limits_{i=1}^nIF(M_i)$$
+## Misure Strutturali
+
+Le strutture hanno 3 componenti : 
+- Strutture Control-Flow : Sequenza di esecuzione delle istruzioni
+- Data Flow : Tenere traccia dei dati creati o gestiti dal programma
+- Struttura Dati : L'organizzazione dei dati indipendentemente dal programma
+
+Le misure strutturali sono usade in tools SW
+
+Come rappresentiamo la "struttura" del programma? Usando i **Control Flowgraphs**
+Come definiamo la "complessità" in termini della struttura? Usando la **Complessità Ciclomatica**
+
+### Flowgraph
+
+La struttura Control Flow è modellato con un flowgraph $FG=\{N,E\}$
+- ogni nodo $n\in N$ rappresenta uno statement del programma
+	- **nodi procedurali** : nodi con grado di uscita $1$
+	- **nodi predicati** : nodi con grado di uscita $\gt1$
+	- **noso inziale** : nodi con grado di entrata $0$
+	- **nodo terminale** : nodi con grado di uscita $0$
+- ogni arco diretto $e\in E$ indica il flusso di controllo da uno statement ad un'altro statement
+
+#### Sequencing
+
+Siano $F_1,F_2$ due flowgraphs. Allora la sequenza di $F_1,F_2$ (scritta come $F_1;F_2$) è un'altro flowgraph formato unendo il nodo terminale di $F_1$ con il nodo iniziale di $F_2$
+
+![[Sequencing.png|center]]
+
+#### Nesting
+
+Siano $F_1,F_2$ due flowgraph. Allora, l'annidamento di $F_2$ in $F_1$ sul nodo $x$, descritto come $F_1(F_2)$ è un'altro flowgraph formato partendo da $F_1$ sostituendo l'arco da $x$ con l'intero $F_2$
+
+![[Nesting.png|center]]
+
+#### Flowgraph primi
+
+I flowgraphs primi sono flowgraph che non possono essere decomposti in modo non banale tramite sequenze e nidificazioni.
+
+>[!teorem]- Teorema decomposizione prima
+>Ogni flowgraph ha una decomposizione *unica* in una gerarchia di primi, chiamata **Albero di Decomposizione**
+
+### Misure Gerarchiche
+
+È un modo di definire le misre dei flowgraph usando l'albero di decomposizione
+È basato sull'idea che afferma che noi possiamo misurare un attributo del flowgraph cosiì : 
+- definendo la misura per il flowgraph prime
+- descrivendo come l'operazione di *sequencing* affetti l'attributo
+- descrivendo come l'operazione di *nesting* affetti l'attributo
+
+#### Depth of Nesting
+
+La depth di un flowgraph $n(F)$ può essere misurata in termini di : 
+- **Primes** : $$\begin{align}&n(P_1)=0;\space n(P_2)=n(P_3)=\dots=n(P_k)=1\\&n(D_0)=n(D_1)=n(D_2)=n(D_3)=1\end{align}$$
+- **Sequencing** : $$n(F_1;F_2;\dots;F_k)=max\{n(F_1),\dots,n(F_k)\}$$
+- **Nesting** : $$n(F(F_1,F_2,\dots,F_k))=1+max\{n(F_1),n(F_2),\dots,n(F_k)\}$$
+#### D-Structuredness
+
+Molte definizioni popolari di programmazione strutturata asseriscono che il programma è strutturato se può essere composto usando solo uno numero piccolo di cotrutti ammissibili. 
+
+La definizione informale di programmazione strutturata può essere espressa formalmente asserendo che un programma è strutturato $\iff$ è **D-strutturato**
+
+La D-Structuredness $d(F)$ di un flowgraph può essere misurata in termini di
+- **Primes** : $$\begin{align}&d(P_1)=0;\space d(D_0)=d(D_1)=d(D_2)=d(D_3)=11\\&0\space\text{altrimenti}\end{align}$$
+- **Sequencing** : $$d(F_1;F_2;\dots;F_k)=min\{d(F_1),\dots,d(F_k)\}$$
+- **Nesting** : $$d(F(F_1,F_2,\dots,F_k))=min\{d(F_1),d(F_2),\dots,d(F_k)\}$$
+
+## Complessità Ciclomatica
+
+La complessità di un programma può essere misurata dal numero **ciclomatico** del flowgraph del programma.
+
+Si può calcolare in due modi diversi : 
+- Flowgraph-based
+- Code-based
+
+**Flowgraph-based**
+La complessità ciclomatica $v(F)$ è misurata come : $$v(F)=e-n+2$$
+Questo valore misura il numero di percorsi lineari indipendenti in $F$
+
+**Code-based**
+Può essere calcolato anche come $$v(F)=1+d$$
+con $d$ = numero dei nodi predicato
+
+La complessità del priming è $v(F)=1+d$
+La complessità del sequencing è $v(F_1;\dots;F_n)=\sum\limits_{i=1}^nv(F_1)-n+1$
+La complessità di annidare dentro un dato prime è $v(F(F_1;\dots;F_n))=v(F)+\sum\limits_{i=1}^nv(F_1)-n$
+
+## Complessità essenziale di McCabe
+
+La **complessità essenziale** di un programma con flowgraph $F$ è data da $$ev(F)=v(F)-m$$
+con $m$ = numero di sub-flowgraphs $D_0,D_1,D_2,D_3$
+

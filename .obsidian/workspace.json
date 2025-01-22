@@ -110,20 +110,6 @@
             }
           },
           {
-            "id": "bd84962bce4103e0",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti ISW/Risposte-Domande orali.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Risposte-Domande orali"
-            }
-          },
-          {
             "id": "1ff2c1a713642f5f",
             "type": "leaf",
             "state": {
@@ -153,6 +139,20 @@
               },
               "icon": "lucide-tags",
               "title": "Tags"
+            }
+          },
+          {
+            "id": "9c4180171a03718d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti ISW/Risposte-Domande orali.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Risposte-Domande orali"
             }
           }
         ]
@@ -190,8 +190,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0762c8319a947449",
+  "active": "8d7f7ef57e57da5a",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/Nesting.png",
+    "Appunti ISW/Risposte-Domande orali.md",
+    "Appunti ISW/img_risposte_domande/Sequencing.png",
     "Appunti ISW/img_risposte_domande/McCall.png",
     "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
     "Appunti ISW/img_risposte_domande/StrutturaTM.png",
@@ -200,13 +203,9 @@
     "Appunti ISW/img_risposte_domande/IdeaFondoOBS.png",
     "Appunti ISW/img_risposte_domande/StrutturaDec.png",
     "Appunti ISW/img_risposte_domande/StrutturaComp.png",
-    "Appunti ISW/img_risposte_domande/StrutturaABS.png",
-    "Appunti ISW/img_risposte_domande/StrutturaFM.png",
-    "Appunti ISW/img_risposte_domande/StrutturaAF.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
-    "Appunti ISW/Risposte-Domande orali.md",
     "Appunti ISW/Indice appunti ISW.md",
     "Appunti CN/Esercizi Crediti Tipo D Salvucci-Noce.md",
     "Appunti CN/Report davide.md",
