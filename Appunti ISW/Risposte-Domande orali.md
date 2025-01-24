@@ -478,6 +478,29 @@ Il software, una volta attivato il caso d'uso:
     - L'arbitro può proseguire con altre operazioni (es. compilazione del rapporto di gara)
 
 
+# Domanda 9 - Che relazione c'è tra prodotto e costo di produzione?
+
+La relazione tra prodotto e costo di produzione nel contesto del software è complessa e si basa su diversi fattori:
+
+- **Dimensione del prodotto**:
+    
+    - Maggiore è la complessità e la dimensione del software, maggiore sarà il costo di produzione.
+- **Qualità del prodotto**:
+    
+    - Un software di alta qualità richiede più tempo e risorse per essere progettato, sviluppato e testato, aumentando i costi iniziali.
+    - Tuttavia, un software di bassa qualità può comportare costi aggiuntivi per manutenzione e correzioni.
+- **Efficienza dei processi di sviluppo**:
+    
+    - L'uso di metodologie di sviluppo efficienti (e.g., Agile, DevOps) può ridurre i costi mantenendo alta la qualità.
+- **Automazione e strumenti**:
+    
+    - L'uso di strumenti di automazione può ridurre il costo di produzione migliorando l'efficienza.
+- **Scalabilità del prodotto**:
+    
+    - Un software scalabile e modulare può ridurre i costi a lungo termine, facilitando aggiornamenti e manutenzione.
+
+In sintesi, esiste un equilibrio tra il costo iniziale di produzione e i costi successivi legati alla manutenzione, supporto e aggiornamenti.
+
 # Domanda 11 - Implementazione SOA
 
 >[!definition]-  SOA (Service Oriented Architecture)
@@ -509,6 +532,51 @@ Otre ai Web Services, le architetture SOA utilizzano altre tecnologie, tra cui :
     - Linguaggio basato su XML utilizzato per descrivere le interfacce dei servizi in un'architettura SOA
     - Specifica cosa il servizio fa, come può essere invocato e dove si trovare
 
+# Domanda 12 - Secondo quali attività va declinata la fase di testing?
+
+La fase di testing, nel ciclo di vita del software, è articolata in una serie di attività che assicurano che il prodotto soddisfi i requisiti definiti. Queste attività includono:
+
+1. **Pianificazione del testing**:
+    
+    - Definizione degli obiettivi del testing.
+    - Identificazione delle risorse necessarie (strumenti, personale).
+    - Pianificazione temporale e stima dei costi.
+2. **Progettazione dei casi di test**:
+    
+    - Creazione di scenari di test basati sui requisiti funzionali e non funzionali.
+    - Identificazione delle condizioni iniziali, dei dati di input e dei risultati attesi.
+3. **Preparazione dell'ambiente di test**:
+    
+    - Configurazione degli ambienti (hardware, software, reti).
+    - Installazione delle versioni del software da testare.
+4. **Esecuzione dei test**:
+    
+    - Esecuzione dei casi di test progettati.
+    - Registrazione dei risultati (successo o fallimento) e documentazione delle anomalie.
+5. **Analisi dei risultati**:
+    
+    - Confronto tra i risultati ottenuti e quelli attesi.
+    - Identificazione e classificazione dei difetti.
+6. **Risoluzione dei problemi**:
+    
+    - Collaborazione con il team di sviluppo per risolvere i difetti identificati.
+    - Verifica delle correzioni mediante retesting.
+7. **Test di regressione**:
+    
+    - Assicurarsi che le modifiche al codice non abbiano introdotto nuovi errori.
+8. **Valutazione finale e report**:
+    
+    - Verifica se il prodotto soddisfa i criteri di accettazione.
+    - Redazione di un report con le conclusioni del testing.
+
+# Domanda 13 - Come si chiama il testing di validazione per i software a contratto?
+
+Il testing di validazione per i software sviluppati a contratto è chiamato **Acceptance Testing** (o **User Acceptance Testing**, UAT).
+
+- **Definizione**: È l'ultima fase del ciclo di testing, in cui il cliente o l'utente finale verifica che il software soddisfi i requisiti contrattuali e sia pronto per il rilascio.
+- **Scopo**:
+    - Validare che il software sia conforme alle specifiche del contratto.
+    - Garantire che il prodotto sia utilizzabile nel contesto operativo del cliente.
 # Domanda 14 - Adapter
 
 L'**Adapter** è un design pattern strutturale che permette a classi o oggetti con interfacce incompatibili di lavorare insieme. L’obiettivo è quello di creare una classe che faccia da “adattatore”, traducendo le richieste di una classe in un formato che l’altra classe possa comprendere.
@@ -646,6 +714,18 @@ Il ciclo di vita del SW è suddiviso in 3 Stadi e 6 Fasi ^e23ae9
 - Esecuzione di test di integrazione per garantire che i moduli lavorino insieme senza errori.
 - Correzione dei bug emersi durante i test.
 - Preparazione per il rilascio o la distribuzione finale.
+
+# Domanda 17 - Qual è la manutenzione più frequentemente utilizzata?
+
+La manutenzione più frequentemente utilizzata è la **manutenzione correttiva**.
+
+- **Definizione**: Si tratta dell'attività necessaria per correggere errori o difetti scoperti nel software dopo il rilascio. Questi difetti possono riguardare bug nel codice o problemi legati a funzionalità non implementate correttamente.
+    
+- **Altri tipi di manutenzione**:
+    
+    - **Manutenzione adattiva**: Modifica il software per adattarlo a cambiamenti nell'ambiente operativo (e.g., nuove versioni di sistemi operativi o hardware).
+    - **Manutenzione perfettiva**: Migliora le prestazioni o aggiunge nuove funzionalità per soddisfare le richieste degli utenti.
+    - **Manutenzione preventiva**: Effettua modifiche per prevenire futuri problemi o ridurre il rischio di guasti.
 
 # Domanda 18 - Regola 10-90
 
@@ -1063,6 +1143,22 @@ Il TCF varia da $0.65$ (se tutti i fattori $F_j$ sono a $0$) a $1.35$ (se tutti 
 UFC = $55$
 TCF = $0.65+0.01(18+10)= 0.93$
 Quindi $$FP = 55\cdot 0.93\sim51$$
+# Domanda 31 - Cos'è un software critico?
+
+Un software critico è un sistema software la cui malfunzione può avere gravi conseguenze, come la perdita di vite umane, danni significativi a infrastrutture o elevati costi economici.
+
+#### **Caratteristiche**:
+
+- **Alta affidabilità**: Deve funzionare correttamente in tutte le condizioni previste.
+- **Sicurezza**: Deve essere protetto da guasti, attacchi e accessi non autorizzati.
+- **Performance rigorose**: Spesso deve operare in tempo reale.
+
+#### **Esempi**:
+
+- Software per dispositivi medici (e.g., pacemaker).
+- Sistemi di controllo del traffico aereo.
+- Sistemi finanziari critici.
+- Sistemi di controllo industriale o infrastrutture energetiche.
 
 # Domanda 32 - PetriNet
 
@@ -1151,6 +1247,30 @@ Ogni componente è progettato per essere utilizzato in molteplici applicazioni, 
 I framework offrono una base strutturata su cui sviluppatori possono creare software, utilizzando i componenti come blocchi costitutivi.
 
 ![[ComponentFramework.png|center|400]]
+
+# Domanda 34 - Qual è il metodo per certificare chi produce il software?
+
+Il metodo più utilizzato per certificare chi produce il software è l'adozione di **standard internazionali e certificazioni di qualità**. Alcuni esempi includono:
+
+#### **a. Standard di processo**
+
+- **ISO/IEC 9001**: Certificazione di gestione della qualità applicata allo sviluppo software.
+- **ISO/IEC 12207**: Standard che definisce i processi per l'ingegneria del software.
+- **CMMI (Capability Maturity Model Integration)**:
+    - Misura la maturità dei processi di sviluppo software su una scala da 1 a 5.
+    - Livelli più alti indicano processi più ottimizzati e prevedibili.
+
+#### **b. Certificazioni individuali**
+
+- **Certified Scrum Master (CSM)** o **Professional Scrum Master (PSM)**: Per chi adotta metodologie Agile.
+- **ISTQB (International Software Testing Qualifications Board)**: Certificazioni per tester.
+- **Certified Software Development Professional (CSDP)**: Certificazione per sviluppatori professionisti.
+
+#### **c. Valutazioni settoriali**
+
+- In settori critici (e.g., aerospaziale, medico), ci sono standard specifici, come:
+    - **DO-178C** (aerospaziale).
+    - **IEC 62304** (dispositivi medici).
 
 # Domanda 35 - Modello McCall
 
@@ -1447,4 +1567,3 @@ Abbiamo vari tipi di testing, che si categorizzano in base all'approccio usato
 	- Categoria : White-Box
 - **Scenario-based testing** : Identificare gli scenari dai casi d'uso e integrarli con diagrammi di interazione che mostrino gli oggetti coinvolti nello scenario.
 	- Categoria : White-Box
-
