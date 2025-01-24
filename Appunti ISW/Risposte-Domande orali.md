@@ -571,6 +571,7 @@ La fase di testing, nel ciclo di vita del software, è articolata in una serie d
 
 # Domanda 13 - Come si chiama il testing di validazione per i software a contratto?
 
+Vedi pdf testi9ng pagina 5
 Il testing di validazione per i software sviluppati a contratto è chiamato **Acceptance Testing** (o **User Acceptance Testing**, UAT).
 
 - **Definizione**: È l'ultima fase del ciclo di testing, in cui il cliente o l'utente finale verifica che il software soddisfi i requisiti contrattuali e sia pronto per il rilascio.
