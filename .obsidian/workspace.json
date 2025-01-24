@@ -155,8 +155,7 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "44d464164230b7ee",
@@ -191,7 +190,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "c7e7748393778edf",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/DefectTest.png",
     "Appunti ISW/img_risposte_domande/EsempioFGWB.png",

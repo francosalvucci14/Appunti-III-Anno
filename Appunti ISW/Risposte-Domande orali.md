@@ -740,16 +740,16 @@ Tale 10% viene chiamato **core** (nucleo) del programma
 
 Per stimare la durata di un progetto software partendo dal documento di specifica, è necessario utilizzare tecniche di pianificazione e stima che si basano su diversi fattori come la dimensione stimata del prodotto, le risorse disponibili e i processi di sviluppo.
 
-La prima fase della stima è quella di stimare la **dimensione** del prodotto SW, usando le tecniche [viste qua](#domanda-30---stima-della-dimensione-del-prodotto-sw)
+La prima fase della stima è quella di stimare la **dimensione** del prodotto SW, usando le tecniche [viste qua](#^718be3)
 
 Dopo aver stimato la dimensione, possiamo usare sostanzialmente due approcci per stimare la durata :
-1. Usando il modello algoritmico [COCOMO](#domanda-24---cocomo)
+1. Usando il modello algoritmico [COCOMO](#^a6d783) 
     1. Stimando prima Effort e poi Tempo, vedi sopra
 2. Usando metodi empirici (Bottom-UP)
     1. Suddividendo il progetto in attività specifiche e stimare la durata di ogni attività
     2. Sommare tutte le durate per ottenere una stima complessiva
 
-# Domanda 22 - Organizzazione modello di qualità del SW
+# Domanda 20 - Organizzazione modello di qualità del SW
 
 **Com’è organizzato il modello di qualità del software a livello di standard utilizzati?**
 
@@ -891,6 +891,8 @@ Il funzionamento del Collaboration diagram è identico a quello del sequence dia
 >[!definition]-  COCOMO (**CO**nstructive **CO**st **MO**del)
 >Modello introdotto da Boehm per determinare il valore dell'effort in base alla dimensione del progetto. 
 >Il valore dell'**effort** viene successvamente utilizzato per determinare **durata** e **costi** di sviluppo
+
+^a6d783
 
 COCOMO comprende 3 ***modelli*** :
 - **Basic** : Per stime iniziali
@@ -1083,6 +1085,8 @@ I modi per mitigare l'impatto delle modifiche sono :
 - etc...
 
 # Domanda 30 - Stima della dimensione del prodotto SW
+
+^718be3
 
 Per stimare la dimensione del prodotto software a partire dal documento di specifica, vengono utilizzate diverse tecniche che analizzano i requisiti del sistema e cercano di quantificare la dimensione in termini di linee di codice (LOC), funzionalità, o altri parametri.
 Tra i metodi principali troviamo:
