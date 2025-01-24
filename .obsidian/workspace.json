@@ -110,19 +110,6 @@
             }
           },
           {
-            "id": "8daeb1c15c1bbeb1",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
             "id": "9c4180171a03718d",
             "type": "leaf",
             "state": {
@@ -172,8 +159,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "8d7f7ef57e57da5a",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/DefectTest.png",
     "Appunti ISW/img_risposte_domande/EsempioFGWB.png",
     "Appunti ISW/img_risposte_domande/TestingWB.png",
     "Appunti ISW/img_risposte_domande/EquivPart2.png",
@@ -185,7 +173,6 @@
     "Appunti ISW/img_risposte_domande/McCall.png",
     "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
     "Appunti ISW/img_risposte_domande/StrutturaTM.png",
-    "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",

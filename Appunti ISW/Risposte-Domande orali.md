@@ -936,6 +936,8 @@ Il punto di partenza per il path testing è il flowgraph del programma che mostr
 
 ## Differenze tra white/black box testing
 
+^8dabd7
+
 | **Caratteristica**        | **Black-Box**                              | **White-Box**                              |
 | ------------------------- | ------------------------------------------ | ------------------------------------------ |
 | **Conoscenza del codice** | Non necessaria                             | Necessaria                                 |
@@ -1406,4 +1408,43 @@ Ci sono 3 tipi di testing
 ## Defect testing
 
 Il goal del **defect testing** è quello di scoprire **difetti** nei programmi (😀)
+Questo va in contrasto con il *validation testing* 
+
+Un defect test *riuscito* è un test che causa un comportamento anomalo all'interno del programma.
+
+Il defect testing ha due fasi : 
+- *Component testing* 
+	- Si testano le componenti del programma in modo individuale
+	- In generale la responsabilità è del developer del componente
+	- I test sono derivati dall'esperienza del developer
+- *Integration testing*
+	- Si testano gruppi di componenti integrati per creare un sistema o sottosistema
+	- La responsabilità è del team di testing indipendente
+	- I test si basano sulle specifiche del software
+
+**Politiche del testing** : 
+
+- Solo test esaustivi possono mostrare che il programma sia libero da difetti.
+- I test devono essere basati su un sottoinsieme di possibili test case, in accordo con le politiche che devono essere visionate dal team di V&V
+- Testare situazioni tipiche è più importante che testare casi limite
+
+![[DefectTest.png|center]]
+
+Nel testing ci sono due approcci fondamentali, che sono [Black/White box testing](#^8dabd7)
+
+Abbiamo vari tipi di testing, che si categorizzano in base all'approccio usato
+- **Integration testing** : Si testano sistemi/sottosistemi completi composti da componenti integrati
+	- Categoria : Black-Box
+- **Interface testing** : Trovare difetti dovuti ad errori dell'interfaccia o assunzioni invalide sulle interfacce
+	- Categoria : Black-Box
+- **Stress testing** : Testa il sistema oltre il suo massimo carico. Stressare il sistema spesso fa emergere i difetti.
+	- Categoria : Black-Box
+- **Object-oriented testing** : Vengono testati i componenti che sono classi di oggetti, istanziati come oggetti
+	- Clasificazione : White-Box
+- **Object class testing** : Test che copre l'intera classe
+	- Testando tutte le operazioni associate ad un oggetto
+	- Fanno lavorare l'oggetto in tutti i possibili modi
+	- Categoria : White-Box
+- **Scenario-based testing** : Identificare gli scenari dai casi d'uso e integrarli con diagrammi di interazione che mostrino gli oggetti coinvolti nello scenario.
+	- Categoria : White-Box
 
