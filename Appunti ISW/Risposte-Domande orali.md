@@ -877,6 +877,74 @@ Le carattestiche principali di questo modello sono :
 - Continuo feedback dei customer durante il processo di sviluppo
 - Progettazione diprodotto e processi in modo che teams grandi possano lavorare come teams piccoli
 
+# Domanda 26 - Differenze tra testing black/white box
+
+Il **testing black-box** e il **testing white-box** sono due approcci fondamentali per testare software, ma si differenziano per il loro focus e il livello di conoscenza del sistema da parte del tester
+
+## Black-Box testing
+
+Approccio al testing dove il programma viene considerato come una **scatola nera (black-box)**
+
+I test case vengono derivati dalle specifiche del software.
+Il tester presenta gli input al componente o al sistema ed esamina l'output corrispondente.
+Se gli output non sono quelli specificati, allora il test ha rilevato *con successo* un problema con il software.
+
+Questo tipo di testing viene spesso chiamato **testing funzionale** , perchè il tester si concentra solo sulle funzionalità del SW, e non considera per niente l'implementazione interna del SW stesso.
+
+![[TestingBB.png|center]]
+
+### Equivalence Partitioning
+
+Tecnica di testing black-box.
+
+I dati di input e i risultati di output spesso rientrano in diverse classi, dove tutti i membri di una classe sono correlati
+Ognuna di queste classi è una *partizione equivalente*, in cui il programma si comporta in modo equivalente per ogni membro della classe.
+I test cases dovrebbero essere scelti da ogni partizione
+
+Come funziona? 
+
+- Si partizionano gli input/output del sistema in *partizioni equivalenti*
+- Si scelgono i test cases al confine di queste partizioni più i casi vicini al punto medio delle partizioni con input validi.
+
+![[EquivPart1.png|center]]
+
+![[EquivPart2.png|center]]
+
+## White-Box testing
+
+Viene spesso chiamato **testing strutturale**
+
+I test case sono derivati dalla *struttura del programma*
+La conoscenza del programma viene usata per identificare ulteriori test case.
+
+Obiettivo di questo tipo di testing è quello di far lavorare ogni istruzione di codice all'interno del programma
+
+![[TestingWB.png|center]]
+
+### Path testing
+
+Tecnica di testing white-box
+
+L'obiettivo del path testing è quello di assicurarsi che l'insieme dei test case sia tale che ogni path attraverso il programma sia eseguito almeno una volta.
+
+Il numero di path attraverso il programma è di solito proporzionale alla sua dimesione.
+Man mano che i moduli vengono integrati nei sistemi, diventa impraticabile l'utilizzo di tecniche di path testing che vengono, di conseguenza, utilizzate per lo più nelle fasi di test delle unità o dei moduli.
+
+Il punto di partenza per il path testing è il flowgraph del programma che mostra nodi che rappresentano le decisioni del programma e archi che rappresentano il flusso di controllo.
+
+![[EsempioFGWB.png|center]]
+
+## Differenze tra white/black box testing
+
+| **Caratteristica**        | **Black-Box**                              | **White-Box**                              |
+| ------------------------- | ------------------------------------------ | ------------------------------------------ |
+| **Conoscenza del codice** | Non necessaria                             | Necessaria                                 |
+| **Focus**                 | Funzionalità e output                      | Implementazione e logica interna           |
+| **Tipi di test**          | Test funzionali, test di sistema           | Test unitari, analisi del flusso di codice |
+| **Tester**                | Non deve conoscere la struttura del codice | Deve conoscere la struttura del codice     |
+| **Obiettivo principale**  | Verificare i requisiti                     | Verificare la correttezza interna          |
+
+In sintesi, il **testing black-box** valuta il **"cosa"** il software fa, mentre il **testing white-box** si concentra sul **"come"** lo fa.
 # Domanda 27 - Affidabilità SW
 
 **Parlami dell'affidabilità del software**
@@ -1169,11 +1237,15 @@ Ogni KPA è descritta rispetto a :
 - metodi di "monitoring" della realizzazione
 - metodi di verifica della realizzazione
 
-# Domanda Bonus - Metriche di Struttura
+# Metriche di Struttura
 
 >[!definition]- Modulo
 >Un modulo è una sequenza contigua di statements del programma,
 
+>[!definition]- Metriche di struttura
+>Misure nate per determinare quanto un software sia "buono", ovvero misurano la qualità stessa del software
+
+Ci troviamo nella situazione in cui il SW viene diviso in moduli.
 
 Si rappresenta l'architettura dei moduli come un albero diretto $S=\{N,R\}$, dove : 
 - ogni nodo $n\in N$ corrisponde a un modulo
@@ -1181,7 +1253,7 @@ Si rappresenta l'architettura dei moduli come un albero diretto $S=\{N,R\}$, dov
 ## Tree Impurity
 
 La Tree Impurity $m(G)$ misura quanto il grafo $G$ è differente da essere un albero
-Più piccolo è questo valore, migliore è il design
+**Più piccolo è questo valore, migliore è il design**
 
 La Tree Impurity può essere definita cosi : 
 $$m(G)=\frac{2(e-n+1)}{(n-1)(n-2)}$$
@@ -1189,18 +1261,18 @@ $$m(G)=\frac{2(e-n+1)}{(n-1)(n-2)}$$
 ## Riuso Interno (Misura di Yin e Winchester)
 
 È una misura che indica il grado di riutilizzo dei moduli all'interno dello stesso prodotto
-Più piccolo è il valore $r(G)$ meno è il riutilizzo
+**Più piccolo è il valore $r(G)$ meno è il riutilizzo**
 
 **Criticità** : Non può tener conto delle chiamate ripetitive e non può tener conto delle dimensioni del modulo riutilizzato.
 
 Il valore del Riuso si calcola cosi : $$r(G)=e-n+1$$
 ## Information Flow
 
-Le misure di Information Flow assumono che la complessità di un modulo dipende da 2 fatori
+Le misure di Information Flow assumono che la complessità di un modulo dipende da 2 fattori
 - La complessità del codice del modulo
 - La complessità delle interfacce del modulo
 
-Le misure di Information Flow sono contate basandosi su l'interconnessione che un modulo ha von altri moduli nel sistema (es. il *Fan-In* e *Fan-Out* del modulo)
+Le misure di Information Flow sono contate basandosi su l'interconnessione che un modulo ha con altri moduli nel sistema (es. il *Fan-In* e *Fan-Out* del modulo)
 
 Le misure di Information Flow si basano su : 
 - flusso di informazioni **locale**
@@ -1310,4 +1382,28 @@ La complessità di annidare dentro un dato prime è $v(F(F_1;\dots;F_n))=v(F)+\s
 
 La **complessità essenziale** di un programma con flowgraph $F$ è data da $$ev(F)=v(F)-m$$
 con $m$ = numero di sub-flowgraphs $D_0,D_1,D_2,D_3$
+
+# Testing
+
+La fase di testing si assicura che un sistema software sia conforme alle sue specifiche e che soddisfi le esigenze dell'utente.
+
+>[!definition]- Verification & Validation
+>- Verification : Risponde a domande tipo "stiamo costruendo il prodotto correttamente?"
+>	- Ovvero, il software deve essere conforme alle sue specifiche
+>- Validation : Risponde a domande tipo "stiamo costruendo il giusto prodotto?"
+>	- Ovvero, il software deve essere quello che l'utente veramente ha richiesto.
+
+**Tecniche di V&V**
+
+- *Ispezioni Software* : Si occupa dell'analisi della rappresentazione statica del sistema per scoprire i problemi (**tecniche statiche**)
+- *Testing Software* : Si occupa dell'esercizio e dell'osservazione del comportamento del prodotto (**tecniche dinamiche**)
+
+Ci sono 3 tipi di testing
+- Validation testing
+- Defect testing
+- Statistical testing
+
+## Defect testing
+
+Il goal del **defect testing** è quello di scoprire **difetti** nei programmi (😀)
 

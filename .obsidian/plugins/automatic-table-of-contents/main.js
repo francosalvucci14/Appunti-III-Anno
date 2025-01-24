@@ -40,6 +40,11 @@ const availableOptions = {
     default: true,
     comment: 'Make headings clickable',
   },
+  hideWhenEmpty: {
+    type: 'boolean',
+    default: false,
+    comment: 'Hide TOC if no headings are found'
+  },
   debugInConsole: {
     type: 'boolean',
     default: false,
@@ -61,7 +66,7 @@ class ObsidianAutomaticTableOfContents extends Plugin {
     })
     this.addCommand({
       id: 'insert-automatic-table-of-contents-docs',
-      name: 'Insert table of contents (documented)',
+      name: 'Insert table of contents (with available options)',
       editorCallback: onInsertTocWithDocs,
     })
   }
@@ -130,13 +135,18 @@ function getMarkdownFromHeadings(headings, options) {
     nestedOrderedList: getMarkdownNestedOrderedListFromHeadings,
     inlineFirstLevel: getMarkdownInlineFirstLevelFromHeadings,
   }
-  let markdown = ''
+  let titleMarkdown = ''
   if (options.title && options.title.length > 0) {
-    markdown += options.title + '\n'
+    titleMarkdown += options.title + '\n'
   }
-  const noHeadingMessage = '_Table of contents: no headings found_'
-  markdown += markdownHandlersByStyle[options.style](headings, options) || noHeadingMessage
-  return markdown
+  const markdownHeadings = markdownHandlersByStyle[options.style](headings, options)
+  if (markdownHeadings === null) {
+    if (options.hideWhenEmpty) {
+      return ''
+    }
+    return titleMarkdown + '_Table of contents: no headings found_'
+  }
+  return titleMarkdown + markdownHeadings
 }
 
 function getMarkdownNestedListFromHeadings(headings, options) {
@@ -289,3 +299,5 @@ if (isObsidian()) {
     getMarkdownFromHeadings,
   }
 }
+
+/* nosourcemap */

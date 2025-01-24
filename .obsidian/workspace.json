@@ -110,25 +110,6 @@
             }
           },
           {
-            "id": "1ff2c1a713642f5f",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Appunti ISW/Risposte-Domande orali.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Risposte-Domande orali"
-            }
-          },
-          {
             "id": "8daeb1c15c1bbeb1",
             "type": "leaf",
             "state": {
@@ -193,6 +174,11 @@
   },
   "active": "f93ea91c596c0818",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/EsempioFGWB.png",
+    "Appunti ISW/img_risposte_domande/TestingWB.png",
+    "Appunti ISW/img_risposte_domande/EquivPart2.png",
+    "Appunti ISW/img_risposte_domande/EquivPart1.png",
+    "Appunti ISW/img_risposte_domande/TestingBB.png",
     "Appunti ISW/img_risposte_domande/Nesting.png",
     "Appunti ISW/Risposte-Domande orali.md",
     "Appunti ISW/img_risposte_domande/Sequencing.png",
@@ -200,10 +186,6 @@
     "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
     "Appunti ISW/img_risposte_domande/StrutturaTM.png",
     "Appunti ISW/img_risposte_domande/StrutturaOBS.png",
-    "Appunti ISW/img_risposte_domande/ApproccioOBS.png",
-    "Appunti ISW/img_risposte_domande/IdeaFondoOBS.png",
-    "Appunti ISW/img_risposte_domande/StrutturaDec.png",
-    "Appunti ISW/img_risposte_domande/StrutturaComp.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
