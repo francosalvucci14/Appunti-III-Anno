@@ -735,6 +735,8 @@ Esperimenti condotti su programmi di notevoli dimensione mostrano che :
 >[!definition]-  Regola 10-90
 >Il 90% del tempo di esecuzione totale è speso eseguendo solo il 10% delle istruzioni
 
+^24c59d
+
 Tale 10% viene chiamato **core** (nucleo) del programma
 # Domanda 19 - Stima durata progetto
 
@@ -1050,7 +1052,7 @@ Prima di continuare, diamo le definizioni di
 
 Intuitivamente, un prodotto SW con molti difetti è poco affidabile (GRAZIE AR CAZZO)
 
-È chiaro che. l'affidabilità del prodotto **migliora** via via che si riduce il numero di difetti
+È chiaro che l'affidabilità del prodotto **migliora** via via che si riduce il numero di difetti
 
 ## Caratteristiche dell'affidabilità SW
 
@@ -1060,7 +1062,7 @@ Intuitivamente, un prodotto SW con molti difetti è poco affidabile (GRAZIE AR C
 
 (1) Eliminare difetti dalle parti del prodotto raramente usate ha piccoli effetti sull'affidabilità osservata.
 
-(2) Il miglioramento dell'affidabilità per l'eliminazione di un difetto dipende dalla localizzazione del difetto (ovvero se appartiene o meno al nucleo del programa [vedi regola 10-90](#domanda-18---regola-10-90)
+(2) Il miglioramento dell'affidabilità per l'eliminazione di un difetto dipende dalla localizzazione del difetto (ovvero se appartiene o meno al nucleo del programa [vedi regola 10-90](#^24c59d) 
 
 (3) Quindi, l'affidabilità osservata dipende da come è usato il prodotto, ovvero in termini tecnici, dal suo profilo operativo (**operational profile**).
 
@@ -1178,7 +1180,8 @@ TCF = $0.65+0.01(18+10)= 0.93$
 Quindi $$FP = 55\cdot 0.93\sim51$$
 # Domanda 31 - Cos'è un software critico?
 
-Un software critico è un sistema software la cui malfunzione può avere gravi conseguenze, come la perdita di vite umane, danni significativi a infrastrutture o elevati costi economici.
+>[!definition]- Software Critico
+>Un software critico è un sistema software la cui malfunzione può avere gravi conseguenze, come la perdita di vite umane, danni significativi a infrastrutture o elevati costi economici.
 
 #### **Caratteristiche**:
 
@@ -1289,7 +1292,7 @@ Il metodo più utilizzato per certificare chi produce il software è l'adozione 
 
 	- **ISO/IEC 9001**: Certificazione di gestione della qualità applicata allo sviluppo software.
 	- **ISO/IEC 12207**: Standard che definisce i processi per l'ingegneria del software.
-	- **CMMI (Capability Maturity Model Integration)**:
+	- **CMMI (Capability Maturity Model Integration)** [vedi qua](#^6524f8):
 	    - Misura la maturità dei processi di sviluppo software su una scala da 1 a 5.
 	    - Livelli più alti indicano processi più ottimizzati e prevedibili.
 
@@ -1358,7 +1361,7 @@ L'immagine riflette l'idea centrale di McCall: la qualità del software è il ri
 La **durata di un prodotto software** si riferisce al periodo di tempo durante il quale il software è considerato utile, operativo e rilevante per soddisfare i bisogni degli utenti o degli stakeholder. 
 Quindi, la durata del prodotto altro non è che il ciclo di vita stesso del prodotto
 
-Le varie fasi e stadi sono spiegate [qua]([[#^e23ae9]]) 
+Le varie fasi e stadi sono spiegate [qua](#^e23ae9) 
 
 La durata può essere misurata in termini di anni o mesi e viene spesso analizzata attraverso indicatori come:
 
@@ -1372,9 +1375,9 @@ In sintesi, la durata di un prodotto software non è solo un parametro temporale
 **Parlami del CMM**
 
 Il **CMM** è un modello atto a determinare il livello di maturità del processo software di una organizzazione.
-In altre parole, il CMM è una misura dell'efficacia globale dell'applicazione di tecniche di ingegneria del software.
+In altre parole, il CMM è una misura dell'efficacia globale dell'applicazione di tecniche di ingegneria del software. ^6524f8
 
-Predisposto dal **SEI (Software Engineering Institute)**, il CMM è un modello basato su un questionario ed uno schema valutativo a **cinque livello**.
+Predisposto dal **SEI (Software Engineering Institute)**, il CMM è un modello basato su un questionario ed uno schema valutativo a **cinque livelli**.
 
 Ogni livello comprende le caratteristiche definite per il livello precedente
 

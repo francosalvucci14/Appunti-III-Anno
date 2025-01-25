@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "17f2d0464e5493ba",
+        "id": "f3d8e667638d0622",
         "type": "tabs",
         "children": [
           {
-            "id": "8d7f7ef57e57da5a",
+            "id": "2b4cee9672bf4cf4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -110,20 +110,6 @@
             }
           },
           {
-            "id": "9c4180171a03718d",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Appunti ISW/Risposte-Domande orali.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Risposte-Domande orali"
-            }
-          },
-          {
             "id": "d4da9f4d1b0f4b7b",
             "type": "leaf",
             "state": {
@@ -155,8 +141,7 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "44d464164230b7ee",
@@ -191,8 +176,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "2b4cee9672bf4cf4",
   "lastOpenFiles": [
+    "[[.md",
+    "Appunti ISW/Risposte-Domande orali.md",
     "Appunti ISW/img_risposte_domande/DefectTest.png",
     "Appunti ISW/img_risposte_domande/EsempioFGWB.png",
     "Appunti ISW/img_risposte_domande/TestingWB.png",
@@ -200,11 +187,9 @@
     "Appunti ISW/img_risposte_domande/EquivPart1.png",
     "Appunti ISW/img_risposte_domande/TestingBB.png",
     "Appunti ISW/img_risposte_domande/Nesting.png",
-    "Appunti ISW/Risposte-Domande orali.md",
     "Appunti ISW/img_risposte_domande/Sequencing.png",
     "Appunti ISW/img_risposte_domande/McCall.png",
     "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
-    "Appunti ISW/img_risposte_domande/StrutturaTM.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
