@@ -11,7 +11,7 @@ debugInConsole: false # Print debug info in Obsidian console
 >- Intervallo i tempo che intercorre tra l'istante in cui nasce l'esigenza di costrutire un prodotto Sw e l'istante in cui il prodotto viene dismesso
 >- Include le fasi di definizione dei requisiti, specifica, pianificazione, progetto preliminare, progetto dettagliato, codifica, itergrazione, testing, uso, manutenzione e dismissione
 
-# Desing pattern
+# Design pattern
 
 **Caratteristiche** : 
 - Rappresentano soluzioni a problematiche ricorrenti che si incontrano durante le varia fasi di sviluppo del software.
@@ -1257,25 +1257,25 @@ I framework offrono una base strutturata su cui sviluppatori possono creare soft
 
 Il metodo più utilizzato per certificare chi produce il software è l'adozione di **standard internazionali e certificazioni di qualità**. Alcuni esempi includono:
 
-#### **a. Standard di processo**
+- Standard di processo
 
-- **ISO/IEC 9001**: Certificazione di gestione della qualità applicata allo sviluppo software.
-- **ISO/IEC 12207**: Standard che definisce i processi per l'ingegneria del software.
-- **CMMI (Capability Maturity Model Integration)**:
-    - Misura la maturità dei processi di sviluppo software su una scala da 1 a 5.
-    - Livelli più alti indicano processi più ottimizzati e prevedibili.
+	- **ISO/IEC 9001**: Certificazione di gestione della qualità applicata allo sviluppo software.
+	- **ISO/IEC 12207**: Standard che definisce i processi per l'ingegneria del software.
+	- **CMMI (Capability Maturity Model Integration)**:
+	    - Misura la maturità dei processi di sviluppo software su una scala da 1 a 5.
+	    - Livelli più alti indicano processi più ottimizzati e prevedibili.
 
-#### **b. Certificazioni individuali**
+- Certificazioni individuali
 
-- **Certified Scrum Master (CSM)** o **Professional Scrum Master (PSM)**: Per chi adotta metodologie Agile.
-- **ISTQB (International Software Testing Qualifications Board)**: Certificazioni per tester.
-- **Certified Software Development Professional (CSDP)**: Certificazione per sviluppatori professionisti.
+	- **Certified Scrum Master (CSM)** o **Professional Scrum Master (PSM)**: Per chi adotta metodologie Agile.
+	- **ISTQB (International Software Testing Qualifications Board)**: Certificazioni per tester.
+	- **Certified Software Development Professional (CSDP)**: Certificazione per sviluppatori professionisti.
 
-#### **c. Valutazioni settoriali**
+-  Valutazioni settoriali
 
-- In settori critici (e.g., aerospaziale, medico), ci sono standard specifici, come:
-    - **DO-178C** (aerospaziale).
-    - **IEC 62304** (dispositivi medici).
+	- In settori critici (e.g., aerospaziale, medico), ci sono standard specifici, come:
+	    - **DO-178C** (aerospaziale).
+	    - **IEC 62304** (dispositivi medici).
 
 # Domanda 35 - Modello McCall
 
