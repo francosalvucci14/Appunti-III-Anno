@@ -1071,7 +1071,6 @@ Quindi, possiamo affermare che l'affidabilità di un prodotto SW **dipende dall'
 # Domanda 28 - Specifica requisito di affidabilità
 
 I **requisiti di affidabilità** fanno parte dei **requisiti non funzionali**, e di conseguenza rientrano anche nei **requisiti di sistema**. I requisiti non funzionali definiscono caratteristiche qualitative del sistema, e l'affidabilità è una di queste.
-
 ## Come specificare un requisito di affidabilità
 
 Per definire un requisito di affidabilità in modo chiaro e verificabile, è fondamentale utilizzare metriche misurabili e standard riconosciuti.
