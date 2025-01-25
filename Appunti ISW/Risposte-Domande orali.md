@@ -1068,6 +1068,35 @@ Intuitivamente, un prodotto SW con molti difetti è poco affidabile (GRAZIE AR C
 
 Quindi, possiamo affermare che l'affidabilità di un prodotto SW **dipende dall'utente**
 
+# Domanda 28 - Specifica requisito di affidabilità
+
+I **requisiti di affidabilità** fanno parte dei **requisiti non funzionali**, e di conseguenza rientrano anche nei **requisiti di sistema**. I requisiti non funzionali definiscono caratteristiche qualitative del sistema, e l'affidabilità è una di queste.
+
+## Come specificare un requisito di affidabilità
+
+Per definire un requisito di affidabilità in modo chiaro e verificabile, è fondamentale utilizzare metriche misurabili e standard riconosciuti.
+
+**Utilizzare metriche comuni di affidabilità**
+
+Esempi di metriche per esprimere un requisito di affidabilità includono:
+
+- **MTBF (Mean Time Between Failures)**:
+    
+    - Indica il tempo medio tra un guasto e l'altro.
+    - Esempio: "Il sistema deve avere un MTBF di almeno 1.000 ore."
+- **MTTR (Mean Time To Repair)**:
+    
+    - Indica il tempo medio necessario per ripristinare il sistema dopo un guasto.
+    - Esempio: "Il sistema deve essere riparabile entro un MTTR di massimo 2 ore."
+- **Tasso di disponibilità (Availability)**:
+    
+    - Indica la percentuale di tempo in cui il sistema è operativo rispetto al tempo totale.
+    - Formula: $\text{Availability} = \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}}$
+    - Esempio: "Il sistema deve garantire un tasso di disponibilità del 99,95%."
+- **Frequenza dei guasti**:
+    
+    - Specifica il numero massimo di guasti accettabili in un dato periodo.
+    - Esempio: "Non più di 2 guasti critici per anno di utilizzo."
 # Domanda 29 - Impatto sui costi
 
 L'effetto delle modifiche varia molto a seconda della fase in cui vengono introdotte.
@@ -1351,6 +1380,7 @@ Predisposto dal **SEI (Software Engineering Institute)**, il CMM è un modello b
 Ogni livello comprende le caratteristiche definite per il livello precedente
 
 I 5 livelli del CMM sono :
+
 ![[CMM.jpg|center|500]]
 
 Il CMM associa a ogni livello di maturità alcune **KPA (Key Process Area)**, tra le 18 definite, che descrivono le funzioni che devono essere presenti per garantire l'appartenenza ad un certo livello.
