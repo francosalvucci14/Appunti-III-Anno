@@ -6,11 +6,6 @@ maxLevel: 0 # Include headings up to the specified level
 includeLinks: true # Make headings clickable
 debugInConsole: false # Print debug info in Obsidian console
 ```
-
->[!definition]-  Definizione ciclo di vita
->- Intervallo i tempo che intercorre tra l'istante in cui nasce l'esigenza di costrutire un prodotto Sw e l'istante in cui il prodotto viene dismesso
->- Include le fasi di definizione dei requisiti, specifica, pianificazione, progetto preliminare, progetto dettagliato, codifica, itergrazione, testing, uso, manutenzione e dismissione
-
 # Design pattern
 
 **Caratteristiche** : 
@@ -399,6 +394,8 @@ L'analisi dei rischi è un processo fondamentale per identificare, valutare e ge
 
 # Domanda 6 - Architettura Oggetti Distribuiti
 
+^fd85f4
+
 **Architetture software - Che cos'è e per cosa si usa l'architettura ad oggetti distribuiti?**
 
 L'architettura di sistema **definisce** la struttura dei **componenti** del sistema software, insieme alle **relazioni tra questi** componenti.
@@ -417,7 +414,9 @@ Le applicazioni basate sul questa architettura consistono in un **insieme di ogg
 >[!definition]-  ORB (Object Request Broker)
 >Componente SW (*Middleware*) che permette la comunicazione tra oggetti distribuiti su una rete, indipendentemente dalla loro posizione fisica, dal linguaggio di programmazione utilizzato o dal S.O. su cui sono in esecuzione.
 
-Funge quindi da **intermediario** per facilitare l'interazione tra oggetti in [un'architettura distribuita](#domanda-6---architettura-oggetti-distribuiti)
+^5712b3
+
+Funge quindi da **intermediario** per facilitare l'interazione tra oggetti in [un'architettura distribuita](#^fd85f4) 
 
 ## Funzionamento
 - **Intermediazione delle richieste:**
@@ -508,7 +507,7 @@ In sintesi, esiste un equilibrio tra il costo iniziale di produzione e i costi s
 >I servizi sono distribuiti in modo tale da poter essere eseguiti su nodi differenti con differenti service provider.
 >L'obiettivo di SOA è quello di sviluppare **applicazioni SW che sono composte da servizi distributi**, in modo tale che i singoli servizi possano essere eseguiti su più pattaforme differenti e implementati con differenti linguaggi di programmazione
 
-All'interno di SOA troviamo [l'ORB](#domanda-7---orb), che gestisce la comunicazione tra i client e i servizi offerti nel SOA.
+All'interno di SOA troviamo [l'ORB](#^5712b3) , che gestisce la comunicazione tra i client e i servizi offerti nel SOA.
 
 Anche se le SOA sono concettualmente platform-indipendent, attualmente vengono fornite con grande successo su piattaforme tecnologiche di **Web Services**.
 
@@ -624,6 +623,14 @@ L'Adapter si utilizza principalmente per:
     - Devi adattare più classi diverse.
     - Stai lavorando con linguaggi che non supportano l’ereditarietà multipla (e.g., Java, Python).
 # Domanda 16 - Ciclo di vita del SW
+
+Definizione formale del ciclo di vita : 
+
+>[!definition]-  Definizione ciclo di vita
+>- Intervallo i tempo che intercorre tra l'istante in cui nasce l'esigenza di costrutire un prodotto Sw e l'istante in cui il prodotto viene dismesso
+>- Include le fasi di definizione dei requisiti, specifica, pianificazione, progetto preliminare, progetto dettagliato, codifica, itergrazione, testing, uso, manutenzione e dismissione
+
+Definizione informale : 
 
 >[!definition]-  Ciclo di vita del SW
 >Il ciclo di vita del SW è un processo strutturato utilizzato per progettare, sviluppare, testare, distribuire e mantenere un sistema software.
@@ -891,7 +898,7 @@ Il funzionamento del Collaboration diagram è identico a quello del sequence dia
 # Domanda 24 - COCOMO
 
 >[!definition]-  COCOMO (**CO**nstructive **CO**st **MO**del)
->Modello introdotto da Boehm per determinare il valore dell'effort in base alla dimensione del progetto. 
+>Modello algoritmico introdotto da Boehm per determinare il valore dell'effort in base alla dimensione del progetto. 
 >Il valore dell'**effort** viene successvamente utilizzato per determinare **durata** e **costi** di sviluppo
 
 ^a6d783
@@ -904,16 +911,19 @@ COCOMO comprende 3 ***modelli*** :
 La stima dell'effort viene effettuata a partire da :
 - Stima delle dimensioni del progetto in **KLOC** (*Kilo Lines of Code*)
 - Stima del modo di sviluppo del prodotto, che misura il livello intrinseco di difficoltà nello sviluppo, tra (anche detti modi/categorie):
-    - **organic** : per prodotti di piccole dimensioni
+    - **Organic** : per prodotti di piccole dimensioni
     - **Semi-detached** : per prodotti di dimensioni intermedie
-    - **embedded** : per prodotti complessi
+    - **Embedded** : per prodotti complessi
 
 ## Formula di COCOMO
 
 Formula base di COCOMO
 
-**Stima dell'effort** : $$Effort=a\cdot(KLOC)^b$$
+**Stima dell'effort nominale** : $$EffortNom=a\cdot(KLOC)^b$$
 $a,b$ sono coefficienti specifici per ciascuna categoria di progetto
+
+**Stima effort** : $$Effort=EffortNom\cdot C$$
+Dove C è il costo driver multiplier, vedi sotto
 
 **Stima del tempo**
 $$Time=c\cdot(Effort)^d$$
@@ -945,22 +955,25 @@ La **Microsoft** ha dovuto affrontare problemi di :
 
 Per risolvere questi problemi si è adottato un processo che allo stesso tempo è **iterativo**,**incrementale** e **concorrente**, e che permette di esaltare le doti di creatività delle persone coinvolte nello sviluppo di prodotti SW.
 
-Con il modello di Microsoft, otteniamo un ciclo di sivluppo a 3 fasi
+L'approccio usato attualmente da MIcrosoft è noto come ***synchronize-and-stabilize***
+
+Con questo modello di Microsoft, otteniamo un ciclo di sviluppo a 3 fasi
+
 **Planning**
 - Definisce la visione del prodotto, le specifiche e la pianificazione
 
 **Development**
-- Sviluppo di funzionalità in 3/4 sottoprogetti sequenziali, ognuno dei quali si traduce in un rilascio milestone.
+- Sviluppo di funzionalità in $3-4$ sottoprogetti sequenziali, ognuno dei quali si traduce in un rilascio milestone.
 
 **Stabilizzazione**
 - Test interni ed esterno completi, prodotto finale, stabilizzazione e spedizione.
 
-Le carattestiche principali di questo modello sono :
+Le ***carattestiche principali*** di questo modello sono :
 - Sviluppo Sw e testing eseguiti in parallelo
-- Features prioritizzate e integrate in 3/4 sottoprogetti cardine
+- Features prioritizzate e integrate in $3-4$ sottoprogetti cardine
 - Sincronizzazioni frequenti e stabilizzazioni intermedie
 - Continuo feedback dei customer durante il processo di sviluppo
-- Progettazione diprodotto e processi in modo che teams grandi possano lavorare come teams piccoli
+- Progettazione di prodotto e processi in modo che teams grandi possano lavorare come teams piccoli
 
 # Domanda 26 - Differenze tra testing black/white box
 
@@ -976,7 +989,7 @@ Se gli output non sono quelli specificati, allora il test ha rilevato *con succe
 
 Questo tipo di testing viene spesso chiamato **testing funzionale** , perchè il tester si concentra solo sulle funzionalità del SW, e non considera per niente l'implementazione interna del SW stesso.
 
-![[TestingBB.png|center]]
+![[TestingBB.png|center|500]]
 
 ### Equivalence Partitioning
 
@@ -991,9 +1004,9 @@ Come funziona?
 - Si partizionano gli input/output del sistema in *partizioni equivalenti*
 - Si scelgono i test cases al confine di queste partizioni più i casi vicini al punto medio delle partizioni con input validi.
 
-![[EquivPart1.png|center]]
+![[EquivPart1.png|center|500]]
 
-![[EquivPart2.png|center]]
+![[EquivPart2.png|center|500]]
 
 ## White-Box testing
 
@@ -1004,7 +1017,7 @@ La conoscenza del programma viene usata per identificare ulteriori test case.
 
 Obiettivo di questo tipo di testing è quello di far lavorare ogni istruzione di codice all'interno del programma
 
-![[TestingWB.png|center]]
+![[TestingWB.png|center|500]]
 
 ### Path testing
 
@@ -1017,7 +1030,7 @@ Man mano che i moduli vengono integrati nei sistemi, diventa impraticabile l'uti
 
 Il punto di partenza per il path testing è il flowgraph del programma che mostra nodi che rappresentano le decisioni del programma e archi che rappresentano il flusso di controllo.
 
-![[EsempioFGWB.png|center]]
+![[EsempioFGWB.png|center|500]]
 
 ## Differenze tra white/black box testing
 
@@ -1399,16 +1412,18 @@ Ogni KPA è descritta rispetto a :
 # Metriche di Struttura
 
 >[!definition]- Modulo
->Un modulo è una sequenza contigua di statements del programma,
+>Un modulo è una sequenza contigua di statements del programma
 
 >[!definition]- Metriche di struttura
 >Misure nate per determinare quanto un software sia "buono", ovvero misurano la qualità stessa del software
 
-Ci troviamo nella situazione in cui il SW viene diviso in moduli.
+Ci troviamo nella situazione in cui il SW viene diviso in moduli, di conseguenza abbiamo la cosi detta **architettura dei moduli (structured chart)**
 
 Si rappresenta l'architettura dei moduli come un albero diretto $S=\{N,R\}$, dove : 
 - ogni nodo $n\in N$ corrisponde a un modulo
 - ogni arco $r\in R$ indica le relazioni
+
+Partendo da questa rappresentazione, vediamo alcune metriche di struttura atte a determinare la qualità del SW
 ## Tree Impurity
 
 La Tree Impurity $m(G)$ misura quanto il grafo $G$ è differente da essere un albero
@@ -1431,23 +1446,33 @@ Le misure di Information Flow assumono che la complessità di un modulo dipende 
 - La complessità del codice del modulo
 - La complessità delle interfacce del modulo
 
+Il livello totale di Information Flow attraverso un sistema è un'***attributo inter-modulare***
+
+Il livello totale di Information Flow tra un modulo individuale e il resto del sistema è un'***attributo intra-modulare***
+
 Le misure di Information Flow sono contate basandosi su l'interconnessione che un modulo ha con altri moduli nel sistema (es. il *Fan-In* e *Fan-Out* del modulo)
 
 Le misure di Information Flow si basano su : 
 - flusso di informazioni **locale**
+	- Diretto : Un modulo chiama un'altro modulo
+	- Indiretto : Flusso derivante dai valori di ritorno
 - flusso di informazioni **globale**
+	- Informazioni che vengono passate tra i moduli secondo una struttura dati globale
 
 ### Fan-In e Fan-Out
 
 >[!definition]- Fan-In e Fan-Out
->- **Fan-In** : di un modulo M è il numero di flussi locali (diretti+indiretti) che terminano su M più il numero di flussi globali le cui informazioni sono prelevate da M
->- **Fan-Out** : di un modulo M è il numero di flussi locali (diretti+indiretti) che iniziano da M più il numero di flussi globali aggiornati da M
+>- **Fan-In** : di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che terminano su M più il numero di flussi globali le cui informazioni sono prelevate da $M$
+>- **Fan-Out** : di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che iniziano da M più il numero di flussi globali aggiornati da $M$
 
-Un valore **alto** di Fan-Out di un modulo indica che lui **influenza/controlla** molti altri moduli
+![[FanInOut.png|center|300]]
 
-Un valore **basso** di Fan-In di un modulo indica che lui è **influenzato/controllato** da molti altri moduli
 
-### Ritornando a IF
+> Un valore **alto** di Fan-Out di un modulo indica che lui **influenza/controlla** molti altri moduli
+
+> Un valore **basso** di Fan-In di un modulo indica che lui è **influenzato/controllato** da molti altri moduli
+
+### Misura di IF (Henry & Kafura)
 
 L'Information Flow (IF) per un modulo $M_i$ è definito cosi : $$IF(M_i)=[\text{fan-in}(M_i)\cdot\text{fan-out}(M_i)]^2$$
 Il valore di IF per un sistema con $n$ moduli è calcolato così $$IF=\sum\limits_{i=1}^nIF(M_i)$$
@@ -1460,12 +1485,12 @@ Le strutture hanno 3 componenti :
 
 Le misure strutturali sono usade in tools SW
 
-Come rappresentiamo la "struttura" del programma? Usando i **Control Flowgraphs**
+Come rappresentiamo la "struttura" del programma? Usando i **Control Flowgraphs** (diagrammi di flusso)
 Come definiamo la "complessità" in termini della struttura? Usando la **Complessità Ciclomatica**
 
 ### Flowgraph
 
-La struttura Control Flow è modellato con un flowgraph $FG=\{N,E\}$
+La struttura Control Flow è modellata da un flowgraph $FG=\{N,E\}$
 - ogni nodo $n\in N$ rappresenta uno statement del programma
 	- **nodi procedurali** : nodi con grado di uscita $1$
 	- **nodi predicati** : nodi con grado di uscita $\gt1$
@@ -1494,18 +1519,23 @@ I flowgraphs primi sono flowgraph che non possono essere decomposti in modo non 
 
 ### Misure Gerarchiche
 
-È un modo di definire le misre dei flowgraph usando l'albero di decomposizione
-È basato sull'idea che afferma che noi possiamo misurare un attributo del flowgraph cosiì : 
+È un modo di definire le misure dei flowgraph usando l'albero di decomposizione
+È basato sull'idea che afferma che noi possiamo misurare un attributo del flowgraph così : 
 - definendo la misura per il flowgraph prime
 - descrivendo come l'operazione di *sequencing* affetti l'attributo
 - descrivendo come l'operazione di *nesting* affetti l'attributo
 
+Esempi di misure per i flowgraph che possono dare informazioni sulla complessità della struttura del codice sono : 
+- Depth of Nesting
+- D-Structuredness
 #### Depth of Nesting
 
 La depth di un flowgraph $n(F)$ può essere misurata in termini di : 
 - **Primes** : $$\begin{align}&n(P_1)=0;\space n(P_2)=n(P_3)=\dots=n(P_k)=1\\&n(D_0)=n(D_1)=n(D_2)=n(D_3)=1\end{align}$$
 - **Sequencing** : $$n(F_1;F_2;\dots;F_k)=max\{n(F_1),\dots,n(F_k)\}$$
 - **Nesting** : $$n(F(F_1,F_2,\dots,F_k))=1+max\{n(F_1),n(F_2),\dots,n(F_k)\}$$
+![[EsempioDepth.png|center|500]]
+
 #### D-Structuredness
 
 Molte definizioni popolari di programmazione strutturata asseriscono che il programma è strutturato se può essere composto usando solo uno numero piccolo di cotrutti ammissibili. 
@@ -1513,9 +1543,10 @@ Molte definizioni popolari di programmazione strutturata asseriscono che il prog
 La definizione informale di programmazione strutturata può essere espressa formalmente asserendo che un programma è strutturato $\iff$ è **D-strutturato**
 
 La D-Structuredness $d(F)$ di un flowgraph può essere misurata in termini di
-- **Primes** : $$\begin{align}&d(P_1)=0;\space d(D_0)=d(D_1)=d(D_2)=d(D_3)=11\\&0\space\text{altrimenti}\end{align}$$
+- **Primes** : $$\begin{align}&d(P_1)=0;\space d(D_0)=d(D_1)=d(D_2)=d(D_3)=1\\&0\space\text{altrimenti}\end{align}$$
 - **Sequencing** : $$d(F_1;F_2;\dots;F_k)=min\{d(F_1),\dots,d(F_k)\}$$
 - **Nesting** : $$d(F(F_1,F_2,\dots,F_k))=min\{d(F_1),d(F_2),\dots,d(F_k)\}$$
+![[EsempioDStruct.png|center|500]]
 
 ## Complessità Ciclomatica
 
@@ -1529,13 +1560,14 @@ Si può calcolare in due modi diversi :
 La complessità ciclomatica $v(F)$ è misurata come : $$v(F)=e-n+2$$
 Questo valore misura il numero di percorsi lineari indipendenti in $F$
 
-**Code-based**
-Può essere calcolato anche come $$v(F)=1+d$$
-con $d$ = numero dei nodi predicato
+Oppure, può essere calcolato come $$v(F)=1+d$$
+con $d$ = numero dei nodi predicato, ovvero il numero di punti di decisione nel programma
 
 La complessità del priming è $v(F)=1+d$
 La complessità del sequencing è $v(F_1;\dots;F_n)=\sum\limits_{i=1}^nv(F_1)-n+1$
 La complessità di annidare dentro un dato prime è $v(F(F_1;\dots;F_n))=v(F)+\sum\limits_{i=1}^nv(F_1)-n$
+
+![[EsempioCC.png|center|500]]
 
 ## Complessità essenziale di McCabe
 
@@ -1585,7 +1617,7 @@ Il defect testing ha due fasi :
 - I test devono essere basati su un sottoinsieme di possibili test case, in accordo con le politiche che devono essere visionate dal team di V&V
 - Testare situazioni tipiche è più importante che testare casi limite
 
-![[DefectTest.png|center]]
+![[DefectTest.png|center|500]]
 
 Nel testing ci sono due approcci fondamentali, che sono [Black/White box testing](#^8dabd7)
 

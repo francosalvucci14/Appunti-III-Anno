@@ -129,19 +129,21 @@
             }
           },
           {
-            "id": "9177a97a73122b10",
+            "id": "0ddc404bbb40717c",
             "type": "leaf",
             "state": {
-              "type": "tag",
+              "type": "outgoing-link",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
+                "file": "Appunti ISW/Risposte-Domande orali.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
               },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              "icon": "links-going-out",
+              "title": "Outgoing links from Risposte-Domande orali"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "44d464164230b7ee",
@@ -176,8 +178,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b4cee9672bf4cf4",
+  "active": "0ddc404bbb40717c",
   "lastOpenFiles": [
+    "Appunti ISW/img_risposte_domande/EsempioCC.png",
+    "Appunti ISW/img_risposte_domande/EsempioDStruct.png",
+    "Appunti ISW/img_risposte_domande/EsempioDepth.png",
+    "Appunti ISW/img_risposte_domande/FanInOut.png",
     "[[.md",
     "Appunti ISW/Risposte-Domande orali.md",
     "Appunti ISW/img_risposte_domande/DefectTest.png",
@@ -187,9 +193,6 @@
     "Appunti ISW/img_risposte_domande/EquivPart1.png",
     "Appunti ISW/img_risposte_domande/TestingBB.png",
     "Appunti ISW/img_risposte_domande/Nesting.png",
-    "Appunti ISW/img_risposte_domande/Sequencing.png",
-    "Appunti ISW/img_risposte_domande/McCall.png",
-    "Appunti ISW/img_risposte_domande/StrutturaSTR.png",
     "Appunti ISW/img_risposte_domande/PetriNetjpg",
     "Appunti ISW/img_risposte_domande",
     "Appunti ISW/Lezione 1.md",
@@ -222,7 +225,6 @@
     "Appunti PW/Lezione 7 - CSS (5).md",
     "Appunti PW/Lezione 8 - CSS (6).md",
     "Appunti PW/Esame/Risposte Domande.md",
-    "Appunti PW/Indice delle lezioni.md",
-    "Appunti PW/Esame/Untitled.md"
+    "Appunti PW/Indice delle lezioni.md"
   ]
 }
