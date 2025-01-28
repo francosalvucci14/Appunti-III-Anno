@@ -220,11 +220,38 @@ Indirizzo però problemi diversi
 - **Partecipanti**
 	- Strategy e ConcreteStrategy
 	- Client
-- Conseguenze:
+- **Conseguenze**:
 	- Il pattern separa l’implementazione degli algoritmi dal contesto dell’applicazione
 		- usare il subclassing della classe Client per aggiungere un algoritmo non sarebbe stata una buona scelta.
 	- Le diverse strategie eliminano i blocchi condizionali che sarebbero necessari inserendo tutti i diversi comportamenti in una unica classe
 	- Lo svantaggio principale è che i client devono conoscere le diverse strategie
+
+### Singleton
+
+- **Scopo** : Gestire la creazione di un'unica istanza di una classe
+- **Motivazione** : Il pattern Singleton risolve il problema di garantire che una classe abbia una sola istanza globale e di fornire un punto di accesso controllato a essa. Un esempio concreto è un registro di configurazione di sistema: deve esserci una sola copia delle configurazioni condivisa tra tutte le parti del sistema per evitare incongruenze o comportamenti imprevedibili.
+
+> Classificazione : Strutturale basato su classi
+
+La struttura è esattamente quella che sta nel progetto
+
+- **Applicabilità**
+	- Quando è necessario garantire che ci sia una sola istanza di una classe, ad esempio:
+	    - Un logger.
+	    - Un registro di configurazione.
+	    - Un pool di connessioni.
+	- Quando è necessaria una gestione centralizzata di una risorsa condivisa.
+	- Quando l'istanza unica deve essere facilmente accessibile da più punti nel sistema
+- **Partecipanti** : Classe Singleton
+- **Conseguenze** : 
+	- **Vantaggi:**
+		- **Controllo:** Assicura l'esistenza di una singola istanza.
+		- **Accesso globale:** Fornisce un punto di accesso centralizzato.
+		- **Riduzione del carico:** Riduce la necessità di istanziare più oggetti quando una sola istanza è sufficiente.
+	- **Svantaggi:**
+		- **Testing:** Difficile da testare poiché l'istanza è globale e non facilmente sostituibile.
+		- **Dipendenze implicite:** Può introdurre accoppiamento eccessivo.
+		- **Problemi di concorrenza:** Deve essere progettato per essere thread-safe nei sistemi concorrenti.
 # Domanda 1 - Significato Include/Exclude negli Use Case
 
 Il diagramma degli Use Case permette di rappresentare graficamente le interazioni tra attori e sistema, specificando quali funzionalità (**casi d'uso**) gli attori possono attivare.
@@ -1409,6 +1436,18 @@ Ogni KPA è descritta rispetto a :
 - metodi di "monitoring" della realizzazione
 - metodi di verifica della realizzazione
 
+# Gestione progetti software
+
+Lo sviluppo di un prodotto software è una operazione complessa che richiede una specifica attività di gestione
+
+La gestione di un progetto SW implica la **pianificazione**, il **monitoraggio** e **controllo** di persone
+## Le quattro "P"
+
+La gestione efficace di un progetto software si fonda sulle "***quattro P***":
+- ***Persone***, che rappresentano l'*elemento più importante di un progetto software* di successo (il SEI ha elaborato il People Management - Capability Maturity Model)
+- ***Prodotto***, che identifica le caratteristiche del software che deve essere sviluppato (obiettivi, dati, funzioni, comportamenti principali, alternative, vincoli)
+- ***Processo***, che definisce il quadro di riferimento entro cui si stabilisce il piano complessivo di sviluppo del prodotto software
+- ***Progetto***, che definisce l'insieme delle attività da svolgere, identificando persone, compiti, tempi e costi
 # Metriche di Struttura
 
 >[!definition]- Modulo

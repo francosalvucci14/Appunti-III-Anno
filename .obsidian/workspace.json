@@ -141,6 +141,19 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Risposte-Domande orali"
             }
+          },
+          {
+            "id": "731afd22feb5e988",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
         ],
         "currentTab": 1
@@ -178,7 +191,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f93ea91c596c0818",
+  "active": "2b4cee9672bf4cf4",
   "lastOpenFiles": [
     "Appunti ISW/img_risposte_domande/EsempioCC.png",
     "Appunti ISW/img_risposte_domande/EsempioDStruct.png",
